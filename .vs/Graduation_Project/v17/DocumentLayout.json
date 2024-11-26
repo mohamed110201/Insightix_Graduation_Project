@@ -3,36 +3,68 @@
   "WorkspaceRootPath": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\extenstions\\iservicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\extenstions\\iservicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\graduation_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\graduation_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\machinetypemonitorattributealertrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\machinetypemonitorattributealertrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\machinetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\machinetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\system.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\alertchangelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\alertchangelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\machinetyperesourceconsumptionattributealertrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\machinetyperesourceconsumptionattributealertrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\machinetyperesourceconsumptionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\machinetyperesourceconsumptionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\resourceconsumptionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\resourceconsumptionattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\resourceconsumptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\resourceconsumptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\monitoringdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\monitoringdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\machinetypemonitoringattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\machinetypemonitoringattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\data\\models\\monitoringattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\monitoringattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|e:\\courses\\fci\\4.1\\graduation_project\\api\\graduation_project\\graduation_project\\graduation_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\graduation_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,112 +74,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 19,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\appsettings.json",
-              "RelativeDocumentMoniker": "Graduation_Project\\appsettings.json",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\appsettings.json",
-              "RelativeToolTip": "Graduation_Project\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-23T13:28:25.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IServiceCollectionExtension.cs",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
-              "RelativeToolTip": "Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:26:32.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Program.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Program.cs",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Program.cs",
-              "RelativeToolTip": "Graduation_Project\\Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:19:36.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Machine.cs",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\Machine.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\Machine.cs",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\Machine.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\Models\\Machine.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:15:53.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Graduation_Project",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Graduation_Project.csproj",
-              "RelativeDocumentMoniker": "Graduation_Project\\Graduation_Project.csproj",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Graduation_Project.csproj",
-              "RelativeToolTip": "Graduation_Project\\Graduation_Project.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-23T13:06:23.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MachineType.cs",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineType.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MachineType.cs",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineType.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:15:53.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "System.cs",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\System.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\System.cs",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\System.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\Models\\System.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:14:52.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\AppDbContext.cs",
-              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:09:03.878Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -199,6 +127,213 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "System.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\System.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\System.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\System.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\System.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T13:14:52.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Machine.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\Machine.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\Machine.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\Machine.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\Machine.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T13:15:53.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MachineType.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineType.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MachineType.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineType.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T13:15:53.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AlertChangeLog.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\AlertChangeLog.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\AlertChangeLog.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\AlertChangeLog.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\AlertChangeLog.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:43:07.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Alert.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\Alert.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\Alert.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\Alert.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\Alert.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:42:02.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MachineTypeMonitorAttributeAlertRule.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeMonitorAttributeAlertRule.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MachineTypeMonitorAttributeAlertRule.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeMonitorAttributeAlertRule.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeMonitorAttributeAlertRule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:41:42.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\AppDbContext.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T13:09:03.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MachineTypeResourceConsumptionAttributeAlertRule.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttributeAlertRule.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttributeAlertRule.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttributeAlertRule.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttributeAlertRule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:41:42.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MachineTypeResourceConsumptionAttribute.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttribute.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttribute.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttribute.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:40:28.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResourceConsumptionAttribute.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\ResourceConsumptionAttribute.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\ResourceConsumptionAttribute.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\ResourceConsumptionAttribute.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\ResourceConsumptionAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:38:57.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResourceConsumptionData.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\ResourceConsumptionData.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\ResourceConsumptionData.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\ResourceConsumptionData.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\ResourceConsumptionData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:38:57.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MonitoringData.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:38:56.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MachineTypeMonitoringAttribute.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeMonitoringAttribute.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MachineTypeMonitoringAttribute.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MachineTypeMonitoringAttribute.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeMonitoringAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:37:30.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MonitoringAttribute.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MonitoringAttribute.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MonitoringAttribute.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Data\\Models\\MonitoringAttribute.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MonitoringAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:36:30.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Program.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Program.cs",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Program.cs",
+              "RelativeToolTip": "Graduation_Project\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T13:19:36.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Graduation_Project.csproj",
+              "DocumentMoniker": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Graduation_Project.csproj",
+              "RelativeDocumentMoniker": "Graduation_Project\\Graduation_Project.csproj",
+              "ToolTip": "E:\\courses\\FCI\\4.1\\Graduation_Project\\API\\Graduation_Project\\Graduation_Project\\Graduation_Project.csproj",
+              "RelativeToolTip": "Graduation_Project\\Graduation_Project.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-23T13:06:23.627Z"
             }
           ]
         },
