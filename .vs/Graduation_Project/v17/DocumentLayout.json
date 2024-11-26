@@ -138,8 +138,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\System.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:14:52.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T13:14:52.304Z"
             },
             {
               "$type": "Document",
@@ -151,8 +150,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\Machine.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:15:53.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T13:15:53.746Z"
             },
             {
               "$type": "Document",
@@ -164,8 +162,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:15:53.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T13:15:53.055Z"
             },
             {
               "$type": "Document",
@@ -177,8 +174,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\AlertChangeLog.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:43:07.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:43:07.651Z"
             },
             {
               "$type": "Document",
@@ -190,8 +186,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\Alert.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:42:02.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:42:02.049Z"
             },
             {
               "$type": "Document",
@@ -203,8 +198,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeMonitorAttributeAlertRule.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:41:42.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:41:42.406Z"
             },
             {
               "$type": "Document",
@@ -216,8 +210,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\AppDbContext.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:09:03.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T13:09:03.878Z"
             },
             {
               "$type": "Document",
@@ -229,8 +222,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttributeAlertRule.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:41:42.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:41:42.832Z"
             },
             {
               "$type": "Document",
@@ -242,8 +234,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeResourceConsumptionAttribute.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:40:28.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:40:28.199Z"
             },
             {
               "$type": "Document",
@@ -255,8 +246,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\ResourceConsumptionAttribute.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:38:57.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:38:57.4Z"
             },
             {
               "$type": "Document",
@@ -268,8 +258,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\ResourceConsumptionData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:38:57.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:38:57.115Z"
             },
             {
               "$type": "Document",
@@ -281,8 +270,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\MonitoringData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:38:56.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:38:56.698Z"
             },
             {
               "$type": "Document",
@@ -294,8 +282,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\MachineTypeMonitoringAttribute.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:37:30.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:37:30.643Z"
             },
             {
               "$type": "Document",
@@ -307,8 +294,7 @@
               "RelativeToolTip": "Graduation_Project\\Data\\Models\\MonitoringAttribute.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:36:30.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:36:30.845Z"
             },
             {
               "$type": "Document",
@@ -320,8 +306,7 @@
               "RelativeToolTip": "Graduation_Project\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:19:36.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T13:19:36.763Z"
             },
             {
               "$type": "Document",
