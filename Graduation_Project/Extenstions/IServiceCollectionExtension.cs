@@ -26,10 +26,8 @@ namespace Graduation_Project.Extenstions
         {
 
             services.AddDbContext<AppDbContext>(options =>
-                {
-                   
-                   options.UseSqlServer(config.GetConnectionString("Default")); 
-                });
+                   options.UseSqlServer(config.GetConnectionString("Default")));
+            
             return services;
         }
         
