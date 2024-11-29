@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Data\Config\" />
     <Folder Include="Services\Implementation\" />
     <Folder Include="Services\Interfaces\" />
     <Folder Include="Repositories\Interfaces\" />
