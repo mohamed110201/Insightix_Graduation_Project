@@ -6,5 +6,7 @@
         //system id
         //machinetype id
         public string SerialNumber { get; set; }
+
+        public ICollection<Alert> Alerts { get; set; } = new List<Alert>();
     }
 }

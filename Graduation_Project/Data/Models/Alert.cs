@@ -9,6 +9,9 @@ public abstract class Alert
     public AlertStatus Status { get; set; }
     public AlertType Type { get; set; }
 
+    public int MachineId { get; set; }
+    public Machine Machine { get; set; } = null!;
+    
     public ICollection<AlertChangeLog> ChangeLogs { get; set; } = new List<AlertChangeLog>();
     
 }
