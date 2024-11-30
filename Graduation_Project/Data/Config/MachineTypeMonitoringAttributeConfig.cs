@@ -1,7 +1,7 @@
 ﻿
 namespace Graduation_Project.Data.Config
 {
-    public class MachineTypeMonitoringAttributeConfigurations : IEntityTypeConfiguration<MachineTypeMonitoringAttribute>
+    public class MachineTypeMonitoringAttributeConfig : IEntityTypeConfiguration<MachineTypeMonitoringAttribute>
     {
         public void Configure(EntityTypeBuilder<MachineTypeMonitoringAttribute> builder)
         {

@@ -1,7 +1,7 @@
 ﻿
 namespace Graduation_Project.Data.Config
 {
-    public class ResourceConsumptionAttributeConfigurations : IEntityTypeConfiguration<ResourceConsumptionAttribute>
+    public class ResourceConsumptionAttributeConfig : IEntityTypeConfiguration<ResourceConsumptionAttribute>
     {
         public void Configure(EntityTypeBuilder<ResourceConsumptionAttribute> builder)
         {
