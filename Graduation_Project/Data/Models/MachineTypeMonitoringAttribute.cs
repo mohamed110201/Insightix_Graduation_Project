@@ -9,7 +9,7 @@ namespace Graduation_Project.Data.Models
         public MonitoringAttribute MonitoringAttribute { get; set; } = null!;
         public int MachineTypeId { get; set; }
         public MachineType MachineType { get; set; } = null!;
-        public ICollection<MonitorAttributeAlertRule> AlertRules { get; set; } = new List<MonitorAttributeAlertRule>();
+        public ICollection<MonitorAttributeAlertRule> AlertRules { get; set; } = [];
 
     }
 }

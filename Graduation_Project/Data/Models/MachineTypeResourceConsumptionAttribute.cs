@@ -11,7 +11,7 @@ namespace Graduation_Project.Data.Models
         public int MachineTypeId { get; set; }
         public MachineType MachineType { get; set; } = null!;
       
-        public ICollection<ResourceConsumptionAttributeAlertRule> AlertRules { get; set; } = new List<ResourceConsumptionAttributeAlertRule>();
+        public ICollection<ResourceConsumptionAttributeAlertRule> AlertRules { get; set; } = [];
      
     }
 }

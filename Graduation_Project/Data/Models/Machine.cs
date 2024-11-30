@@ -8,9 +8,9 @@ namespace Graduation_Project.Data.Models
         public int MachineTypeId { get; set; }
         public MachineType MachineType { get; set; } = null!;
         public string SerialNumber { get; set; } = null!;
-        public ICollection<Alert> Alerts { get; set; } = new List<Alert>();
-        public List<MonitoringData> MonitoringData { get; set; } = [];
-        public List<ResourceConsumptionData> ResourceConsumptionData { get; set; } = [];
+        public ICollection<Alert> Alerts { get; set; } = [];
+        public ICollection<MonitoringData> MonitoringData { get; set; } = [];
+        public ICollection<ResourceConsumptionData> ResourceConsumptionData { get; set; } = [];
 
     }
 }
