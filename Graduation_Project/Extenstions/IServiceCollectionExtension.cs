@@ -25,10 +25,8 @@ namespace Graduation_Project.Extenstions
         public static IServiceCollection RegisterDbContext(this IServiceCollection services , IConfiguration config)
         {
 
-             services.AddDbContext<AppDbContext>(options =>
-                {
-                   options.UseSqlServer(config.GetConnectionString("Default")); 
-                });
+            services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(config.GetConnectionString("Default")));
             return services;
         }
         

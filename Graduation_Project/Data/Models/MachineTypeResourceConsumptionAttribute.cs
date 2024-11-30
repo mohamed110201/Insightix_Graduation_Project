@@ -1,4 +1,4 @@
-﻿namespace Graduation_Project.Data.Models
+namespace Graduation_Project.Data.Models
 {
     public class MachineTypeResourceConsumptionAttribute
     {
@@ -10,8 +10,8 @@
         public ResourceConsumptionAttribute ResourceConsumptionAttribute { get; set; } = null!;
         public int MachineTypeId { get; set; }
         public MachineType MachineType { get; set; } = null!;
-
-
-       
+      
+        public ICollection<ResourceConsumptionAttributeAlertRule> AlertRules { get; set; } = new List<ResourceConsumptionAttributeAlertRule>();
+     
     }
 }

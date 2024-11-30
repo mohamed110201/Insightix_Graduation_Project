@@ -1,6 +1,16 @@
-﻿namespace Graduation_Project.Data.Models
+﻿using Graduation_Project.Data.Enums;
+
+namespace Graduation_Project.Data.Models;
+
+public class AlertChangeLog
 {
-    public class AlertChangeLog
-    {
-    }
+    public int Id { get; set; }
+    public DateTime TimeStamp { get; set; }
+    public AlertStatus Status { get; set; }
+
+    public int AlertId { get; set; }
+    public Alert Alert { get; set; } = null!;
+    
+    
+    
 }
