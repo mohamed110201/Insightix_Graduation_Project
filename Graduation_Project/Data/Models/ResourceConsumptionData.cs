@@ -4,10 +4,10 @@
     {
         public int Id { get; set; }
         public int MachineId { get; set; }
-        public Machine Machine { get; set; }
+        public Machine Machine { get; set; } = null!;
 
-        public int MachineTypeResourceConsumptionAttributeId { get; set; }
-        public MachineTypeResourceConsumptionAttribute MachineTypeResourceConsumptionAttribute { get; set; }
+        public int ResourceConsumptionAttributeId { get; set; }
+        public ResourceConsumptionAttribute ResourceConsumptionAttribute { get; set; } = null!;
 
         public DateTime TimeStamp { get; set; }
 
