@@ -4,14 +4,14 @@
     {
         public int Id { get; set; }
         public int MachineId { get; set; }
-        public Machine Machine { get; set; }
+        public Machine Machine { get; set; } = null!;
 
-        public int MachineTypeMonitoringAttributeId { get; set; }
-        public MachineTypeMonitoringAttribute MachineTypeMonitoringAttribute { get; set; }
+        public int MonitoringAttributeId { get; set; }
+        public MonitoringAttribute MonitoringAttribute { get; set; } = null!;
 
-        public DateTime TimeStamp { get; set; }
-
+        public DateTime TimeStamp { get; set;}
         public int Value { get; set; }
+
 
     }
 }

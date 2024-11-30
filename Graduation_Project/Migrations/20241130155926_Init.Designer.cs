@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241127081645_Completing Models")]
-    partial class CompletingModels
+    [Migration("20241130155926_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,6 +60,11 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(25)
@@ -84,9 +89,6 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("MachineTypeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MonitorAttributeId")
-                        .HasColumnType("int");
-
                     b.Property<int>("MonitoringAttributeId")
                         .HasColumnType("int");
 
@@ -99,7 +101,7 @@ namespace Graduation_Project.Migrations
 
                     b.HasIndex("MonitoringAttributeId");
 
-                    b.ToTable("MachineTypeMonitoringAttribute");
+                    b.ToTable("MachineTypeMonitoringAttributes", (string)null);
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeResourceConsumptionAttribute", b =>
@@ -165,7 +167,7 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("MachineId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MachineTypeMonitoringAttributeId")
+                    b.Property<int>("MonitoringAttributeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("TimeStamp")
@@ -178,7 +180,7 @@ namespace Graduation_Project.Migrations
 
                     b.HasIndex("MachineId");
 
-                    b.HasIndex("MachineTypeMonitoringAttributeId");
+                    b.HasIndex("MonitoringAttributeId");
 
                     b.ToTable("MonitoringData", (string)null);
                 });
@@ -217,7 +219,7 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("MachineId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MachineTypeResourceConsumptionAttributeId")
+                    b.Property<int>("ResourceConsumptionAttributeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("TimeStamp")
@@ -230,7 +232,7 @@ namespace Graduation_Project.Migrations
 
                     b.HasIndex("MachineId");
 
-                    b.HasIndex("MachineTypeResourceConsumptionAttributeId");
+                    b.HasIndex("ResourceConsumptionAttributeId");
 
                     b.ToTable("ResourceConsumptionData", (string)null);
                 });
@@ -275,13 +277,13 @@ namespace Graduation_Project.Migrations
             modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeMonitoringAttribute", b =>
                 {
                     b.HasOne("Graduation_Project.Data.Models.MachineType", "MachineType")
-                        .WithMany()
+                        .WithMany("MachineTypeMonitoringAttributes")
                         .HasForeignKey("MachineTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Graduation_Project.Data.Models.MonitoringAttribute", "MonitoringAttribute")
-                        .WithMany()
+                        .WithMany("MachineTypeMonitoringAttributes")
                         .HasForeignKey("MonitoringAttributeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -294,13 +296,13 @@ namespace Graduation_Project.Migrations
             modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeResourceConsumptionAttribute", b =>
                 {
                     b.HasOne("Graduation_Project.Data.Models.MachineType", "MachineType")
-                        .WithMany()
+                        .WithMany("MachineTypeResourceConsumptionAttributes")
                         .HasForeignKey("MachineTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Graduation_Project.Data.Models.ResourceConsumptionAttribute", "ResourceConsumptionAttribute")
-                        .WithMany()
+                        .WithMany("MachineTypeResourceConsumptionAttributes")
                         .HasForeignKey("ResourceConsumptionAttributeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -318,15 +320,15 @@ namespace Graduation_Project.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Graduation_Project.Data.Models.MachineTypeMonitoringAttribute", "MachineTypeMonitoringAttribute")
+                    b.HasOne("Graduation_Project.Data.Models.MonitoringAttribute", "MonitoringAttribute")
                         .WithMany("MonitoringData")
-                        .HasForeignKey("MachineTypeMonitoringAttributeId")
+                        .HasForeignKey("MonitoringAttributeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Machine");
 
-                    b.Navigation("MachineTypeMonitoringAttribute");
+                    b.Navigation("MonitoringAttribute");
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.ResourceConsumptionData", b =>
@@ -337,15 +339,15 @@ namespace Graduation_Project.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Graduation_Project.Data.Models.MachineTypeResourceConsumptionAttribute", "MachineTypeResourceConsumptionAttribute")
+                    b.HasOne("Graduation_Project.Data.Models.ResourceConsumptionAttribute", "ResourceConsumptionAttribute")
                         .WithMany("ResourceConsumptionData")
-                        .HasForeignKey("MachineTypeResourceConsumptionAttributeId")
+                        .HasForeignKey("ResourceConsumptionAttributeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Machine");
 
-                    b.Navigation("MachineTypeResourceConsumptionAttribute");
+                    b.Navigation("ResourceConsumptionAttribute");
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.Machine", b =>
@@ -357,16 +359,24 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MachineType", b =>
                 {
+                    b.Navigation("MachineTypeMonitoringAttributes");
+
+                    b.Navigation("MachineTypeResourceConsumptionAttributes");
+
                     b.Navigation("Machines");
                 });
 
-            modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeMonitoringAttribute", b =>
+            modelBuilder.Entity("Graduation_Project.Data.Models.MonitoringAttribute", b =>
                 {
+                    b.Navigation("MachineTypeMonitoringAttributes");
+
                     b.Navigation("MonitoringData");
                 });
 
-            modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeResourceConsumptionAttribute", b =>
+            modelBuilder.Entity("Graduation_Project.Data.Models.ResourceConsumptionAttribute", b =>
                 {
+                    b.Navigation("MachineTypeResourceConsumptionAttributes");
+
                     b.Navigation("ResourceConsumptionData");
                 });
 

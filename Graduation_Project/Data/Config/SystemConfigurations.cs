@@ -8,12 +8,12 @@ namespace Graduation_Project.Data.Config
     {
         public void Configure(EntityTypeBuilder<Models.System> builder)
         {
+            builder.ToTable("Systems");
+
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).HasColumnType("nvarchar")
-                .HasMaxLength(25)
-                .IsRequired();
-
-            builder.ToTable("Systems");
+                .HasMaxLength(25);
+                
 
         }
     }

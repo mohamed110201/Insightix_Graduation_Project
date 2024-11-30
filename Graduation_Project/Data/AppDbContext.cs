@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Data.Config;
 using Graduation_Project.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.PortableExecutable;
 
 namespace Graduation_Project.Data
 {
@@ -10,7 +11,7 @@ namespace Graduation_Project.Data
         public AppDbContext(DbContextOptions options): base(options)
         {
         }
-        DbSet<Models.System> Systems { get; set; }
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

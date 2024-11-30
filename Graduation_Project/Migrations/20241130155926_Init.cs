@@ -6,11 +6,25 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class CompletingModels : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "MachineTypes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MachineTypes", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "MonitoringAttributes",
                 columns: table => new
@@ -40,28 +54,40 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MachineTypeMonitoringAttribute",
+                name: "Systems",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    MonitorAttributeId = table.Column<int>(type: "int", nullable: false),
-                    MonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
-                    MachineTypeId = table.Column<int>(type: "int", nullable: false),
-                    LowerRange = table.Column<int>(type: "int", nullable: false),
-                    UpperRange = table.Column<int>(type: "int", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MachineTypeMonitoringAttribute", x => x.Id);
+                    table.PrimaryKey("PK_Systems", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MachineTypeMonitoringAttributes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    LowerRange = table.Column<int>(type: "int", nullable: false),
+                    UpperRange = table.Column<int>(type: "int", nullable: false),
+                    MonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
+                    MachineTypeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MachineTypeMonitoringAttributes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MachineTypeMonitoringAttribute_MachineTypes_MachineTypeId",
+                        name: "FK_MachineTypeMonitoringAttributes_MachineTypes_MachineTypeId",
                         column: x => x.MachineTypeId,
                         principalTable: "MachineTypes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MachineTypeMonitoringAttribute_MonitoringAttributes_MonitoringAttributeId",
+                        name: "FK_MachineTypeMonitoringAttributes_MonitoringAttributes_MonitoringAttributeId",
                         column: x => x.MonitoringAttributeId,
                         principalTable: "MonitoringAttributes",
                         principalColumn: "Id",
@@ -74,10 +100,10 @@ namespace Graduation_Project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
-                    MachineTypeId = table.Column<int>(type: "int", nullable: false),
                     LowerRange = table.Column<int>(type: "int", nullable: false),
-                    UpperRange = table.Column<int>(type: "int", nullable: false)
+                    UpperRange = table.Column<int>(type: "int", nullable: false),
+                    ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
+                    MachineTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -97,13 +123,40 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Machines",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SystemId = table.Column<int>(type: "int", nullable: false),
+                    MachineTypeId = table.Column<int>(type: "int", nullable: false),
+                    SerialNumber = table.Column<string>(type: "nvarchar", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Machines", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Machines_MachineTypes_MachineTypeId",
+                        column: x => x.MachineTypeId,
+                        principalTable: "MachineTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Machines_Systems_SystemId",
+                        column: x => x.SystemId,
+                        principalTable: "Systems",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MonitoringData",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
-                    MachineTypeMonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
+                    MonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
                     TimeStamp = table.Column<DateTime>(type: "datetime", nullable: false),
                     Value = table.Column<int>(type: "int", nullable: false)
                 },
@@ -111,15 +164,15 @@ namespace Graduation_Project.Migrations
                 {
                     table.PrimaryKey("PK_MonitoringData", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MonitoringData_MachineTypeMonitoringAttribute_MachineTypeMonitoringAttributeId",
-                        column: x => x.MachineTypeMonitoringAttributeId,
-                        principalTable: "MachineTypeMonitoringAttribute",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_MonitoringData_Machines_MachineId",
                         column: x => x.MachineId,
                         principalTable: "Machines",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MonitoringData_MonitoringAttributes_MonitoringAttributeId",
+                        column: x => x.MonitoringAttributeId,
+                        principalTable: "MonitoringAttributes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -131,7 +184,7 @@ namespace Graduation_Project.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
-                    MachineTypeResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
+                    ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
                     TimeStamp = table.Column<DateTime>(type: "datetime", nullable: false),
                     Value = table.Column<int>(type: "int", nullable: false)
                 },
@@ -139,27 +192,37 @@ namespace Graduation_Project.Migrations
                 {
                     table.PrimaryKey("PK_ResourceConsumptionData", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ResourceConsumptionData_MachineTypeResourceConsumptionAttribute_MachineTypeResourceConsumptionAttributeId",
-                        column: x => x.MachineTypeResourceConsumptionAttributeId,
-                        principalTable: "MachineTypeResourceConsumptionAttribute",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_ResourceConsumptionData_Machines_MachineId",
                         column: x => x.MachineId,
                         principalTable: "Machines",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ResourceConsumptionData_ResourceConsumptionAttributes_ResourceConsumptionAttributeId",
+                        column: x => x.ResourceConsumptionAttributeId,
+                        principalTable: "ResourceConsumptionAttributes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_MachineTypeMonitoringAttribute_MachineTypeId",
-                table: "MachineTypeMonitoringAttribute",
+                name: "IX_Machines_MachineTypeId",
+                table: "Machines",
                 column: "MachineTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MachineTypeMonitoringAttribute_MonitoringAttributeId",
-                table: "MachineTypeMonitoringAttribute",
+                name: "IX_Machines_SystemId",
+                table: "Machines",
+                column: "SystemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MachineTypeMonitoringAttributes_MachineTypeId",
+                table: "MachineTypeMonitoringAttributes",
+                column: "MachineTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MachineTypeMonitoringAttributes_MonitoringAttributeId",
+                table: "MachineTypeMonitoringAttributes",
                 column: "MonitoringAttributeId");
 
             migrationBuilder.CreateIndex(
@@ -178,9 +241,9 @@ namespace Graduation_Project.Migrations
                 column: "MachineId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MonitoringData_MachineTypeMonitoringAttributeId",
+                name: "IX_MonitoringData_MonitoringAttributeId",
                 table: "MonitoringData",
-                column: "MachineTypeMonitoringAttributeId");
+                column: "MonitoringAttributeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResourceConsumptionData_MachineId",
@@ -188,14 +251,20 @@ namespace Graduation_Project.Migrations
                 column: "MachineId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ResourceConsumptionData_MachineTypeResourceConsumptionAttributeId",
+                name: "IX_ResourceConsumptionData_ResourceConsumptionAttributeId",
                 table: "ResourceConsumptionData",
-                column: "MachineTypeResourceConsumptionAttributeId");
+                column: "ResourceConsumptionAttributeId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "MachineTypeMonitoringAttributes");
+
+            migrationBuilder.DropTable(
+                name: "MachineTypeResourceConsumptionAttribute");
+
             migrationBuilder.DropTable(
                 name: "MonitoringData");
 
@@ -203,16 +272,19 @@ namespace Graduation_Project.Migrations
                 name: "ResourceConsumptionData");
 
             migrationBuilder.DropTable(
-                name: "MachineTypeMonitoringAttribute");
-
-            migrationBuilder.DropTable(
-                name: "MachineTypeResourceConsumptionAttribute");
-
-            migrationBuilder.DropTable(
                 name: "MonitoringAttributes");
 
             migrationBuilder.DropTable(
+                name: "Machines");
+
+            migrationBuilder.DropTable(
                 name: "ResourceConsumptionAttributes");
+
+            migrationBuilder.DropTable(
+                name: "MachineTypes");
+
+            migrationBuilder.DropTable(
+                name: "Systems");
         }
     }
 }

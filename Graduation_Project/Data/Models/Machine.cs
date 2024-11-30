@@ -4,13 +4,13 @@
     {
         public int Id { get; set; }
         public int SystemId { get; set; }
-        public System System { get; set; }
+        public System System { get; set; } = null!;
         public int MachineTypeId { get; set; }
-        public MachineType MachineType { get; set; }
-        public string SerialNumber { get; set; }
+        public MachineType MachineType { get; set; } = null!;
+        public string SerialNumber { get; set; } = null!;
 
-        public List<MonitoringData>? MonitoringData { get; set; }
-        public List<ResourceConsumptionData>? ResourceConsumptionData { get; set; }
+        public List<MonitoringData> MonitoringData { get; set; } = [];
+        public List<ResourceConsumptionData> ResourceConsumptionData { get; set; } = [];
 
     }
 }
