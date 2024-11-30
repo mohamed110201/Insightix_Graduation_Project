@@ -7,9 +7,9 @@
         public string Unit { get; set; } = null!;
 
         public ICollection<MachineType> MachineTypes { get; set; } = [];
-        public List<ResourceConsumptionData> ResourceConsumptionData { get; set; } = [];
+        public ICollection<ResourceConsumptionData> ResourceConsumptionData { get; set; } = [];
 
-        public List<MachineTypeResourceConsumptionAttribute> MachineTypeResourceConsumptionAttributes { get; set; } = [];
+        public ICollection<MachineTypeResourceConsumptionAttribute> MachineTypeResourceConsumptionAttributes { get; set; } = [];
 
     }
 }

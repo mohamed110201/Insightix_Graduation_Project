@@ -1,7 +1,7 @@
 ﻿
 namespace Graduation_Project.Data.Config
 {
-    public class MonitoringAttributeConfigurations : IEntityTypeConfiguration<MonitoringAttribute>
+    public class MonitoringAttributeConfig : IEntityTypeConfiguration<MonitoringAttribute>
     {
         public void Configure(EntityTypeBuilder<MonitoringAttribute> builder)
         {

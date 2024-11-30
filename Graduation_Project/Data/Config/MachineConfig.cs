@@ -1,6 +1,6 @@
 ﻿namespace Graduation_Project.Data.Config
 {
-    public class MachineConfigurations : IEntityTypeConfiguration<Machine>
+    public class MachineConfig : IEntityTypeConfiguration<Machine>
     {
         public void Configure(EntityTypeBuilder<Machine> builder)
         {

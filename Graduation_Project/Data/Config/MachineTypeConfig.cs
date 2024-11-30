@@ -2,7 +2,7 @@
 
 namespace Graduation_Project.Data.Config
 {
-    public class MachineTypeConfigurations : IEntityTypeConfiguration<MachineType>
+    public class MachineTypeConfig : IEntityTypeConfiguration<MachineType>
     {
         public void Configure(EntityTypeBuilder<MachineType> builder)
         {

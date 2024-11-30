@@ -2,7 +2,7 @@
 
 public class ResourceConsumptionAttributeAlertRule:AlertRule
 {
-    public ICollection<ResourceConsumptionAlert> Alerts { get; set; } = new List<ResourceConsumptionAlert>();
+    public ICollection<ResourceConsumptionAlert> Alerts { get; set; } = [];
     public int MachineTypeResourceConsumptionAttributeId { get; set; }
     public MachineTypeResourceConsumptionAttribute MachineTypeResourceConsumptionAttribute { get; set; } = null!;
 }

@@ -6,10 +6,10 @@
         public string Name { get; set; } = null!;
         public string Unit { get; set; } = null!;
 
-        public List<MachineType> MachineTypes { get; set; } = [];
-        public List<MonitoringData> MonitoringData { get; set; } = [];
+        public ICollection<MachineType> MachineTypes { get; set; } = [];
+        public ICollection<MonitoringData> MonitoringData { get; set; } = [];
 
-        public List<MachineTypeMonitoringAttribute> MachineTypeMonitoringAttributes { get; set; } = [];
+        public ICollection<MachineTypeMonitoringAttribute> MachineTypeMonitoringAttributes { get; set; } = [];
 
     }
 }

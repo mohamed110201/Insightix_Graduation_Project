@@ -4,7 +4,7 @@ using System.Reflection.Emit;
 
 namespace Graduation_Project.Data.Config
 {
-    public class SystemConfigurations : IEntityTypeConfiguration<Models.System>
+    public class SystemConfig : IEntityTypeConfiguration<Models.System>
     {
         public void Configure(EntityTypeBuilder<Models.System> builder)
         {
