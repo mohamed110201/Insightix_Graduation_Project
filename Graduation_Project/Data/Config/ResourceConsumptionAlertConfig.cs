@@ -14,6 +14,7 @@ public class ResourceConsumptionAlertConfig:IEntityTypeConfiguration<ResourceCon
         builder.HasOne<ResourceConsumptionAttributeAlertRule>(x=>x.ResourceConsumptionAttributeAlertRule)
             .WithMany(x => x.Alerts)
             .HasForeignKey(x => x.ResourceConsumptionAttributeAlertRuleId)
-            .IsRequired();
+            .IsRequired()
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }
