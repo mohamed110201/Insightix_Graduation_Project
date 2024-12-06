@@ -11,10 +11,8 @@ namespace Graduation_Project.Data.Config
             builder.ToTable("Systems");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name).HasColumnType("nvarchar")
-                .HasMaxLength(25);
-                
-
+            builder.Property(x => x.Name);
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 using Graduation_Project.Data;
+using Graduation_Project.Data.Seed;
 using Graduation_Project.Extenstions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var db = services.GetRequiredService<AppDbContext>();
+
+    
+    if (!db.Systems.Any())
+    {
+        var dataLoader = new SeedDataLoader(db);
+        dataLoader.Load();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,0 +1,869 @@
+{
+	"Systems": [
+		{ "Name": "System A" },
+		{ "Name": "System B" },
+		{ "Name": "System C" },
+		{ "Name": "System D" },
+		{ "Name": "System E" }
+	],
+	"MachineTypes": [
+		{ "Name": "Type 1", "Model": "T100" },
+		{ "Name": "Type 2", "Model": "T200" },
+		{ "Name": "Type 3", "Model": "T300" },
+		{ "Name": "Type 4", "Model": "T400" },
+		{ "Name": "Type 5", "Model": "T500" },
+		{ "Name": "Type 6", "Model": "T600" },
+		{ "Name": "Type 7", "Model": "T700" },
+		{ "Name": "Type 8", "Model": "T800" },
+		{ "Name": "Type 9", "Model": "T900" },
+		{ "Name": "Type 10", "Model": "T1000" }
+	],
+	"MonitoringAttributes": [
+		{ "Name": "Temperature", "Unit": "Celsius" },
+		{ "Name": "Vibration", "Unit": "Hz" },
+		{ "Name": "Pressure", "Unit": "Bar" },
+		{ "Name": "Humidity", "Unit": "%" },
+		{ "Name": "Speed", "Unit": "RPM" },
+		{ "Name": "Flow Rate", "Unit": "m3/s" },
+		{ "Name": "Torque", "Unit": "Nm" },
+		{ "Name": "Current", "Unit": "A" },
+		{ "Name": "Voltage", "Unit": "V" },
+		{ "Name": "Frequency", "Unit": "Hz" }
+	],
+	"ResourceConsumptionAttributes": [
+		{ "Name": "Power", "Unit": "kWh" },
+		{ "Name": "Water Usage", "Unit": "Liters" },
+		{ "Name": "Oil Consumption", "Unit": "Liters" },
+		{ "Name": "Gas Usage", "Unit": "Cubic Meters" },
+		{ "Name": "Energy Efficiency", "Unit": "%" },
+		{ "Name": "Heat Emission", "Unit": "BTU" },
+		{ "Name": "Battery Usage", "Unit": "Ah" },
+		{ "Name": "Material Usage", "Unit": "kg" },
+		{ "Name": "Operational Time", "Unit": "Hours" },
+		{ "Name": "Maintenance Cost", "Unit": "USD" }
+	],
+	"Machines": [
+		{
+			"SystemId": 1,
+			"MachineTypeId": 1,
+			"SerialNumber": "SN00001"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 2,
+			"SerialNumber": "SN00002"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 3,
+			"SerialNumber": "SN00003"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 4,
+			"SerialNumber": "SN00004"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 5,
+			"SerialNumber": "SN00005"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 6,
+			"SerialNumber": "SN00006"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 7,
+			"SerialNumber": "SN00007"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 8,
+			"SerialNumber": "SN00008"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 9,
+			"SerialNumber": "SN00009"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 10,
+			"SerialNumber": "SN00010"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 1,
+			"SerialNumber": "SN00011"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 2,
+			"SerialNumber": "SN00012"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 3,
+			"SerialNumber": "SN00013"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 4,
+			"SerialNumber": "SN00014"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 5,
+			"SerialNumber": "SN00015"
+		},
+		{
+			"SystemId": 4,
+			"MachineTypeId": 6,
+			"SerialNumber": "SN00016"
+		},
+		{
+			"SystemId": 4,
+			"MachineTypeId": 7,
+			"SerialNumber": "SN00017"
+		},
+		{
+			"SystemId": 4,
+			"MachineTypeId": 8,
+			"SerialNumber": "SN00018"
+		},
+		{
+			"SystemId": 4,
+			"MachineTypeId": 9,
+			"SerialNumber": "SN00019"
+		},
+		{
+			"SystemId": 4,
+			"MachineTypeId": 10,
+			"SerialNumber": "SN00020"
+		},
+		{
+			"SystemId": 5,
+			"MachineTypeId": 1,
+			"SerialNumber": "SN00021"
+		},
+		{
+			"SystemId": 5,
+			"MachineTypeId": 2,
+			"SerialNumber": "SN00022"
+		},
+		{
+			"SystemId": 5,
+			"MachineTypeId": 3,
+			"SerialNumber": "SN00023"
+		},
+		{
+			"SystemId": 5,
+			"MachineTypeId": 4,
+			"SerialNumber": "SN00024"
+		},
+		{
+			"SystemId": 5,
+			"MachineTypeId": 5,
+			"SerialNumber": "SN00025"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 6,
+			"SerialNumber": "SN00026"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 7,
+			"SerialNumber": "SN00027"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 8,
+			"SerialNumber": "SN00028"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 9,
+			"SerialNumber": "SN00029"
+		},
+		{
+			"SystemId": 1,
+			"MachineTypeId": 10,
+			"SerialNumber": "SN00030"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 1,
+			"SerialNumber": "SN00031"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 2,
+			"SerialNumber": "SN00032"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 3,
+			"SerialNumber": "SN00033"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 4,
+			"SerialNumber": "SN00034"
+		},
+		{
+			"SystemId": 2,
+			"MachineTypeId": 5,
+			"SerialNumber": "SN00035"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 6,
+			"SerialNumber": "SN00036"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 7,
+			"SerialNumber": "SN00037"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 8,
+			"SerialNumber": "SN00038"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 9,
+			"SerialNumber": "SN00039"
+		},
+		{
+			"SystemId": 3,
+			"MachineTypeId": 10,
+			"SerialNumber": "SN00040"
+		}
+	],
+	"MachineTypeMonitoringAttributes": [
+		{
+			"LowerRange": 10,
+			"UpperRange": 100,
+			"MonitoringAttributeId": 1,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 0,
+			"UpperRange": 50,
+			"MonitoringAttributeId": 2,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 1,
+			"UpperRange": 5,
+			"MonitoringAttributeId": 3,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 20,
+			"UpperRange": 80,
+			"MonitoringAttributeId": 4,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 100,
+			"UpperRange": 200,
+			"MonitoringAttributeId": 5,
+			"MachineTypeId": 1
+		},
+
+		{
+			"LowerRange": 15,
+			"UpperRange": 90,
+			"MonitoringAttributeId": 6,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 10,
+			"UpperRange": 60,
+			"MonitoringAttributeId": 7,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 5,
+			"UpperRange": 30,
+			"MonitoringAttributeId": 8,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 25,
+			"UpperRange": 85,
+			"MonitoringAttributeId": 9,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 50,
+			"UpperRange": 150,
+			"MonitoringAttributeId": 10,
+			"MachineTypeId": 2
+		},
+
+		{
+			"LowerRange": 10,
+			"UpperRange": 70,
+			"MonitoringAttributeId": 1,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 5,
+			"UpperRange": 45,
+			"MonitoringAttributeId": 2,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 2,
+			"UpperRange": 8,
+			"MonitoringAttributeId": 3,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 30,
+			"UpperRange": 90,
+			"MonitoringAttributeId": 4,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 120,
+			"UpperRange": 250,
+			"MonitoringAttributeId": 5,
+			"MachineTypeId": 3
+		},
+
+		{
+			"LowerRange": 20,
+			"UpperRange": 110,
+			"MonitoringAttributeId": 6,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 15,
+			"UpperRange": 65,
+			"MonitoringAttributeId": 7,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 7,
+			"UpperRange": 35,
+			"MonitoringAttributeId": 8,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 40,
+			"UpperRange": 120,
+			"MonitoringAttributeId": 9,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 80,
+			"UpperRange": 200,
+			"MonitoringAttributeId": 10,
+			"MachineTypeId": 4
+		},
+
+		{
+			"LowerRange": 5,
+			"UpperRange": 50,
+			"MonitoringAttributeId": 1,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 3,
+			"UpperRange": 25,
+			"MonitoringAttributeId": 2,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 1,
+			"UpperRange": 6,
+			"MonitoringAttributeId": 3,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 20,
+			"UpperRange": 75,
+			"MonitoringAttributeId": 4,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 90,
+			"UpperRange": 180,
+			"MonitoringAttributeId": 5,
+			"MachineTypeId": 5
+		},
+
+		{
+			"LowerRange": 15,
+			"UpperRange": 95,
+			"MonitoringAttributeId": 6,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 10,
+			"UpperRange": 55,
+			"MonitoringAttributeId": 7,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 5,
+			"UpperRange": 20,
+			"MonitoringAttributeId": 8,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 35,
+			"UpperRange": 100,
+			"MonitoringAttributeId": 9,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 75,
+			"UpperRange": 170,
+			"MonitoringAttributeId": 10,
+			"MachineTypeId": 6
+		},
+
+		{
+			"LowerRange": 12,
+			"UpperRange": 85,
+			"MonitoringAttributeId": 1,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 8,
+			"UpperRange": 45,
+			"MonitoringAttributeId": 2,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 2,
+			"UpperRange": 10,
+			"MonitoringAttributeId": 3,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 25,
+			"UpperRange": 90,
+			"MonitoringAttributeId": 4,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 100,
+			"UpperRange": 220,
+			"MonitoringAttributeId": 5,
+			"MachineTypeId": 7
+		},
+
+		{
+			"LowerRange": 18,
+			"UpperRange": 120,
+			"MonitoringAttributeId": 6,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 12,
+			"UpperRange": 60,
+			"MonitoringAttributeId": 7,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 6,
+			"UpperRange": 30,
+			"MonitoringAttributeId": 8,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 40,
+			"UpperRange": 110,
+			"MonitoringAttributeId": 9,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 85,
+			"UpperRange": 200,
+			"MonitoringAttributeId": 10,
+			"MachineTypeId": 8
+		},
+
+		{
+			"LowerRange": 14,
+			"UpperRange": 100,
+			"MonitoringAttributeId": 1,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 9,
+			"UpperRange": 50,
+			"MonitoringAttributeId": 2,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 3,
+			"UpperRange": 15,
+			"MonitoringAttributeId": 3,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 30,
+			"UpperRange": 80,
+			"MonitoringAttributeId": 4,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 110,
+			"UpperRange": 240,
+			"MonitoringAttributeId": 5,
+			"MachineTypeId": 9
+		},
+
+		{
+			"LowerRange": 20,
+			"UpperRange": 130,
+			"MonitoringAttributeId": 6,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 13,
+			"UpperRange": 70,
+			"MonitoringAttributeId": 7,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 8,
+			"UpperRange": 35,
+			"MonitoringAttributeId": 8,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 50,
+			"UpperRange": 125,
+			"MonitoringAttributeId": 9,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 90,
+			"UpperRange": 190,
+			"MonitoringAttributeId": 10,
+			"MachineTypeId": 10
+		}
+	],
+	"MachineTypeResourceConsumptionAttributes": [
+		{
+			"LowerRange": 100,
+			"UpperRange": 500,
+			"ResourceConsumptionAttributeId": 1,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 200,
+			"UpperRange": 600,
+			"ResourceConsumptionAttributeId": 2,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 300,
+			"UpperRange": 700,
+			"ResourceConsumptionAttributeId": 3,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 400,
+			"UpperRange": 800,
+			"ResourceConsumptionAttributeId": 4,
+			"MachineTypeId": 1
+		},
+		{
+			"LowerRange": 500,
+			"UpperRange": 900,
+			"ResourceConsumptionAttributeId": 5,
+			"MachineTypeId": 1
+		},
+
+		{
+			"LowerRange": 120,
+			"UpperRange": 520,
+			"ResourceConsumptionAttributeId": 6,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 220,
+			"UpperRange": 620,
+			"ResourceConsumptionAttributeId": 7,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 320,
+			"UpperRange": 720,
+			"ResourceConsumptionAttributeId": 8,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 420,
+			"UpperRange": 820,
+			"ResourceConsumptionAttributeId": 9,
+			"MachineTypeId": 2
+		},
+		{
+			"LowerRange": 520,
+			"UpperRange": 920,
+			"ResourceConsumptionAttributeId": 10,
+			"MachineTypeId": 2
+		},
+
+		{
+			"LowerRange": 150,
+			"UpperRange": 550,
+			"ResourceConsumptionAttributeId": 1,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 250,
+			"UpperRange": 650,
+			"ResourceConsumptionAttributeId": 2,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 350,
+			"UpperRange": 750,
+			"ResourceConsumptionAttributeId": 3,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 450,
+			"UpperRange": 850,
+			"ResourceConsumptionAttributeId": 4,
+			"MachineTypeId": 3
+		},
+		{
+			"LowerRange": 550,
+			"UpperRange": 950,
+			"ResourceConsumptionAttributeId": 5,
+			"MachineTypeId": 3
+		},
+
+		{
+			"LowerRange": 130,
+			"UpperRange": 530,
+			"ResourceConsumptionAttributeId": 6,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 230,
+			"UpperRange": 630,
+			"ResourceConsumptionAttributeId": 7,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 330,
+			"UpperRange": 730,
+			"ResourceConsumptionAttributeId": 8,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 430,
+			"UpperRange": 830,
+			"ResourceConsumptionAttributeId": 9,
+			"MachineTypeId": 4
+		},
+		{
+			"LowerRange": 530,
+			"UpperRange": 930,
+			"ResourceConsumptionAttributeId": 10,
+			"MachineTypeId": 4
+		},
+
+		{
+			"LowerRange": 160,
+			"UpperRange": 560,
+			"ResourceConsumptionAttributeId": 1,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 260,
+			"UpperRange": 660,
+			"ResourceConsumptionAttributeId": 2,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 360,
+			"UpperRange": 760,
+			"ResourceConsumptionAttributeId": 3,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 460,
+			"UpperRange": 860,
+			"ResourceConsumptionAttributeId": 4,
+			"MachineTypeId": 5
+		},
+		{
+			"LowerRange": 560,
+			"UpperRange": 960,
+			"ResourceConsumptionAttributeId": 5,
+			"MachineTypeId": 5
+		},
+
+		{
+			"LowerRange": 140,
+			"UpperRange": 540,
+			"ResourceConsumptionAttributeId": 6,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 240,
+			"UpperRange": 640,
+			"ResourceConsumptionAttributeId": 7,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 340,
+			"UpperRange": 740,
+			"ResourceConsumptionAttributeId": 8,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 440,
+			"UpperRange": 840,
+			"ResourceConsumptionAttributeId": 9,
+			"MachineTypeId": 6
+		},
+		{
+			"LowerRange": 540,
+			"UpperRange": 940,
+			"ResourceConsumptionAttributeId": 10,
+			"MachineTypeId": 6
+		},
+
+		{
+			"LowerRange": 170,
+			"UpperRange": 570,
+			"ResourceConsumptionAttributeId": 1,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 270,
+			"UpperRange": 670,
+			"ResourceConsumptionAttributeId": 2,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 370,
+			"UpperRange": 770,
+			"ResourceConsumptionAttributeId": 3,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 470,
+			"UpperRange": 870,
+			"ResourceConsumptionAttributeId": 4,
+			"MachineTypeId": 7
+		},
+		{
+			"LowerRange": 570,
+			"UpperRange": 970,
+			"ResourceConsumptionAttributeId": 5,
+			"MachineTypeId": 7
+		},
+
+		{
+			"LowerRange": 180,
+			"UpperRange": 580,
+			"ResourceConsumptionAttributeId": 6,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 280,
+			"UpperRange": 680,
+			"ResourceConsumptionAttributeId": 7,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 380,
+			"UpperRange": 780,
+			"ResourceConsumptionAttributeId": 8,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 480,
+			"UpperRange": 880,
+			"ResourceConsumptionAttributeId": 9,
+			"MachineTypeId": 8
+		},
+		{
+			"LowerRange": 580,
+			"UpperRange": 980,
+			"ResourceConsumptionAttributeId": 10,
+			"MachineTypeId": 8
+		},
+
+		{
+			"LowerRange": 190,
+			"UpperRange": 590,
+			"ResourceConsumptionAttributeId": 1,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 290,
+			"UpperRange": 690,
+			"ResourceConsumptionAttributeId": 2,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 390,
+			"UpperRange": 790,
+			"ResourceConsumptionAttributeId": 3,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 490,
+			"UpperRange": 890,
+			"ResourceConsumptionAttributeId": 4,
+			"MachineTypeId": 9
+		},
+		{
+			"LowerRange": 590,
+			"UpperRange": 990,
+			"ResourceConsumptionAttributeId": 5,
+			"MachineTypeId": 9
+		},
+
+		{
+			"LowerRange": 150,
+			"UpperRange": 600,
+			"ResourceConsumptionAttributeId": 6,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 250,
+			"UpperRange": 700,
+			"ResourceConsumptionAttributeId": 7,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 350,
+			"UpperRange": 800,
+			"ResourceConsumptionAttributeId": 8,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 450,
+			"UpperRange": 900,
+			"ResourceConsumptionAttributeId": 9,
+			"MachineTypeId": 10
+		},
+		{
+			"LowerRange": 550,
+			"UpperRange": 1000,
+			"ResourceConsumptionAttributeId": 10,
+			"MachineTypeId": 10
+		}
+	]
+}

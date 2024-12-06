@@ -9,12 +9,10 @@ namespace Graduation_Project.Data.Config
             builder.ToTable("MachineTypes");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name).HasColumnType("nvarchar")
-                .HasMaxLength(25);
+            builder.Property(x => x.Name);
                 
 
-            builder.Property(x => x.Model).HasColumnType("nvarchar")
-                .HasMaxLength(25);
+            builder.Property(x => x.Model);
 
             builder.HasMany(x => x.MonitoringAttributes)
                 .WithMany(x => x.MachineTypes)

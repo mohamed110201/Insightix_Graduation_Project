@@ -7,8 +7,7 @@
             builder.ToTable("Machines");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.SerialNumber)
-                .HasColumnType("nvarchar");
+            builder.Property(x => x.SerialNumber);
 
 
             builder.HasOne(x => x.System)

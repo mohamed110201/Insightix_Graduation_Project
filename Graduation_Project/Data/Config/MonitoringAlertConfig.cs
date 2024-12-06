@@ -13,6 +13,7 @@ public class MonitoringAlertConfig:IEntityTypeConfiguration<MonitoringAlert>
         builder.HasOne<MonitorAttributeAlertRule>(x=>x.MonitorAttributeAlertRule)
             .WithMany(x => x.Alerts)
             .HasForeignKey(x => x.MonitorAttributeAlertRuleId)
-            .IsRequired();
+            .IsRequired()
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }
