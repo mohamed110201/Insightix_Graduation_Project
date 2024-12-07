@@ -1,4 +1,6 @@
+using System.Net;
 using FluentValidation;
+using Graduation_Project.Core;
 using Graduation_Project.DTOs;
 using Graduation_Project.Services.Interfaces;
 using Graduation_Project.Validators;
@@ -12,17 +14,17 @@ public class MonitoringAttributesController(IMonitoringAttributesService monitor
 {
     [Route("")]
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<ActionResult> GetAll()
     {
         var monitoringAttributes = await monitoringAttributesService.GetAll();
-        return Ok(monitoringAttributes);
+        return JSend.Success(data:monitoringAttributes);
     }
 
     [Route("")]
     [HttpPost]
-    public async Task<IActionResult> Add([FromBody] AddMonitoringAttributeDto addMonitoringAttributeDto)
+    public async Task<ActionResult> Add([FromBody] AddMonitoringAttributeDto addMonitoringAttributeDto)
     {
         await monitoringAttributesService.Add(addMonitoringAttributeDto);
-        return Ok();
+        return JSend.Created(message:"Monitoring Attribute Added Successfully");
     }
 }
