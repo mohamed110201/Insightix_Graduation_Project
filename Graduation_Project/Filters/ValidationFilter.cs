@@ -1,3 +1,4 @@
+using Graduation_Project.Core;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -16,6 +17,6 @@ public class ValidationFilter : IActionFilter
             .Select(error => error.ErrorMessage)
             .ToList();
            
-        context.Result = new BadRequestObjectResult(messages);
+        context.Result = JSend.ValidationError(errors:messages);
     }
 }
