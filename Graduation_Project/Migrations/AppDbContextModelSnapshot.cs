@@ -22,6 +22,93 @@ namespace Graduation_Project.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.HasSequence("AlertRuleSequence");
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.Alert", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MachineId");
+
+                    b.ToTable("Alerts", (string)null);
+
+                    b.HasDiscriminator<string>("Type");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.AlertChangeLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AlertId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlertId");
+
+                    b.ToTable("AlertChangeLogs", (string)null);
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.AlertRule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValueSql("NEXT VALUE FOR [AlertRuleSequence]");
+
+                    SqlServerPropertyBuilderExtensions.UseSequence(b.Property<int>("Id"));
+
+                    b.Property<string>("Condition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Severity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable((string)null);
+
+                    b.UseTpcMappingStrategy();
+                });
+
             modelBuilder.Entity("Graduation_Project.Data.Models.Machine", b =>
                 {
                     b.Property<int>("Id")
@@ -35,7 +122,7 @@ namespace Graduation_Project.Migrations
 
                     b.Property<string>("SerialNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SystemId")
                         .HasColumnType("int");
@@ -59,13 +146,11 @@ namespace Graduation_Project.Migrations
 
                     b.Property<string>("Model")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -127,7 +212,7 @@ namespace Graduation_Project.Migrations
 
                     b.HasIndex("ResourceConsumptionAttributeId");
 
-                    b.ToTable("MachineTypeResourceConsumptionAttribute");
+                    b.ToTable("MachineTypeResourceConsumptionAttributes", (string)null);
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MonitoringAttribute", b =>
@@ -140,13 +225,11 @@ namespace Graduation_Project.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Unit")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -168,7 +251,7 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Value")
                         .HasColumnType("int");
@@ -192,13 +275,11 @@ namespace Graduation_Project.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Unit")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -220,7 +301,7 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Value")
                         .HasColumnType("int");
@@ -244,12 +325,81 @@ namespace Graduation_Project.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Systems", (string)null);
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.MonitoringAlert", b =>
+                {
+                    b.HasBaseType("Graduation_Project.Data.Models.Alert");
+
+                    b.Property<int>("MonitorAttributeAlertRuleId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("MonitorAttributeAlertRuleId");
+
+                    b.HasDiscriminator().HasValue("Monitoring");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.ResourceConsumptionAlert", b =>
+                {
+                    b.HasBaseType("Graduation_Project.Data.Models.Alert");
+
+                    b.Property<int>("ResourceConsumptionAttributeAlertRuleId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("ResourceConsumptionAttributeAlertRuleId");
+
+                    b.HasDiscriminator().HasValue("ResourceConsumption");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.MonitorAttributeAlertRule", b =>
+                {
+                    b.HasBaseType("Graduation_Project.Data.Models.AlertRule");
+
+                    b.Property<int>("MachineTypeMonitoringAttributeId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("MachineTypeMonitoringAttributeId");
+
+                    b.ToTable("MonitorAttributeAlertRules", (string)null);
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.ResourceConsumptionAttributeAlertRule", b =>
+                {
+                    b.HasBaseType("Graduation_Project.Data.Models.AlertRule");
+
+                    b.Property<int>("MachineTypeResourceConsumptionAttributeId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("MachineTypeResourceConsumptionAttributeId");
+
+                    b.ToTable("ResourceConsumptionAttributeAlertRules", (string)null);
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.Alert", b =>
+                {
+                    b.HasOne("Graduation_Project.Data.Models.Machine", "Machine")
+                        .WithMany("Alerts")
+                        .HasForeignKey("MachineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Machine");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.AlertChangeLog", b =>
+                {
+                    b.HasOne("Graduation_Project.Data.Models.Alert", "Alert")
+                        .WithMany("ChangeLogs")
+                        .HasForeignKey("AlertId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Alert");
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.Machine", b =>
@@ -347,8 +497,59 @@ namespace Graduation_Project.Migrations
                     b.Navigation("ResourceConsumptionAttribute");
                 });
 
+            modelBuilder.Entity("Graduation_Project.Data.Models.MonitoringAlert", b =>
+                {
+                    b.HasOne("Graduation_Project.Data.Models.MonitorAttributeAlertRule", "MonitorAttributeAlertRule")
+                        .WithMany("Alerts")
+                        .HasForeignKey("MonitorAttributeAlertRuleId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("MonitorAttributeAlertRule");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.ResourceConsumptionAlert", b =>
+                {
+                    b.HasOne("Graduation_Project.Data.Models.ResourceConsumptionAttributeAlertRule", "ResourceConsumptionAttributeAlertRule")
+                        .WithMany("Alerts")
+                        .HasForeignKey("ResourceConsumptionAttributeAlertRuleId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("ResourceConsumptionAttributeAlertRule");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.MonitorAttributeAlertRule", b =>
+                {
+                    b.HasOne("Graduation_Project.Data.Models.MachineTypeMonitoringAttribute", "MachineTypeMonitoringAttribute")
+                        .WithMany("AlertRules")
+                        .HasForeignKey("MachineTypeMonitoringAttributeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MachineTypeMonitoringAttribute");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.ResourceConsumptionAttributeAlertRule", b =>
+                {
+                    b.HasOne("Graduation_Project.Data.Models.MachineTypeResourceConsumptionAttribute", "MachineTypeResourceConsumptionAttribute")
+                        .WithMany("AlertRules")
+                        .HasForeignKey("MachineTypeResourceConsumptionAttributeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MachineTypeResourceConsumptionAttribute");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.Alert", b =>
+                {
+                    b.Navigation("ChangeLogs");
+                });
+
             modelBuilder.Entity("Graduation_Project.Data.Models.Machine", b =>
                 {
+                    b.Navigation("Alerts");
+
                     b.Navigation("MonitoringData");
 
                     b.Navigation("ResourceConsumptionData");
@@ -361,6 +562,16 @@ namespace Graduation_Project.Migrations
                     b.Navigation("MachineTypeResourceConsumptionAttributes");
 
                     b.Navigation("Machines");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeMonitoringAttribute", b =>
+                {
+                    b.Navigation("AlertRules");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeResourceConsumptionAttribute", b =>
+                {
+                    b.Navigation("AlertRules");
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MonitoringAttribute", b =>
@@ -380,6 +591,16 @@ namespace Graduation_Project.Migrations
             modelBuilder.Entity("Graduation_Project.Data.Models.System", b =>
                 {
                     b.Navigation("Machines");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.MonitorAttributeAlertRule", b =>
+                {
+                    b.Navigation("Alerts");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.ResourceConsumptionAttributeAlertRule", b =>
+                {
+                    b.Navigation("Alerts");
                 });
 #pragma warning restore 612, 618
         }
