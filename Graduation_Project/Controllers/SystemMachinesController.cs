@@ -14,7 +14,7 @@ namespace Graduation_Project.Controllers
         {
             _machineService = machineService;
         }
-        [HttpGet("{systemId:int}")]
+        [HttpGet]
         public IActionResult GetMachinesBySystemId(int systemId)
         {
             var Machines = _machineService.GetMachinesBySystemId(systemId);

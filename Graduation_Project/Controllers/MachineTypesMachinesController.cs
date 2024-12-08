@@ -8,11 +8,11 @@ namespace Graduation_Project.Controllers;
 public class MachineTypesMachinesController : Controller
 {
 
-    private readonly IMachineServices _machineTypeServices;
+    private readonly IMachineService _machineTypeService;
     [HttpGet]
     public IActionResult GetMachinesByMachineTypeId([FromRoute]int machineTypeId)
     {
-        var machines = _machineTypeServices.GetMachinesByMachineTypeIdAsync(machineTypeId);
+        var machines = _machineTypeService.GetMachinesByMachineTypeIdAsync(machineTypeId);
         return Ok(machines);
     }
 }

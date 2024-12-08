@@ -16,11 +16,17 @@ namespace Graduation_Project.Extenstions
         public static void RegisterServices(this IServiceCollection services)
         {
             services.AddScoped<IMonitoringAttributesService, MonitoringAttributesService>();
+            services.AddScoped<IMachineService, MachineService>();
+            services.AddScoped<ISystemService, SystemService>();
+            services.AddScoped<IMachineTypeServices, MachineTypeServices>();
         }
 
         public static void RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<IMonitoringAttributesRepository, MonitoringAttributesRepository>();
+            services.AddScoped<IMachineRepository, MachineRepository>();
+            services.AddScoped<ISystemRepository, SystemRepository>();
+            services.AddScoped<IMachinetypeRepository, MachineTypeRepository>();
         }
 
         public static void RegisterConfigurations(this IServiceCollection services)
