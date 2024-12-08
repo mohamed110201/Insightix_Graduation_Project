@@ -22,4 +22,17 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Modules\Machines\Validators\" />
+    <Folder Include="Modules\MachineTypesMachines\DTOs\" />
+    <Folder Include="Modules\MachineTypesMachines\Repository\" />
+    <Folder Include="Modules\MachineTypesMachines\Service\" />
+    <Folder Include="Modules\MachineTypesMachines\Validators\" />
+    <Folder Include="Modules\SystemsMachines\DTOs\" />
+    <Folder Include="Modules\SystemsMachines\Repository\" />
+    <Folder Include="Modules\SystemsMachines\Service\" />
+    <Folder Include="Modules\SystemsMachines\Validators\" />
+    <Folder Include="Modules\Systems\Validators\" />
+  </ItemGroup>
+
 </Project>

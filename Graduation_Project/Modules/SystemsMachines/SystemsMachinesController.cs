@@ -6,7 +6,7 @@ namespace Graduation_Project.Controllers
 {
     [Route("api/systems/{systemId:int}/machines")]
     [ApiController]
-    public class SystemMachinesController(IMachinesService machinesService) : ControllerBase
+    public class SystemsMachinesController(IMachinesService machinesService) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetMachinesBySystemId([FromRoute]int systemId)

@@ -3,7 +3,7 @@ using Graduation_Project.Repositories.Interfaces;
 
 namespace Graduation_Project.Repositories.Implementation
 {
-    public class SystemsesRepository(AppDbContext dbContext) : ISystemsRepository
+    public class SystemsRepository(AppDbContext dbContext) : ISystemsRepository
     {
         public async Task Add(Data.Models.System system)
         {
