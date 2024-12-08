@@ -1,0 +1,28 @@
+using Graduation_Project.Data;
+using Graduation_Project.Repositories.Interfaces;
+
+namespace Graduation_Project.Repositories.Implementation;
+
+public class MachineTypesRepository(AppDbContext dbContext) : IMachineTypesRepository
+{
+    public async Task<List<MachineType>> GetAll()
+    {
+        var machineTypes = await dbContext.MachineTypes.ToListAsync();
+        return machineTypes;
+    }
+
+    public async Task<MachineType?> GetById(int id)
+    {
+        var machineType = await dbContext.MachineTypes
+            .Include(mt => mt.MachineTypeMonitoringAttributes)
+            .Include(mt => mt.MachineTypeResourceConsumptionAttributes)
+            .FirstOrDefaultAsync(mt => mt.Id == id);
+        return machineType;
+    }
+
+    public async Task Add(MachineType machineType)
+    {
+        dbContext.MachineTypes.Add(machineType);
+        await dbContext.SaveChangesAsync();
+    }
+}

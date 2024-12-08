@@ -4,13 +4,11 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Services.Implementation;
 
-public class MachineTypeServices(IMachinetypeRepository machineTypeRepository) : IMachineTypeServices
+public class MachineTypesService(IMachineTypesRepository machineTypeRepository) : IMachineTypesService
 {
-    private readonly IMachinetypeRepository _machineTypeRepository = machineTypeRepository;
-
-    public async Task<List<MachineTypeGetAllDto>> GetAllMachineTypesAsync()
+    public async Task<List<MachineTypeGetAllDto>> GetAll()
     {
-        var machineTypes = await _machineTypeRepository.GetAllMachineTypesAsync();
+        var machineTypes = await machineTypeRepository.GetAll();
         var machineTypesDtos = machineTypes.Select(mt => new MachineTypeGetAllDto()
         {
             Id = mt.Id,
@@ -20,9 +18,9 @@ public class MachineTypeServices(IMachinetypeRepository machineTypeRepository) :
         return machineTypesDtos.ToList();
     }
 
-    public async Task<MachineTypeGetByIdDto?> GetMachineTypeByIdAsync(int id)
+    public async Task<MachineTypeGetByIdDto?> GetById(int id)
     {
-        var machineType = await _machineTypeRepository.GetMachineTypeByIdAsync(id);
+        var machineType = await machineTypeRepository.GetById(id);
         if (machineType == null)
         {
             throw new NullReferenceException();
@@ -39,7 +37,7 @@ public class MachineTypeServices(IMachinetypeRepository machineTypeRepository) :
         return machineTypeDto;
     }
 
-    public async Task<MachineTypeGetByIdDto> AddMachineTypeAsync(MachineTypeRequestDto machineTypeRequestDto)
+    public async Task Add(MachineTypeRequestDto machineTypeRequestDto)
     {
         var machineType = new MachineType()
         {
@@ -63,16 +61,7 @@ public class MachineTypeServices(IMachinetypeRepository machineTypeRepository) :
                 MachineType = machineType,
                 ResourceConsumptionAttributeId = raId
             }).ToList();
-        }
-        var machineTypeAdded = await _machineTypeRepository.AddMachineTypeAsync(machineType);
-        var machineTypeDto = new MachineTypeGetByIdDto()
-        {
-            Id = machineTypeAdded.Id,
-            Name = machineTypeAdded.Name,
-            Model = machineTypeAdded.Model,
-            MonitoringAttributes = machineTypeAdded.MachineTypeMonitoringAttributes.Select(ma=>ma.MonitoringAttribute.Name).ToList(),  
-            ResourceConsumptionAttributes = machineTypeAdded.MachineTypeResourceConsumptionAttributes.Select(ra=>ra.ResourceConsumptionAttribute.Name).ToList()
-        };
-        return machineTypeDto;
+        } 
+        await machineTypeRepository.Add(machineType);
     }
 }
