@@ -1,4 +1,4 @@
-﻿using Graduation_Project.Data;
+using Graduation_Project.Data;
 using Graduation_Project.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +11,13 @@ namespace Graduation_Project.Repositories.Implementation
         public MachineRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
+        }
+        
+        public async Task<List<Machine>> GetMachinesByMachineTypeIdAsync(int machineTypeId)
+        {
+             return await _dbContext.Machines
+            .Where(m => m.MachineTypeId == machineTypeId)
+            .ToListAsync();
         }
 
         public Machine AddMachineToSystem(int systemId, Machine machine)
