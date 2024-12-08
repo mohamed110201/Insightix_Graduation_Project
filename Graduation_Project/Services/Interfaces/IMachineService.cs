@@ -1,4 +1,5 @@
 ﻿using Graduation_Project.Data.Dtos.Machine;
+using Graduation_Project.Data.Dtos.MachineDto;
 using Graduation_Project.Data.Dtos.SystemDto;
 
 namespace Graduation_Project.Services.Interfaces
@@ -9,6 +10,7 @@ namespace Graduation_Project.Services.Interfaces
         MachineDetailsDto? GetMachineById(int id);
         IEnumerable<MachinesInsideSystemDto> GetMachinesBySystemId(int systemId);
         MachinesInsideSystemDto AddMachineToSystem(int systemId, AddMachineToSystemDto addMachineToSystemDto);
+        Task<List<MachineTypeMachineResponseDto>> GetMachinesByMachineTypeIdAsync(int machineTypeId);
 
     }
 }
