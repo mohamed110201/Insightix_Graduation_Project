@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Graduation_Project/1.0.0": {
         "dependencies": {
+          "Bogus": "35.6.1",
           "Microsoft.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore.Design": "8.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11",
@@ -50,6 +51,14 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "Bogus/35.6.1": {
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "assemblyVersion": "35.6.1.0",
+            "fileVersion": "35.6.1.0"
           }
         }
       },
@@ -814,14 +823,7 @@
           }
         }
       },
-      "System.Formats.Asn1/8.0.1": {
-        "runtime": {
-          "lib/net8.0/System.Formats.Asn1.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.724.31311"
-          }
-        }
-      },
+      "System.Formats.Asn1/8.0.1": {},
       "System.IdentityModel.Tokens.Jwt/6.35.0": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "6.35.0",
@@ -975,6 +977,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "Bogus/35.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QPJ8zLL0ScEunEoUNhMDigD4ykA/n7vXCZUQdGCFGHBfP2mNYjiCzR9Cj12eaFaDlwkhIC1HKQZihWl8OgbLsw==",
+      "path": "bogus/35.6.1",
+      "hashPath": "bogus.35.6.1.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
