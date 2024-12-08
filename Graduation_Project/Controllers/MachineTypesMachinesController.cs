@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Controllers;
 
-[Route("api/MachineType/Machines")]
+[Route("api/machineTypes/{machineTypeId:int}/machines")]
 [ApiController]
 public class MachineTypesMachinesController : Controller
 {
 
     private readonly IMachineServices _machineTypeServices;
-    [HttpGet("{MachineTypeId:int}")]
+    [HttpGet]
     public IActionResult GetMachinesByMachineTypeId([FromRoute]int machineTypeId)
     {
         var machines = _machineTypeServices.GetMachinesByMachineTypeIdAsync(machineTypeId);
