@@ -4,10 +4,15 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Services.Implementation;
 
-public class MachineServices(IMachineRepository machineRepository) : IMachineServices
+public class MachineServices(IMachineRepository machineRepository,IMachinetypeRepository machinetypeRepository) : IMachineServices
 {
     public async Task<List<MachineTypeMachineResponseDto>> GetMachinesByMachineTypeIdAsync(int machineTypeId)
     {
+        var machineType = await machinetypeRepository.GetMachineTypeByIdAsync(machineTypeId);
+        if (machineType == null)
+        {
+            throw new NullReferenceException();
+        }
         var machines = await machineRepository.GetMachinesByMachineTypeIdAsync(machineTypeId);
 
         if (!machines.Any())

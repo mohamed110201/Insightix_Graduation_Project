@@ -54,5 +54,7 @@ public class MachineTypesController(IMachineTypeServices machineTypeServices) : 
             Console.WriteLine(e);
             throw;
         }
+        
     }
+    
 }

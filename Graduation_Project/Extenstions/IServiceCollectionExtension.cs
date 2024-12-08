@@ -1,6 +1,13 @@
-﻿using Graduation_Project.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using Graduation_Project.Data;
+using Graduation_Project.Data.Dtos.MachineTypeDto;
+using Graduation_Project.Repositories.Implementation;
+using Graduation_Project.Repositories.Interfaces;
+using Graduation_Project.Services.Implementation;
+using Graduation_Project.Services.Interfaces;
+using Graduation_Project.Validators;
+
 
 namespace Graduation_Project.Extenstions
 {
@@ -9,11 +16,13 @@ namespace Graduation_Project.Extenstions
         
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
+            services.AddScoped<IMachineTypeServices, MachineTypeServices>();
             return services;
         }
 
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
+            services.AddScoped<IMachinetypeRepository,MachineTypeRepository>();
             return services;
         }
 
@@ -29,6 +38,13 @@ namespace Graduation_Project.Extenstions
             options.UseSqlServer(config.GetConnectionString("Default")));
             return services;
         }
-        
+        public static IServiceCollection RegisterValidators(this IServiceCollection services)
+        {
+
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssemblyContaining<MachineTypeValidator>();
+            return services;
+        }
+
     }
 }
