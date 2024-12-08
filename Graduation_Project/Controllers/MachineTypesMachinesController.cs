@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/MachineType/Machines")]
 [ApiController]
 public class MachineTypesMachinesController : Controller
 {
