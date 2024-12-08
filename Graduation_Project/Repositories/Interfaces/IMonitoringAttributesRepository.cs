@@ -4,6 +4,6 @@ namespace Graduation_Project.Repositories.Interfaces;
 
 public interface IMonitoringAttributesRepository
 {
-    public Task Add(MonitoringAttribute monitoringAttribute);
     public Task<List<MonitoringAttribute>> GetAll();
+    public Task Add(MonitoringAttribute monitoringAttribute);
 }

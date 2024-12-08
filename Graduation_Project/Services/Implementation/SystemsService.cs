@@ -5,33 +5,20 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Services.Implementation
 {
-    public class SystemService : ISystemService
+    public class SystemsService(ISystemsRepository systemsRepository) : ISystemsService
     {
-        private readonly ISystemRepository _systemRepository;
-
-        public SystemService(ISystemRepository systemRepository)
-        {
-            _systemRepository = systemRepository;
-        }
-        public GetSystemDto AddSystem(SystemRequestDto systemRequestDto)
+        public async Task Add(SystemRequestDto systemRequestDto)
         {
             var system = new Data.Models.System
             {
                 Name = systemRequestDto.Name
             };
-            var createdSystem = _systemRepository.Add(system);
-
-            return new GetSystemDto
-            {
-                Id = createdSystem.Id,
-                Name = createdSystem.Name
-   
-            };
+            await systemsRepository.Add(system);
         }
 
-        public IEnumerable<GetSystemDto> GetAllSystems()
+        public async Task<IEnumerable<GetSystemDto>> GetAll()
         {
-            var systems = _systemRepository.GetAll();
+            var systems = await systemsRepository.GetAll();
 
             return systems.Select(s => new GetSystemDto
             {
@@ -41,9 +28,9 @@ namespace Graduation_Project.Services.Implementation
             });
         }
 
-        public GetSystemDetailsDto? GetSystemById(int id)
+        public async Task<GetSystemDetailsDto?> GetById(int id)
         {
-            var system = _systemRepository.GetById(id);
+            var system = await systemsRepository.GetById(id);
 
             if (system == null) return null;
 

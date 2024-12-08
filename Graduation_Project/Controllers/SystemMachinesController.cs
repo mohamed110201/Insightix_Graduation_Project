@@ -4,21 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Controllers
 {
-    [Route("api/Systems/{systemId:int}/Machines")]
+    [Route("api/systems/{systemId:int}/machines")]
     [ApiController]
-    public class SystemMachinesController : ControllerBase
+    public class SystemMachinesController(IMachinesService machinesService) : ControllerBase
     {
-        private readonly IMachineService _machineService;
-
-        public SystemMachinesController(IMachineService machineService)
-        {
-            _machineService = machineService;
-        }
         [HttpGet]
-        public IActionResult GetMachinesBySystemId(int systemId)
+        public async Task<IActionResult> GetMachinesBySystemId([FromRoute]int systemId)
         {
-            var Machines = _machineService.GetMachinesBySystemId(systemId);
-            return Ok(Machines);
+            var machines = await machinesService.GetMachinesBySystemId(systemId);
+            return Ok(machines);
         }
     }
 }

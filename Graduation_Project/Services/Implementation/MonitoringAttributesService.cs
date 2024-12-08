@@ -4,7 +4,7 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Services.Implementation;
 
-public class MonitoringAttributesService(IMonitoringAttributesRepository repo):IMonitoringAttributesService
+public class MonitoringAttributesService(IMonitoringAttributesRepository monitoringAttributesRepository):IMonitoringAttributesService
 {
     public async Task Add(AddMonitoringAttributeDto addMonitoringAttributeDto)
     {
@@ -14,12 +14,12 @@ public class MonitoringAttributesService(IMonitoringAttributesRepository repo):I
             Unit = addMonitoringAttributeDto.Unit,
         };
         
-        await repo.Add(monitoringAttribute);
+        await monitoringAttributesRepository.Add(monitoringAttribute);
     }
 
     public async Task<List<GetAllMonitoringAttributeDto>> GetAll()
     {
-        var monitoringAttributes = await repo.GetAll();
+        var monitoringAttributes = await monitoringAttributesRepository.GetAll();
         var getMonitoringAttributeDtoList = monitoringAttributes.Select(x => new GetAllMonitoringAttributeDto
         {
             Id = x.Id,

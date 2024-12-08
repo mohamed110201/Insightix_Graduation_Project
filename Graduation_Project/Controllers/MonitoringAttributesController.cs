@@ -9,20 +9,18 @@ using Microsoft.AspNetCore.Mvc;
 namespace Graduation_Project.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/monitoring-attributes")]
 public class MonitoringAttributesController(IMonitoringAttributesService monitoringAttributesService) : ControllerBase
 {
-    [Route("")]
     [HttpGet]
-    public async Task<ActionResult> GetAll()
+    public async Task<IActionResult> GetAll()
     {
         var monitoringAttributes = await monitoringAttributesService.GetAll();
         return JSend.Success(data:monitoringAttributes);
     }
 
-    [Route("")]
     [HttpPost]
-    public async Task<ActionResult> Add([FromBody] AddMonitoringAttributeDto addMonitoringAttributeDto)
+    public async Task<IActionResult> Add([FromBody] AddMonitoringAttributeDto addMonitoringAttributeDto)
     {
         await monitoringAttributesService.Add(addMonitoringAttributeDto);
         return JSend.Created(message:"Monitoring Attribute Added Successfully");

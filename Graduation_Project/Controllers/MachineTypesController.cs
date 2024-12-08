@@ -4,17 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/machine-types")]
 [ApiController]
-public class MachineTypesController(IMachineTypeServices machineTypeServices) : Controller
+public class MachineTypesController(IMachineTypesService machineTypesService) : Controller
 {
-    private readonly IMachineTypeServices _machineTypeServices = machineTypeServices;
     [HttpGet]
-    public async Task<IActionResult> GetAllMachineTypes()
+    public async Task<IActionResult> GetAll()
     {
         try
         {
-            var machineTypes = await _machineTypeServices.GetAllMachineTypesAsync();
+            var machineTypes = await machineTypesService.GetAll();
             return Ok(machineTypes);
         }
         catch (Exception e)
@@ -25,11 +24,11 @@ public class MachineTypesController(IMachineTypeServices machineTypeServices) : 
         
     }
     [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetMachineTypeById(int id)
+    public async Task<IActionResult> GetById([FromRoute]int id)
     {
         try
         {
-            var machineType = await _machineTypeServices.GetMachineTypeByIdAsync(id);
+            var machineType = await machineTypesService.GetById(id);
             return Ok(machineType);
         }
         catch (Exception e)
@@ -40,14 +39,13 @@ public class MachineTypesController(IMachineTypeServices machineTypeServices) : 
     }
 
     [HttpPost]
-
-    public async Task<IActionResult> CreateMachineType(MachineTypeRequestDto machineTypeRequestDto)
+    public async Task<IActionResult> Add([FromBody]MachineTypeRequestDto machineTypeRequestDto)
     {
         
         try
         {
-            var machineTypeCreated = await _machineTypeServices.AddMachineTypeAsync(machineTypeRequestDto);
-            return Created(machineTypeCreated.Id.ToString(), machineTypeCreated);
+            await machineTypesService.Add(machineTypeRequestDto);
+            return Created();
         }
         catch (Exception e)
         {
