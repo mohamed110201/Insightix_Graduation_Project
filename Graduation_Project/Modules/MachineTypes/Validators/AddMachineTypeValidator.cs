@@ -3,9 +3,9 @@ using Graduation_Project.Data.Dtos.MachineTypeDto;
 
 namespace Graduation_Project.Validators;
 
-public class MachineTypeValidator : AbstractValidator<MachineTypeRequestDto>
+public class AddMachineTypeValidator : AbstractValidator<MachineTypeRequestDto>
 {
-    public MachineTypeValidator()
+    public AddMachineTypeValidator()
     {
         RuleFor(x => x.Name)
             .NotEmpty()

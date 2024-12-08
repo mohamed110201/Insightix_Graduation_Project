@@ -25,7 +25,7 @@ namespace Graduation_Project.Extenstions
         {
             services.AddScoped<IMonitoringAttributesRepository, MonitoringAttributesRepository>();
             services.AddScoped<IMachinesRepository, MachinesRepository>();
-            services.AddScoped<ISystemsRepository, SystemsesRepository>();
+            services.AddScoped<ISystemsRepository, SystemsRepository>();
             services.AddScoped<IMachineTypesRepository, MachineTypesRepository>();
         }
 
