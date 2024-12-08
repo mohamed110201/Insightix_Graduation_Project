@@ -1,4 +1,5 @@
 ﻿using Graduation_Project.Data.Dtos.Machine;
+using Graduation_Project.Data.Dtos.MachineDto;
 using Graduation_Project.Data.Dtos.SystemDto;
 using Graduation_Project.Repositories.Implementation;
 using Graduation_Project.Repositories.Interfaces;
@@ -6,13 +7,9 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Services.Implementation
 {
-    public class MachineService : IMachineService
+    public class MachineService(IMachineRepository machineRepository,IMachinetypeRepository machinetypeRepository) : IMachineService
     {
-        private readonly IMachineRepository _machineRepository;
-        public MachineService(IMachineRepository machineRepository)
-        {
-            _machineRepository = machineRepository;
-        }
+        private readonly IMachineRepository _machineRepository = machineRepository;
 
         public MachinesInsideSystemDto AddMachineToSystem(int systemId, AddMachineToSystemDto addMachineToSystemDto)
         {
@@ -30,6 +27,28 @@ namespace Graduation_Project.Services.Implementation
                 SerialNumber = createdMachine.SerialNumber,
                 MachineTypeName = createdMachine.MachineType.Name
             };
+        }
+
+        public async Task<List<MachineTypeMachineResponseDto>> GetMachinesByMachineTypeIdAsync(int machineTypeId)
+        {
+            var machineType = await machinetypeRepository.GetMachineTypeByIdAsync(machineTypeId);
+            if (machineType == null)
+            {
+                throw new NullReferenceException();
+            }
+            var machines = await machineRepository.GetMachinesByMachineTypeIdAsync(machineTypeId);
+
+            if (!machines.Any())
+            {
+            }
+
+            var machinesDto = machines.Select(m => new MachineTypeMachineResponseDto()
+            {
+                Id = m.Id,
+                SystemId = m.SystemId,
+                SerialNumber = m.SerialNumber
+            });
+            return machinesDto.ToList();    
         }
 
         public IEnumerable<AllMachinesAcrossAllSystemsDto> GetAllMachines()
