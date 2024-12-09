@@ -7,5 +7,7 @@ public interface IMonitoringAttributesService
     public Task Add(AddMonitoringAttributeDto addMonitoringAttributeDto);
     
     public Task<List<GetAllMonitoringAttributeDto>> GetAll();
+    public Task<List<GetAllMonitoringAttributeDto>> GetByMachineTypeId(int machineTypeId);
+
 
 }
