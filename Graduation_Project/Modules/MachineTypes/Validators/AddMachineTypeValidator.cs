@@ -2,6 +2,7 @@ using FluentValidation;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
 using Graduation_Project.Repositories.Interfaces;
 
+
 namespace Graduation_Project.Validators;
 
 public class AddMachineTypeValidator : AbstractValidator<MachineTypeRequestDto>
@@ -10,6 +11,7 @@ public class AddMachineTypeValidator : AbstractValidator<MachineTypeRequestDto>
     public AddMachineTypeValidator(IMachineTypesRepository machineTypesRepository)
     {
         _machineTypesRepository = machineTypesRepository;
+
         RuleFor(x => x.Name)
             .NotEmpty()
             .MaximumLength(25);
@@ -38,4 +40,5 @@ public class AddMachineTypeValidator : AbstractValidator<MachineTypeRequestDto>
             return true;
         return false;
     }
+
 }

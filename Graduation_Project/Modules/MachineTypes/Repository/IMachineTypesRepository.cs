@@ -8,6 +8,5 @@ public interface IMachineTypesRepository
     Task<MachineType?> GetById(int id);
     Task Add(MachineType machineType);
     MachineType? FindByModel(string model);
-
-
+  
 }
