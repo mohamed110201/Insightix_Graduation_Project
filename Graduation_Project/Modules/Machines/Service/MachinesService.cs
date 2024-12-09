@@ -1,9 +1,11 @@
-﻿using Graduation_Project.Data.Dtos.Machine;
+﻿using Graduation_Project.Core.ErrorHandling.Exceptions;
+using Graduation_Project.Data.Dtos.Machine;
 using Graduation_Project.Data.Dtos.MachineDto;
 using Graduation_Project.Data.Dtos.SystemDto;
 using Graduation_Project.Repositories.Implementation;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Graduation_Project.Services.Implementation
 {
@@ -42,11 +44,11 @@ namespace Graduation_Project.Services.Implementation
             return machinesDto.ToList();    
         }
 
-        public async Task<IEnumerable<AllMachinesAcrossAllSystemsDto>> GetAll()
+        public async Task<IEnumerable<GetAllMachinesAcrossAllSystemsDto>> GetAll()
         {
              var machines = await machinesRepository.GetAll();
 
-            return machines.Select(m => new AllMachinesAcrossAllSystemsDto
+            return machines.Select(m => new GetAllMachinesAcrossAllSystemsDto
             {
                 Id = m.Id,
                 SystemName=m.System.Name,
@@ -56,13 +58,14 @@ namespace Graduation_Project.Services.Implementation
             });
         }
 
-        public async Task<MachineDetailsDto?> GetById(int id)
+        public async Task<GetMachineByIdDto?> GetById(int id)
         { 
             var machine = await machinesRepository.GetById(id);
 
-            if (machine == null) return null;
+            if (machine == null)
+                throw new NotFoundError("Machine With This Id Does Not Exist");
 
-            return new MachineDetailsDto
+            return new GetMachineByIdDto
             {
                 Id = machine.Id,
                 SystemName = machine.System.Name,

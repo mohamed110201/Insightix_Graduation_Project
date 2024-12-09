@@ -1,4 +1,5 @@
-﻿using Graduation_Project.Data.Dtos.Machine;
+﻿using Graduation_Project.Core.JSend;
+using Graduation_Project.Data.Dtos.Machine;
 using Graduation_Project.Services.Implementation;
 using Graduation_Project.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -14,18 +15,14 @@ namespace Graduation_Project.Controllers
         public async Task<IActionResult> GetAll()
         {
             var machines = await machinesService.GetAll();
-            return Ok(machines);
+            return JSend.Success(data:machines);
         }
 
         [HttpGet("{machineId:int}")]
         public async Task<IActionResult> GetById([FromRoute] int machineId)
         {
             var machine = await machinesService.GetById(machineId);
-            if (machine == null)
-            {
-                return NotFound($"Machine with ID {machineId} not found.");
-            }
-            return Ok(machine);
+            return JSend.Success(data:machine);
         }
 
         

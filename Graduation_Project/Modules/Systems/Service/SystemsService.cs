@@ -1,4 +1,5 @@
-﻿using Graduation_Project.Data.Dtos.Machine;
+﻿using Graduation_Project.Core.ErrorHandling.Exceptions;
+using Graduation_Project.Data.Dtos.Machine;
 using Graduation_Project.Data.Dtos.SystemDto;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
@@ -32,7 +33,7 @@ namespace Graduation_Project.Services.Implementation
         {
             var system = await systemsRepository.GetById(id);
 
-            if (system == null) return null;
+            if (system == null) throw new NotFoundError("System With This Id Does Not Exist");
 
             return new GetSystemByIdDto
             {

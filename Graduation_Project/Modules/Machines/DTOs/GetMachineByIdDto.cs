@@ -1,6 +1,6 @@
 ﻿namespace Graduation_Project.Data.Dtos.Machine
 {
-    public class MachineDetailsDto
+    public class GetMachineByIdDto
     {
         //Will Be Adjusted Later
         public int Id { get; set; }

@@ -1,4 +1,5 @@
-﻿using Graduation_Project.Data.Dtos.SystemDto;
+﻿using Graduation_Project.Core.JSend;
+using Graduation_Project.Data.Dtos.SystemDto;
 using Graduation_Project.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,35 +10,26 @@ namespace Graduation_Project.Controllers
     [ApiController]
     public class SystemsController(ISystemsService systemsService) : ControllerBase
     {
-        [HttpPost]
-        public async Task<IActionResult> Add([FromBody]AddSystemDto AddSystemDto)
-        {
-            if (string.IsNullOrEmpty(AddSystemDto.Name))
-            {
-                return BadRequest("System name is required.");
-            }
-
-            await systemsService.Add(AddSystemDto);
-            return Created();
-        }
-
+      
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var systems =await  systemsService.GetAll();
-            return Ok(systems);
+            return JSend.Success(data:systems);
         }
 
         [HttpGet("{systemId:int}")]
         public async Task<IActionResult> GetById([FromRoute]int systemId)
         {
             var system = await systemsService.GetById(systemId);
-            if (system == null)
-            {
-                return NotFound($"System with ID {systemId} not found.");
-            }
+            return JSend.Success(data:system);
+        }
 
-            return Ok(system);
+        [HttpPost]
+        public async Task<IActionResult> Add([FromBody] AddSystemDto AddSystemDto)
+        {
+            await systemsService.Add(AddSystemDto);
+            return JSend.Created("System Was Added Successfully");
         }
     }
 }
