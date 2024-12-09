@@ -1,6 +1,6 @@
 ﻿namespace Graduation_Project.Data.Dtos.Machine
 {
-    public class AllMachinesAcrossAllSystemsDto
+    public class GetAllMachinesAcrossAllSystemsDto
 
     {
         public int Id { get; set; }
