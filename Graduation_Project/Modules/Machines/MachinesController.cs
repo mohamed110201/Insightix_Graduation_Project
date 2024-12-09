@@ -1,4 +1,5 @@
-﻿using Graduation_Project.Services.Implementation;
+﻿using Graduation_Project.Data.Dtos.Machine;
+using Graduation_Project.Services.Implementation;
 using Graduation_Project.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,5 +27,9 @@ namespace Graduation_Project.Controllers
             }
             return Ok(machine);
         }
+
+        
+
+
     }
 }

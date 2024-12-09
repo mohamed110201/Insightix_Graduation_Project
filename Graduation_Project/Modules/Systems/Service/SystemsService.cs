@@ -7,20 +7,20 @@ namespace Graduation_Project.Services.Implementation
 {
     public class SystemsService(ISystemsRepository systemsRepository) : ISystemsService
     {
-        public async Task Add(SystemRequestDto systemRequestDto)
+        public async Task Add(AddSystemDto AddSystemDto)
         {
             var system = new Data.Models.System
             {
-                Name = systemRequestDto.Name
+                Name = AddSystemDto.Name
             };
             await systemsRepository.Add(system);
         }
 
-        public async Task<IEnumerable<GetSystemDto>> GetAll()
+        public async Task<IEnumerable<GetAllSystemsDto>> GetAll()
         {
             var systems = await systemsRepository.GetAll();
 
-            return systems.Select(s => new GetSystemDto
+            return systems.Select(s => new GetAllSystemsDto
             {
                 Id = s.Id,
                 Name = s.Name,
@@ -28,17 +28,17 @@ namespace Graduation_Project.Services.Implementation
             });
         }
 
-        public async Task<GetSystemDetailsDto?> GetById(int id)
+        public async Task<GetSystemByIdDto?> GetById(int id)
         {
             var system = await systemsRepository.GetById(id);
 
             if (system == null) return null;
 
-            return new GetSystemDetailsDto
+            return new GetSystemByIdDto
             {
                 Id = system.Id,
                 Name = system.Name,
-                Machines = system.Machines.Select(m => new MachinesInsideSystemDto
+                Machines = system.Machines.Select(m => new GetMachinesBySystemIdDto
                 {
                     Id = m.Id,
                     SerialNumber = m.SerialNumber,

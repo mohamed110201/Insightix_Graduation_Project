@@ -14,7 +14,7 @@ namespace Graduation_Project.Services.Implementation
             var machine = new Machine
             {
                 SerialNumber = addMachineToSystemDto.SerialNumber,
-                //MachineTypeId = addMachineToSystemDto.MachineTypeId,
+                MachineTypeId = addMachineToSystemDto.MachineTypeId,
             };
 
             await machinesRepository.AddMachineToSystem(systemId, machine);
@@ -71,10 +71,10 @@ namespace Graduation_Project.Services.Implementation
             };
         }
 
-        public async Task<IEnumerable<MachinesInsideSystemDto>> GetMachinesBySystemId(int systemId)
+        public async Task<IEnumerable<GetMachinesBySystemIdDto>> GetMachinesBySystemId(int systemId)
         {
             var machines = await machinesRepository.GetMachinesBySystemId(systemId);
-            return machines.Select(m => new MachinesInsideSystemDto
+            return machines.Select(m => new GetMachinesBySystemIdDto
             {
                 Id = m.Id,
                 SerialNumber = m.SerialNumber,

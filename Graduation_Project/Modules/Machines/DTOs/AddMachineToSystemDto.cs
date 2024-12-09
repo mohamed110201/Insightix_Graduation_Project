@@ -2,7 +2,7 @@
 {
     public class AddMachineToSystemDto
     {
-        public string MachineTypeName { get; set; } = null!;
+        public int MachineTypeId { get; set; }
         public string SerialNumber { get; set; } = null!;
     }
 }
