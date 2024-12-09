@@ -7,5 +7,8 @@ public interface IResourceConsumptionAttributesService
     public Task Add(AddResourceConsumptionAttributeDto addResourceConsumptionAttributeDto);
     
     public Task<List<GetAllResourceConsumptionAttributeDto>> GetAll();
+    
+    public Task<List<GetAllResourceConsumptionAttributeDto>> GetByMachineTypeId(int machineTypeId);
+
 
 }

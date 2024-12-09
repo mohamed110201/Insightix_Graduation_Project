@@ -29,4 +29,17 @@ public class ResourceConsumptionAttributesService(IResourceConsumptionAttributes
         
         return getAllResourceConsumptionAttributeDtos;
     }
+
+    public async Task<List<GetAllResourceConsumptionAttributeDto>> GetByMachineTypeId(int machineTypeId)
+    {
+        var resourceConsumptionAttributes = await resourceConsumptionAttributesRepository.GetByMachineTypeId(machineTypeId);
+        var getAllResourceConsumptionAttributeDtos = resourceConsumptionAttributes.Select(x => new GetAllResourceConsumptionAttributeDto()
+        {
+            Id = x.Id,
+            Name = x.Name,
+            Unit = x.Unit,
+        }).ToList();
+        
+        return getAllResourceConsumptionAttributeDtos;
+    }
 }

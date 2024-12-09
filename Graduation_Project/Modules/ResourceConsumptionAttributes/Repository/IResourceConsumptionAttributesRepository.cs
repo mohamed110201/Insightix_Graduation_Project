@@ -6,5 +6,6 @@ public interface IResourceConsumptionAttributesRepository
 {
     public Task<List<ResourceConsumptionAttribute>> GetAll();
     public Task Add(ResourceConsumptionAttribute resourceConsumptionAttribute);
-    
+    public Task<List<ResourceConsumptionAttribute>> GetByMachineTypeId(int machineTypeId);
+
 }
