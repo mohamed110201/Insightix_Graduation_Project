@@ -1,3 +1,5 @@
+using Graduation_Project.Core;
+using Graduation_Project.Core.JSend;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
 using Graduation_Project.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -11,48 +13,24 @@ public class MachineTypesController(IMachineTypesService machineTypesService) : 
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        try
-        {
-            var machineTypes = await machineTypesService.GetAll();
-            return Ok(machineTypes);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-        
+        var machineTypes = await machineTypesService.GetAll();
+        return JSend.Success(data:machineTypes);
     }
+
     [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetById([FromRoute]int id)
+    public async Task<IActionResult> GetById([FromRoute] int id)
     {
-        try
-        {
+        
             var machineType = await machineTypesService.GetById(id);
-            return Ok(machineType);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+            return JSend.Success(data:machineType);
+       
     }
 
     [HttpPost]
-    public async Task<IActionResult> Add([FromBody]MachineTypeRequestDto machineTypeRequestDto)
+    public async Task<IActionResult> Add([FromBody] MachineTypeRequestDto machineTypeRequestDto)
     {
-        
-        try
-        {
             await machineTypesService.Add(machineTypeRequestDto);
-            return Created();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-        
+            return JSend.Created(message:"Machine Type Added Successfully");
+            
     }
-    
 }

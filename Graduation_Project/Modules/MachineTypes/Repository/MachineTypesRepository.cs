@@ -25,4 +25,10 @@ public class MachineTypesRepository(AppDbContext dbContext) : IMachineTypesRepos
         dbContext.MachineTypes.Add(machineType);
         await dbContext.SaveChangesAsync();
     }
+    
+    public MachineType? FindByModel(string model)
+    {
+        var machineType = dbContext.MachineTypes.FirstOrDefault(mt => mt.Model == model);
+        return machineType;
+    }
 }

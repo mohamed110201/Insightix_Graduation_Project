@@ -1,3 +1,4 @@
+using Graduation_Project.Core.ErrorHandling.Exceptions;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
@@ -23,7 +24,7 @@ public class MachineTypesService(IMachineTypesRepository machineTypeRepository) 
         var machineType = await machineTypeRepository.GetById(id);
         if (machineType == null)
         {
-            throw new NullReferenceException();
+            throw new NotFoundError("Machine Type not found");
         }
 
         var machineTypeDto = new MachineTypeGetByIdDto()
