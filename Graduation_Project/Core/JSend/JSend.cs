@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Graduation_Project.Core;
+namespace Graduation_Project.Core.JSend;
 
 public static class JSend
 {

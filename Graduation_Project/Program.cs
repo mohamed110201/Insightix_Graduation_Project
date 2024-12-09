@@ -1,3 +1,5 @@
+using System.Text.Json;
+using Graduation_Project.Core.ErrorHandling;
 using Graduation_Project.Extenstions;
 using Graduation_Project.Filters;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +25,7 @@ builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
-
+app.RegisterMiddlewares();
 app.Services.AddSeedData();
 
 // Configure the HTTP request pipeline.
