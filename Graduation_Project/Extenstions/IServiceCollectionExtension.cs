@@ -16,6 +16,7 @@ namespace Graduation_Project.Extenstions
         public static void RegisterServices(this IServiceCollection services)
         {
             services.AddScoped<IMonitoringAttributesService, MonitoringAttributesService>();
+            services.AddScoped<IResourceConsumptionAttributesService, ResourceConsumptionAttributesService>();
             services.AddScoped<IMachinesService, MachinesService>();
             services.AddScoped<ISystemsService, SystemsService>();
             services.AddScoped<IMachineTypesService, MachineTypesService>();
@@ -24,6 +25,7 @@ namespace Graduation_Project.Extenstions
         public static void RegisterRepositories(this IServiceCollection services)
         {
             services.AddScoped<IMonitoringAttributesRepository, MonitoringAttributesRepository>();
+            services.AddScoped<IResourceConsumptionAttributesRepository, ResourceConsumptionAttributesRepository>();
             services.AddScoped<IMachinesRepository, MachinesRepository>();
             services.AddScoped<ISystemsRepository, SystemsRepository>();
             services.AddScoped<IMachineTypesRepository, MachineTypesRepository>();
@@ -35,8 +37,6 @@ namespace Graduation_Project.Extenstions
             {
                 options.SuppressModelStateInvalidFilter = true;
             });
-            
-            // services.Configure<RouteOptions>(options => options.LowercaseUrls = true); 
         }
         
         public static void RegisterValidations(this IServiceCollection services)

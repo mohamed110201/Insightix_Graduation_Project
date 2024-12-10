@@ -2,10 +2,10 @@
 
 namespace Graduation_Project.Data.Dtos.SystemDto
 {
-    public class GetSystemDetailsDto
+    public class GetSystemByIdDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public ICollection<MachinesInsideSystemDto> Machines { get; set; } = [];
+        public ICollection<GetMachinesBySystemIdDto> Machines { get; set; } = [];
     }
 }

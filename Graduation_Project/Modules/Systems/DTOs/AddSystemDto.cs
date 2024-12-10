@@ -1,6 +1,6 @@
 ﻿namespace Graduation_Project.Data.Dtos.SystemDto
 {
-    public class SystemRequestDto
+    public class AddSystemDto
     {
       public string Name { get; set; } = null!;
 

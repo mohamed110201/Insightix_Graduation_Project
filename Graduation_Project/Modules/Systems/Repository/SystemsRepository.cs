@@ -21,5 +21,10 @@ namespace Graduation_Project.Repositories.Implementation
             return await dbContext.Systems.Include(s => s.Machines).ThenInclude(m => m.MachineType)
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
+
+        public Data.Models.System? SearchByName(string name)
+        {
+            return dbContext.Systems.FirstOrDefault(s => s.Name == name);
+        }
     }
 }

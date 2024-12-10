@@ -29,4 +29,17 @@ public class MonitoringAttributesService(IMonitoringAttributesRepository monitor
         
         return getMonitoringAttributeDtoList;
     }
+
+    public async Task<List<GetAllMonitoringAttributeDto>> GetByMachineTypeId(int machineTypeId)
+    {
+        var monitoringAttributes = await monitoringAttributesRepository.GetByMachineTypeId(machineTypeId);
+        var getMonitoringAttributeDtoList = monitoringAttributes.Select(x => new GetAllMonitoringAttributeDto
+        {
+            Id = x.Id,
+            Name = x.Name,
+            Unit = x.Unit,
+        }).ToList();
+        
+        return getMonitoringAttributeDtoList;
+    }
 }
