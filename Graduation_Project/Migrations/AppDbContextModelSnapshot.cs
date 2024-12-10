@@ -165,16 +165,10 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("LowerRange")
-                        .HasColumnType("int");
-
                     b.Property<int>("MachineTypeId")
                         .HasColumnType("int");
 
                     b.Property<int>("MonitoringAttributeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UpperRange")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -194,16 +188,10 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("LowerRange")
-                        .HasColumnType("int");
-
                     b.Property<int>("MachineTypeId")
                         .HasColumnType("int");
 
                     b.Property<int>("ResourceConsumptionAttributeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UpperRange")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
