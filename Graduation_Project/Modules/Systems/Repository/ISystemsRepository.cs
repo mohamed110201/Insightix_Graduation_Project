@@ -6,5 +6,7 @@
         Task<List<Data.Models.System>> GetAll();
         Task<Data.Models.System?> GetById(int id);
 
+        Data.Models.System? SearchByName(string name);
+
     }
 }

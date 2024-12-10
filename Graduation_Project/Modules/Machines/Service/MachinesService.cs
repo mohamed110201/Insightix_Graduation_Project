@@ -22,7 +22,7 @@ namespace Graduation_Project.Services.Implementation
             await machinesRepository.AddMachineToSystem(systemId, machine);
         }
 
-        public async Task<List<MachineTypeMachineResponseDto>> GetMachinesByMachineTypeId(int machineTypeId)
+        public async Task<List<GetMachineByMachineTypeIdDto>> GetMachinesByMachineTypeId(int machineTypeId)
         {
             var machineType = await machineTypesRepository.GetById(machineTypeId);
             if (machineType == null)
@@ -35,7 +35,7 @@ namespace Graduation_Project.Services.Implementation
             {
             }
 
-            var machinesDto = machines.Select(m => new MachineTypeMachineResponseDto()
+            var machinesDto = machines.Select(m => new GetMachineByMachineTypeIdDto()
             {
                 Id = m.Id,
                 SystemId = m.SystemId,

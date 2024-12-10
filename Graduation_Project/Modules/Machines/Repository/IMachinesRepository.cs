@@ -8,5 +8,8 @@ namespace Graduation_Project.Repositories.Interfaces
         Task<List<Machine>> GetMachinesBySystemId(int systemId);
         Task AddMachineToSystem(int systemId, Machine machine);
         Task<List<Machine>> GetMachinesByMachineTypeId(int machineTypeId);
+
+        Machine? SearchBySerialNumber(string serialNumber);
+
     }
 }

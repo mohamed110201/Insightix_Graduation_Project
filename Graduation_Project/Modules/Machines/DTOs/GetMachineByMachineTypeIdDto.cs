@@ -1,6 +1,6 @@
 namespace Graduation_Project.Data.Dtos.MachineDto;
 
-public class MachineTypeMachineResponseDto
+public class GetMachineByMachineTypeIdDto
 {
     public int Id { get; set; }
     public int SystemId { get; set; }

@@ -10,7 +10,7 @@ namespace Graduation_Project.Services.Interfaces
         Task<GetMachineByIdDto?> GetById(int id);
         Task<IEnumerable<GetMachinesBySystemIdDto>> GetMachinesBySystemId(int systemId);
         Task AddMachineToSystem(int systemId, AddMachineToSystemDto addMachineToSystemDto);
-        Task<List<MachineTypeMachineResponseDto>> GetMachinesByMachineTypeId(int machineTypeId);
+        Task<List<GetMachineByMachineTypeIdDto>> GetMachinesByMachineTypeId(int machineTypeId);
 
     }
 }
