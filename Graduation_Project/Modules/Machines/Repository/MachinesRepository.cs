@@ -39,5 +39,11 @@ namespace Graduation_Project.Repositories.Implementation
                 .Where(m => m.SystemId == systemId)
                 .ToListAsync();
         }
+
+        public  Machine? SearchBySerialNumber(string serialNumber)
+        {
+           return  dbContext.Machines.FirstOrDefault(m => m.SerialNumber == serialNumber);
+        }
+       
     }
 }
