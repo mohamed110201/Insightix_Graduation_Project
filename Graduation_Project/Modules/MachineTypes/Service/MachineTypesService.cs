@@ -50,9 +50,10 @@ public class MachineTypesService(IMachineTypesRepository machineTypeRepository) 
         {
             machineType.MachineTypeMonitoringAttributes = machineTypeRequestDto.MonitoringAttributeIds.Select(maId => new MachineTypeMonitoringAttribute()
             {
-                MachineTypeId = machineType.Id,
+                MachineType = machineType,
                 MonitoringAttributeId = maId
             }).ToList();
+            
         }
         
         if (machineTypeRequestDto.ResourceConsumptionAttributeIds.Any())
