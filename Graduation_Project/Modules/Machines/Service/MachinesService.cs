@@ -9,25 +9,28 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Graduation_Project.Services.Implementation
 {
-    public class MachinesService(IMachinesRepository machinesRepository,IMachineTypesRepository machineTypesRepository, ISystemsRepository systemsRepository) : IMachinesService
+    public class MachinesService(IMachinesRepository machinesRepository,IMachineTypesRepository machineTypesRepository,ISystemsRepository systemsRepository) : IMachinesService
     {
+       
 
         public async Task<IEnumerable<GetAllMachinesAcrossAllSystemsDto>> GetAll()
         {
+            
+
             var machines = await machinesRepository.GetAll();
 
             return machines.Select(m => new GetAllMachinesAcrossAllSystemsDto
             {
                 Id = m.Id,
-                SystemName = m.System.Name,
-                SerialNumber = m.SerialNumber,
-                MachineTypeName = m.MachineType.Name,
+                SystemName=m.System.Name,
+                SerialNumber=m.SerialNumber,
+                MachineTypeName=m.MachineType.Name,
 
             });
         }
 
         public async Task<GetMachineByIdDto?> GetById(int id)
-        {
+        { 
             var machine = await machinesRepository.GetById(id);
 
             if (machine == null)
@@ -41,7 +44,8 @@ namespace Graduation_Project.Services.Implementation
                 MachineTypeName = machine.MachineType.Name,
             };
         }
-       
+
+
 
         public async Task<List<GetMachineByMachineTypeIdDto>> GetMachinesByMachineTypeId(int machineTypeId)
         {
@@ -62,9 +66,8 @@ namespace Graduation_Project.Services.Implementation
                 SystemId = m.SystemId,
                 SerialNumber = m.SerialNumber
             });
-            return machinesDto.ToList();    
+            return machinesDto.ToList();
         }
-
 
         public async Task<IEnumerable<GetMachinesBySystemIdDto>> GetMachinesBySystemId(int systemId)
         {
