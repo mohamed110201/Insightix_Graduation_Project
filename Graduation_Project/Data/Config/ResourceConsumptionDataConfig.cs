@@ -8,8 +8,8 @@ namespace Graduation_Project.Data.Config
             builder.ToTable("ResourceConsumptionData");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.TimeStamp).HasColumnType("datetime");
-            builder.Property(x => x.Value).HasColumnType("int");
+            builder.Property(x => x.TimeStamp);
+            builder.Property(x => x.Value);
 
             builder.HasOne(x => x.Machine)
                 .WithMany(x => x.ResourceConsumptionData)

@@ -6,19 +6,22 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateSequence(
+                name: "AlertRuleSequence");
+
             migrationBuilder.CreateTable(
                 name: "MachineTypes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
-                    Model = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,8 +34,8 @@ namespace Graduation_Project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
-                    Unit = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,8 +48,8 @@ namespace Graduation_Project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
-                    Unit = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -59,7 +62,7 @@ namespace Graduation_Project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -95,7 +98,7 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MachineTypeResourceConsumptionAttribute",
+                name: "MachineTypeResourceConsumptionAttributes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -107,15 +110,15 @@ namespace Graduation_Project.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MachineTypeResourceConsumptionAttribute", x => x.Id);
+                    table.PrimaryKey("PK_MachineTypeResourceConsumptionAttributes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MachineTypeResourceConsumptionAttribute_MachineTypes_MachineTypeId",
+                        name: "FK_MachineTypeResourceConsumptionAttributes_MachineTypes_MachineTypeId",
                         column: x => x.MachineTypeId,
                         principalTable: "MachineTypes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MachineTypeResourceConsumptionAttribute_ResourceConsumptionAttributes_ResourceConsumptionAttributeId",
+                        name: "FK_MachineTypeResourceConsumptionAttributes_ResourceConsumptionAttributes_ResourceConsumptionAttributeId",
                         column: x => x.ResourceConsumptionAttributeId,
                         principalTable: "ResourceConsumptionAttributes",
                         principalColumn: "Id",
@@ -130,7 +133,7 @@ namespace Graduation_Project.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SystemId = table.Column<int>(type: "int", nullable: false),
                     MachineTypeId = table.Column<int>(type: "int", nullable: false),
-                    SerialNumber = table.Column<string>(type: "nvarchar", nullable: false)
+                    SerialNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -150,6 +153,48 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MonitorAttributeAlertRules",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false, defaultValueSql: "NEXT VALUE FOR [AlertRuleSequence]"),
+                    Value = table.Column<double>(type: "float", nullable: false),
+                    Severity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Condition = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MachineTypeMonitoringAttributeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MonitorAttributeAlertRules", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MonitorAttributeAlertRules_MachineTypeMonitoringAttributes_MachineTypeMonitoringAttributeId",
+                        column: x => x.MachineTypeMonitoringAttributeId,
+                        principalTable: "MachineTypeMonitoringAttributes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ResourceConsumptionAttributeAlertRules",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false, defaultValueSql: "NEXT VALUE FOR [AlertRuleSequence]"),
+                    Value = table.Column<double>(type: "float", nullable: false),
+                    Severity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Condition = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MachineTypeResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ResourceConsumptionAttributeAlertRules", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ResourceConsumptionAttributeAlertRules_MachineTypeResourceConsumptionAttributes_MachineTypeResourceConsumptionAttributeId",
+                        column: x => x.MachineTypeResourceConsumptionAttributeId,
+                        principalTable: "MachineTypeResourceConsumptionAttributes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MonitoringData",
                 columns: table => new
                 {
@@ -157,7 +202,7 @@ namespace Graduation_Project.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
                     MonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
-                    TimeStamp = table.Column<DateTime>(type: "datetime", nullable: false),
+                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Value = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -185,7 +230,7 @@ namespace Graduation_Project.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
                     ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
-                    TimeStamp = table.Column<DateTime>(type: "datetime", nullable: false),
+                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Value = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -204,6 +249,81 @@ namespace Graduation_Project.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Alerts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MachineId = table.Column<int>(type: "int", nullable: false),
+                    MonitorAttributeAlertRuleId = table.Column<int>(type: "int", nullable: true),
+                    ResourceConsumptionAttributeAlertRuleId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Alerts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Alerts_Machines_MachineId",
+                        column: x => x.MachineId,
+                        principalTable: "Machines",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Alerts_MonitorAttributeAlertRules_MonitorAttributeAlertRuleId",
+                        column: x => x.MonitorAttributeAlertRuleId,
+                        principalTable: "MonitorAttributeAlertRules",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Alerts_ResourceConsumptionAttributeAlertRules_ResourceConsumptionAttributeAlertRuleId",
+                        column: x => x.ResourceConsumptionAttributeAlertRuleId,
+                        principalTable: "ResourceConsumptionAttributeAlertRules",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AlertChangeLogs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AlertId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AlertChangeLogs", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AlertChangeLogs_Alerts_AlertId",
+                        column: x => x.AlertId,
+                        principalTable: "Alerts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AlertChangeLogs_AlertId",
+                table: "AlertChangeLogs",
+                column: "AlertId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Alerts_MachineId",
+                table: "Alerts",
+                column: "MachineId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Alerts_MonitorAttributeAlertRuleId",
+                table: "Alerts",
+                column: "MonitorAttributeAlertRuleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Alerts_ResourceConsumptionAttributeAlertRuleId",
+                table: "Alerts",
+                column: "ResourceConsumptionAttributeAlertRuleId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Machines_MachineTypeId",
@@ -226,14 +346,19 @@ namespace Graduation_Project.Migrations
                 column: "MonitoringAttributeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MachineTypeResourceConsumptionAttribute_MachineTypeId",
-                table: "MachineTypeResourceConsumptionAttribute",
+                name: "IX_MachineTypeResourceConsumptionAttributes_MachineTypeId",
+                table: "MachineTypeResourceConsumptionAttributes",
                 column: "MachineTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MachineTypeResourceConsumptionAttribute_ResourceConsumptionAttributeId",
-                table: "MachineTypeResourceConsumptionAttribute",
+                name: "IX_MachineTypeResourceConsumptionAttributes_ResourceConsumptionAttributeId",
+                table: "MachineTypeResourceConsumptionAttributes",
                 column: "ResourceConsumptionAttributeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MonitorAttributeAlertRules_MachineTypeMonitoringAttributeId",
+                table: "MonitorAttributeAlertRules",
+                column: "MachineTypeMonitoringAttributeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MonitoringData_MachineId",
@@ -244,6 +369,11 @@ namespace Graduation_Project.Migrations
                 name: "IX_MonitoringData_MonitoringAttributeId",
                 table: "MonitoringData",
                 column: "MonitoringAttributeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ResourceConsumptionAttributeAlertRules_MachineTypeResourceConsumptionAttributeId",
+                table: "ResourceConsumptionAttributeAlertRules",
+                column: "MachineTypeResourceConsumptionAttributeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResourceConsumptionData_MachineId",
@@ -260,10 +390,7 @@ namespace Graduation_Project.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "MachineTypeMonitoringAttributes");
-
-            migrationBuilder.DropTable(
-                name: "MachineTypeResourceConsumptionAttribute");
+                name: "AlertChangeLogs");
 
             migrationBuilder.DropTable(
                 name: "MonitoringData");
@@ -272,19 +399,37 @@ namespace Graduation_Project.Migrations
                 name: "ResourceConsumptionData");
 
             migrationBuilder.DropTable(
-                name: "MonitoringAttributes");
+                name: "Alerts");
 
             migrationBuilder.DropTable(
                 name: "Machines");
 
             migrationBuilder.DropTable(
-                name: "ResourceConsumptionAttributes");
+                name: "MonitorAttributeAlertRules");
+
+            migrationBuilder.DropTable(
+                name: "ResourceConsumptionAttributeAlertRules");
+
+            migrationBuilder.DropTable(
+                name: "Systems");
+
+            migrationBuilder.DropTable(
+                name: "MachineTypeMonitoringAttributes");
+
+            migrationBuilder.DropTable(
+                name: "MachineTypeResourceConsumptionAttributes");
+
+            migrationBuilder.DropTable(
+                name: "MonitoringAttributes");
 
             migrationBuilder.DropTable(
                 name: "MachineTypes");
 
             migrationBuilder.DropTable(
-                name: "Systems");
+                name: "ResourceConsumptionAttributes");
+
+            migrationBuilder.DropSequence(
+                name: "AlertRuleSequence");
         }
     }
 }
