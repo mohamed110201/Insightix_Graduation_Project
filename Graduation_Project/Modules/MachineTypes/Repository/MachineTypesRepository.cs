@@ -1,7 +1,7 @@
 using Graduation_Project.Data;
 using Graduation_Project.Repositories.Interfaces;
 
-namespace Graduation_Project.Repositories.Implementation;
+namespace Graduation_Project.Modules.MachineTypes.Repository;
 
 public class MachineTypesRepository(AppDbContext dbContext) : IMachineTypesRepository
 {
@@ -14,8 +14,8 @@ public class MachineTypesRepository(AppDbContext dbContext) : IMachineTypesRepos
     public async Task<MachineType?> GetById(int id)
     {
         var machineType = await dbContext.MachineTypes
-            .Include(mt => mt.MachineTypeMonitoringAttributes)
-            .Include(mt => mt.MachineTypeResourceConsumptionAttributes)
+            .Include(mt => mt.MonitoringAttributes)
+            .Include(mt => mt.ResourceConsumptionAttributes)
             .FirstOrDefaultAsync(mt => mt.Id == id);
         return machineType;
     }
