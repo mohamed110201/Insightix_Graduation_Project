@@ -1,6 +1,6 @@
 ﻿namespace Graduation_Project.Data.Dtos.Machine
 {
-    public class MachinesInsideSystemDto
+    public class GetMachinesBySystemIdDto
     {
         public int Id { get; set; }
         public string MachineTypeName { get; set; } = null!;

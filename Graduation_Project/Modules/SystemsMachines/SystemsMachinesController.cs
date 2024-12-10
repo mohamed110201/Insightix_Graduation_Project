@@ -1,4 +1,5 @@
-﻿using Graduation_Project.Services.Interfaces;
+﻿using Graduation_Project.Data.Dtos.Machine;
+using Graduation_Project.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,5 +15,16 @@ namespace Graduation_Project.Controllers
             var machines = await machinesService.GetMachinesBySystemId(systemId);
             return Ok(machines);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddMachineToSystem([FromRoute] int systemId, [FromBody] AddMachineToSystemDto AddMachineToSystemDto)
+        {
+           await machinesService.AddMachineToSystem(systemId, AddMachineToSystemDto);
+           return Ok();
+        }
     }
+
+
+
+
 }

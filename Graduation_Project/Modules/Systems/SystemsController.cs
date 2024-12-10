@@ -10,14 +10,14 @@ namespace Graduation_Project.Controllers
     public class SystemsController(ISystemsService systemsService) : ControllerBase
     {
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody]SystemRequestDto systemRequestDto)
+        public async Task<IActionResult> Add([FromBody]AddSystemDto AddSystemDto)
         {
-            if (string.IsNullOrEmpty(systemRequestDto.Name))
+            if (string.IsNullOrEmpty(AddSystemDto.Name))
             {
                 return BadRequest("System name is required.");
             }
 
-            await systemsService.Add(systemRequestDto);
+            await systemsService.Add(AddSystemDto);
             return Created();
         }
 
