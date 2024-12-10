@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Graduation_Project.Controllers;
 
 [ApiController]
-[Route("api/machine-types/{machineTypeId:int}/monitoring-attributes")]
+[Route("api/machine-types/{machineTypeId:int}/resource-consumption-attributes")]
 public class MachineTypesResourceConsumptionAttributesController(IResourceConsumptionAttributesService resourceConsumptionAttributesService) : ControllerBase
 {
     [HttpGet]
