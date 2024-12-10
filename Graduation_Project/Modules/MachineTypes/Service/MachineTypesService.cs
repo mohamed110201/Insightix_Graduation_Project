@@ -25,6 +25,7 @@ public class MachineTypesService(IMachineTypesRepository machineTypeRepository) 
         if (machineType == null)
         {
             throw new NotFoundError("Machine Type not found");
+
         }
 
         var machineTypeDto = new MachineTypeGetByIdDto()

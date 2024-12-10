@@ -1,4 +1,3 @@
-using Graduation_Project.Core;
 using Graduation_Project.Core.JSend;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
 using Graduation_Project.Services.Interfaces;
@@ -33,4 +32,6 @@ public class MachineTypesController(IMachineTypesService machineTypesService) : 
             return JSend.Created(message:"Machine Type Added Successfully");
             
     }
+           
+    
 }
