@@ -1,6 +1,5 @@
 ﻿using Graduation_Project.Core.JSend;
 using Graduation_Project.Modules.Alerts.Service;
-using Graduation_Project.Modules.Machines.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Modules.Alerts

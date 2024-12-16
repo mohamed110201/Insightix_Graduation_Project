@@ -1,13 +1,10 @@
 ﻿using Graduation_Project.Core.ErrorHandling.Exceptions;
 using Graduation_Project.Data.Dtos.Machine;
 using Graduation_Project.Data.Dtos.MachineDto;
-using Graduation_Project.Data.Dtos.SystemDto;
-using Graduation_Project.Repositories.Implementation;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
-using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace Graduation_Project.Services.Implementation
+namespace Graduation_Project.Modules.Machines.Service
 {
     public class MachinesService(IMachinesRepository machinesRepository,IMachineTypesRepository machineTypesRepository,ISystemsRepository systemsRepository) : IMachinesService
     {
