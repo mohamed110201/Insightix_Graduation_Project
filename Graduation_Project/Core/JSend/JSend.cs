@@ -13,7 +13,13 @@ public static class JSend
     {
         return new JSendResponse(StatusCodes.Status201Created,
             new JSendBody { Status = "success", Message = message, Data = data });
-    }    
+    }  
+    
+    public static JSendResponse Edited(string? message = null, object? data = null)
+    {
+        return new JSendResponse(StatusCodes.Status200OK,
+            new JSendBody { Status = "success", Message = message, Data = data });
+    }
     
     public static JSendResponse Deleted()
     {
