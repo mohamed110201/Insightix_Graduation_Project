@@ -865,5 +865,224 @@
 			"ResourceConsumptionAttributeId": 10,
 			"MachineTypeId": 10
 		}
+	],
+	"MonitoringData": [
+		{
+			"MachineId": 1,
+			"MonitoringAttributeId": 1,
+			"TimeStamp": "2024-12-14T10:00:00",
+			"Value": 150
+		},
+		{
+			"MachineId": 1,
+			"MonitoringAttributeId": 2,
+			"TimeStamp": "2024-12-14T10:05:00",
+			"Value": 170
+		},
+		{
+			"MachineId": 1,
+			"MonitoringAttributeId": 3,
+			"TimeStamp": "2024-12-14T10:10:00",
+			"Value": 180
+		},
+		{
+			"MachineId": 1,
+			"MonitoringAttributeId": 4,
+			"TimeStamp": "2024-12-14T10:15:00",
+			"Value": 200
+		},
+		{
+			"MachineId": 1,
+			"MonitoringAttributeId": 5,
+			"TimeStamp": "2024-12-14T10:20:00",
+			"Value": 220
+		},
+
+		{
+			"MachineId": 2,
+			"MonitoringAttributeId": 1,
+			"TimeStamp": "2024-12-14T11:00:00",
+			"Value": 160
+		},
+		{
+			"MachineId": 2,
+			"MonitoringAttributeId": 2,
+			"TimeStamp": "2024-12-14T11:05:00",
+			"Value": 175
+		},
+		{
+			"MachineId": 2,
+			"MonitoringAttributeId": 3,
+			"TimeStamp": "2024-12-14T11:10:00",
+			"Value": 190
+		},
+		{
+			"MachineId": 2,
+			"MonitoringAttributeId": 4,
+			"TimeStamp": "2024-12-14T11:15:00",
+			"Value": 210
+		},
+		{
+			"MachineId": 2,
+			"MonitoringAttributeId": 5,
+			"TimeStamp": "2024-12-14T11:20:00",
+			"Value": 225
+		},
+
+		{
+			"MachineId": 3,
+			"MonitoringAttributeId": 6,
+			"TimeStamp": "2024-12-14T12:00:00",
+			"Value": 155
+		},
+		{
+			"MachineId": 3,
+			"MonitoringAttributeId": 7,
+			"TimeStamp": "2024-12-14T12:05:00",
+			"Value": 165
+		},
+		{
+			"MachineId": 3,
+			"MonitoringAttributeId": 8,
+			"TimeStamp": "2024-12-14T12:10:00",
+			"Value": 175
+		},
+		{
+			"MachineId": 3,
+			"MonitoringAttributeId": 9,
+			"TimeStamp": "2024-12-14T12:15:00",
+			"Value": 185
+		},
+		{
+			"MachineId": 3,
+			"MonitoringAttributeId": 10,
+			"TimeStamp": "2024-12-14T12:20:00",
+			"Value": 195
+		},
+
+		{
+			"MachineId": 4,
+			"MonitoringAttributeId": 6,
+			"TimeStamp": "2024-12-14T13:00:00",
+			"Value": 145
+		},
+		{
+			"MachineId": 4,
+			"MonitoringAttributeId": 7,
+			"TimeStamp": "2024-12-14T13:05:00",
+			"Value": 155
+		},
+		{
+			"MachineId": 4,
+			"MonitoringAttributeId": 8,
+			"TimeStamp": "2024-12-14T13:10:00",
+			"Value": 165
+		},
+		{
+			"MachineId": 4,
+			"MonitoringAttributeId": 9,
+			"TimeStamp": "2024-12-14T13:15:00",
+			"Value": 175
+		},
+		{
+			"MachineId": 4,
+			"MonitoringAttributeId": 10,
+			"TimeStamp": "2024-12-14T13:20:00",
+			"Value": 185
+		},
+
+		{
+			"MachineId": 5,
+			"MonitoringAttributeId": 1,
+			"TimeStamp": "2024-12-14T14:00:00",
+			"Value": 130
+		},
+		{
+			"MachineId": 5,
+			"MonitoringAttributeId": 2,
+			"TimeStamp": "2024-12-14T14:05:00",
+			"Value": 140
+		},
+		{
+			"MachineId": 5,
+			"MonitoringAttributeId": 3,
+			"TimeStamp": "2024-12-14T14:10:00",
+			"Value": 150
+		},
+		{
+			"MachineId": 5,
+			"MonitoringAttributeId": 4,
+			"TimeStamp": "2024-12-14T14:15:00",
+			"Value": 160
+		},
+		{
+			"MachineId": 5,
+			"MonitoringAttributeId": 5,
+			"TimeStamp": "2024-12-14T14:20:00",
+			"Value": 170
+		},
+
+		{
+			"MachineId": 6,
+			"MonitoringAttributeId": 1,
+			"TimeStamp": "2024-12-14T15:00:00",
+			"Value": 110
+		},
+		{
+			"MachineId": 6,
+			"MonitoringAttributeId": 2,
+			"TimeStamp": "2024-12-14T15:05:00",
+			"Value": 120
+		},
+		{
+			"MachineId": 6,
+			"MonitoringAttributeId": 3,
+			"TimeStamp": "2024-12-14T15:10:00",
+			"Value": 130
+		},
+		{
+			"MachineId": 6,
+			"MonitoringAttributeId": 4,
+			"TimeStamp": "2024-12-14T15:15:00",
+			"Value": 140
+		},
+		{
+			"MachineId": 6,
+			"MonitoringAttributeId": 5,
+			"TimeStamp": "2024-12-14T15:20:00",
+			"Value": 150
+		},
+
+		{
+			"MachineId": 7,
+			"MonitoringAttributeId": 6,
+			"TimeStamp": "2024-12-14T16:00:00",
+			"Value": 160
+		},
+		{
+			"MachineId": 7,
+			"MonitoringAttributeId": 7,
+			"TimeStamp": "2024-12-14T16:05:00",
+			"Value": 170
+		},
+		{
+			"MachineId": 7,
+			"MonitoringAttributeId": 8,
+			"TimeStamp": "2024-12-14T16:10:00",
+			"Value": 180
+		},
+		{
+			"MachineId": 7,
+			"MonitoringAttributeId": 9,
+			"TimeStamp": "2024-12-14T16:15:00",
+			"Value": 190
+		},
+		{
+			"MachineId": 7,
+			"MonitoringAttributeId": 10,
+			"TimeStamp": "2024-12-14T16:20:00",
+			"Value": 200
+		}
 	]
+
 }

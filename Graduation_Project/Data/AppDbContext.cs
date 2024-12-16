@@ -16,6 +16,10 @@ namespace Graduation_Project.Data
         public DbSet<ResourceConsumptionAttribute>  ResourceConsumptionAttributes  { get; set; }
         public DbSet<MachineTypeMonitoringAttribute>  MachineTypeMonitoringAttributes  { get; set; }
         public DbSet<MachineTypeResourceConsumptionAttribute>  MachineTypeResourceConsumptionAttributes  { get; set; }
+        public DbSet<MonitoringData>  MonitoringData  { get; set; }
+        
+        public DbSet<MonitorAttributeAlertRule>  MonitorAttributeAlertRules   { get; set; }
+        public DbSet<ResourceConsumptionAttributeAlertRule>  ResourceConsumptionAttributeAlertRules   { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
