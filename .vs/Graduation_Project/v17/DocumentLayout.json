@@ -3,6 +3,142 @@
   "WorkspaceRootPath": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesresourceconsumptiondata\\machinesresourceconsumptiondatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesresourceconsumptiondata\\machinesresourceconsumptiondatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesresourceconsumptiondata\\service\\machinesresourceconsumptiondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesresourceconsumptiondata\\service\\machinesresourceconsumptiondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesresourceconsumptiondata\\service\\imachinesresourceconsumptiondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesresourceconsumptiondata\\service\\imachinesresourceconsumptiondataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesresourceconsumptiondata\\repository\\machinesresourceconsumptiondatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesresourceconsumptiondata\\repository\\machinesresourceconsumptiondatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesresourceconsumptiondata\\repository\\imachinesresourceconsumptiondatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesresourceconsumptiondata\\repository\\imachinesresourceconsumptiondatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesresourceconsumptiondata\\dtos\\getsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesresourceconsumptiondata\\dtos\\getsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\extenstions\\iservicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\extenstions\\iservicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\service\\imachinesmonitoringdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\service\\imachinesmonitoringdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesresourceconsumptiondata\\dtos\\getresourceconsumptiondatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesresourceconsumptiondata\\dtos\\getresourceconsumptiondatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\machinesmonitoringdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\machinesmonitoringdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\repository\\machinesmonitoringdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\repository\\machinesmonitoringdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\repository\\imachinesmonitoringdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\repository\\imachinesmonitoringdatarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\service\\machinesmonitoringdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\service\\machinesmonitoringdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\dtos\\getmonitoringdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\dtos\\getmonitoringdatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\dtos\\getsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\dtos\\getsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinesmonitoringdata\\dtos\\getcurrentmonitoringattributesvaluesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinesmonitoringdata\\dtos\\getcurrentmonitoringattributesvaluesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\extenstions\\iapplicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\extenstions\\iapplicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\extenstions\\enumerableextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\extenstions\\enumerableextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\extenstions\\iserviceproviderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\extenstions\\iserviceproviderextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\migrations\\20241217142610_init.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\migrations\\20241217142610_init.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machines\\dtos\\addmachinetosystemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machines\\dtos\\addmachinetosystemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\functionsdata\\machinemonitoringdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\functionsdata\\machinemonitoringdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\functionsdata\\machineresourceconsumptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\functionsdata\\machineresourceconsumptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\models\\monitoringdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\models\\monitoringdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\testdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\testdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddatacontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddatacontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\alerts\\dtos\\changelogsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\alerts\\dtos\\changelogsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinetypes\\repository\\machinetypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinetypes\\repository\\machinetypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinetypes\\service\\machinetypesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinetypes\\service\\machinetypesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machines\\service\\machinesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machines\\service\\machinesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,12 +175,12 @@
       "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\systems\\systemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\machinetypes\\repository\\machinetypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\machinetypes\\repository\\machinetypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\systems\\repository\\systemsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\systems\\repository\\systemsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\migrations\\20241217142610_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\migrations\\20241217142610_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,21 +190,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 17,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MachinesService.cs",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
-              "RelativeToolTip": "Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAQwEUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T18:33:26.114Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -132,6 +255,407 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "IMachinesResourceConsumptionDataService.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\IMachinesResourceConsumptionDataService.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\IMachinesResourceConsumptionDataService.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\IMachinesResourceConsumptionDataService.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\IMachinesResourceConsumptionDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:14:09.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MachinesResourceConsumptionDataService.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\MachinesResourceConsumptionDataService.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\MachinesResourceConsumptionDataService.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\MachinesResourceConsumptionDataService.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Service\\MachinesResourceConsumptionDataService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAqwCcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:15:30.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MachinesResourceConsumptionDataController.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\MachinesResourceConsumptionDataController.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\MachinesResourceConsumptionDataController.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\MachinesResourceConsumptionDataController.cs*",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\MachinesResourceConsumptionDataController.cs*",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wBsAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:29:18.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MachinesResourceConsumptionDataRepository.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\MachinesResourceConsumptionDataRepository.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\MachinesResourceConsumptionDataRepository.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\MachinesResourceConsumptionDataRepository.cs*",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\MachinesResourceConsumptionDataRepository.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:02:24.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMachinesResourceConsumptionDataRepository.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\IMachinesResourceConsumptionDataRepository.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\IMachinesResourceConsumptionDataRepository.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\IMachinesResourceConsumptionDataRepository.cs*",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\Repository\\IMachinesResourceConsumptionDataRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:00:55.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetSummaryDto.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetSummaryDto.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetSummaryDto.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetSummaryDto.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetSummaryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:58:44.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IServiceCollectionExtension.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
+              "RelativeToolTip": "Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwCsAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:40:41.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAqwCIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:06:52.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IMachinesMonitoringDataService.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:48:25.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetResourceConsumptionDataDto.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetResourceConsumptionDataDto.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetResourceConsumptionDataDto.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetResourceConsumptionDataDto.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\DTOs\\GetResourceConsumptionDataDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:16:02.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MachinesMonitoringDataController.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\MachinesMonitoringDataController.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\MachinesMonitoringDataController.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\MachinesMonitoringDataController.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\MachinesMonitoringDataController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAoAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T12:34:40.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MachinesMonitoringDataRepository.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\MachinesMonitoringDataRepository.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\MachinesMonitoringDataRepository.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\MachinesMonitoringDataRepository.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\MachinesMonitoringDataRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:57:20.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IMachinesMonitoringDataRepository.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\IMachinesMonitoringDataRepository.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\IMachinesMonitoringDataRepository.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\IMachinesMonitoringDataRepository.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\IMachinesMonitoringDataRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:42:43.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MachinesMonitoringDataService.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\MachinesMonitoringDataService.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\MachinesMonitoringDataService.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\MachinesMonitoringDataService.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\MachinesMonitoringDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:59:40.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetMonitoringDataDto.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetMonitoringDataDto.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetMonitoringDataDto.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetMonitoringDataDto.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetMonitoringDataDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:56:42.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GetSummaryDto.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetSummaryDto.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetSummaryDto.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetSummaryDto.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetSummaryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:56:52.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetCurrentMonitoringAttributesValuesDto.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetCurrentMonitoringAttributesValuesDto.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetCurrentMonitoringAttributesValuesDto.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetCurrentMonitoringAttributesValuesDto.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetCurrentMonitoringAttributesValuesDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:56:15.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IApplicationBuilderExtensions.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IApplicationBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\IApplicationBuilderExtensions.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IApplicationBuilderExtensions.cs",
+              "RelativeToolTip": "Graduation_Project\\Extenstions\\IApplicationBuilderExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:41:02.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EnumerableExtensions.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\EnumerableExtensions.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\EnumerableExtensions.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\EnumerableExtensions.cs",
+              "RelativeToolTip": "Graduation_Project\\Extenstions\\EnumerableExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:53:21.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IServiceProviderExtension.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceProviderExtension.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\IServiceProviderExtension.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceProviderExtension.cs",
+              "RelativeToolTip": "Graduation_Project\\Extenstions\\IServiceProviderExtension.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:41:04.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20241217142610_init.Designer.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Migrations\\20241217142610_init.Designer.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Migrations\\20241217142610_init.Designer.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Migrations\\20241217142610_init.Designer.cs",
+              "RelativeToolTip": "Graduation_Project\\Migrations\\20241217142610_init.Designer.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:30:18.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20241217142610_init.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Migrations\\20241217142610_init.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Migrations\\20241217142610_init.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Migrations\\20241217142610_init.cs",
+              "RelativeToolTip": "Graduation_Project\\Migrations\\20241217142610_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:26:11.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AddMachineToSystemDto.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\DTOs\\AddMachineToSystemDto.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Machines\\DTOs\\AddMachineToSystemDto.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\DTOs\\AddMachineToSystemDto.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\Machines\\DTOs\\AddMachineToSystemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:17:01.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Program.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Program.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Program.cs",
+              "RelativeToolTip": "Graduation_Project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:06:42.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MachineMonitoringData.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\FunctionsData\\MachineMonitoringData.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\FunctionsData\\MachineMonitoringData.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\FunctionsData\\MachineMonitoringData.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\FunctionsData\\MachineMonitoringData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:54:02.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MachineResourceConsumptionData.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\FunctionsData\\MachineResourceConsumptionData.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\FunctionsData\\MachineResourceConsumptionData.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\FunctionsData\\MachineResourceConsumptionData.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\FunctionsData\\MachineResourceConsumptionData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:55:25.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MonitoringData.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Models\\MonitoringData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:54:19.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TestData.json",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\TestData.json",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\TestData.json",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\TestData.json",
+              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\TestData.json",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-17T15:37:49.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SeedDataLoader.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:02:52.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SeedDataGenerator.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA6wBAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:02:43.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SeedDataContainer.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:01:30.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedData.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedData.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedData.cs",
+              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedData.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwDcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:00:35.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ChangeLogsDto.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Alerts\\DTOs\\ChangeLogsDto.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Alerts\\DTOs\\ChangeLogsDto.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Alerts\\DTOs\\ChangeLogsDto.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\Alerts\\DTOs\\ChangeLogsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T14:17:42.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "Graduation_Project.http",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Graduation_Project.http",
               "RelativeDocumentMoniker": "Graduation_Project\\Graduation_Project.http",
@@ -139,12 +663,47 @@
               "RelativeToolTip": "Graduation_Project\\Graduation_Project.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-12-10T16:00:28.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T16:00:28.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 32,
+              "Title": "MachineTypesRepository.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:29:09.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MachinesService.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T18:33:26.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MachineTypesService.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Service\\MachineTypesService.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachineTypes\\Service\\MachineTypesService.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Service\\MachineTypesService.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachineTypes\\Service\\MachineTypesService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:06:35.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "GlobalUsings.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\GlobalUsings.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\GlobalUsings.cs",
@@ -156,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 38,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\appsettings.json",
               "RelativeDocumentMoniker": "Graduation_Project\\appsettings.json",
@@ -168,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 35,
               "Title": "SystemsMachinesController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\SystemsMachines\\SystemsMachinesController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\SystemsMachines\\SystemsMachinesController.cs",
@@ -176,12 +735,11 @@
               "RelativeToolTip": "Graduation_Project\\Modules\\SystemsMachines\\SystemsMachinesController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:37:32.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:37:32.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 39,
               "Title": "SystemsService.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Systems\\Service\\SystemsService.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Systems\\Service\\SystemsService.cs",
@@ -193,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 40,
               "Title": "MachinesController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\MachinesController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Machines\\MachinesController.cs",
@@ -205,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 41,
               "Title": "AddMachineTypeValidator.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Validators\\AddMachineTypeValidator.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachineTypes\\Validators\\AddMachineTypeValidator.cs",
@@ -217,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 42,
               "Title": "SystemsController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Systems\\SystemsController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Systems\\SystemsController.cs",
@@ -229,19 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MachineTypesRepository.cs",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
-              "RelativeToolTip": "Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:29:09.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 43,
               "Title": "SystemsRepository.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Systems\\Repository\\SystemsRepository.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Systems\\Repository\\SystemsRepository.cs",

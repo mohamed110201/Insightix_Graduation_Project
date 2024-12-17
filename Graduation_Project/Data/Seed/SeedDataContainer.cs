@@ -10,4 +10,6 @@ public class SeedDataContainer
     public List<MachineTypeMonitoringAttribute> MachineTypeMonitoringAttributes {get; set;}
     public List<MachineTypeResourceConsumptionAttribute> MachineTypeResourceConsumptionAttributes {get; set;}
     public List<MonitoringData> MonitoringData {get; set;}
+    public List<ResourceConsumptionData> ResourceConsumptionData { get; set; }
+
 }

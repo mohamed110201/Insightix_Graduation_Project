@@ -9,6 +9,10 @@ using FluentValidation.AspNetCore;
 using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachineTypes.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Graduation_Project.Modules.MachinesResourceConsumptionData.Service;
+using Graduation_Project.Modules.MachinesResourceConsumptionData.Repository;
+using Graduation_Project.Modules.MachinesMonitoringData.Service;
+using Graduation_Project.Modules.MachinesMonitoringData.Repository;
 
 
 namespace Graduation_Project.Extenstions
@@ -22,6 +26,11 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachinesService, MachinesService>();
             services.AddScoped<ISystemsService, SystemsService>();
             services.AddScoped<IMachineTypesService, MachineTypesService>();
+            services.AddScoped<IMachinesResourceConsumptionDataService, MachinesResourceConsumptionDataService>();
+            services.AddScoped<IMachinesMonitoringDataService, MachinesMonitoringDataService>();
+
+
+
         }
 
         public static void RegisterRepositories(this IServiceCollection services)
@@ -31,6 +40,10 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachinesRepository, MachinesRepository>();
             services.AddScoped<ISystemsRepository, SystemsRepository>();
             services.AddScoped<IMachineTypesRepository, MachineTypesRepository>();
+            services.AddScoped<IMachinesResourceConsumptionDataRepository, MachinesResourceConsumptionDataRepository>();
+            services.AddScoped<IMachinesMonitoringDataRepository, MachinesMonitoringDataRepository>();
+
+
         }
 
         public static void RegisterConfigurations(this IServiceCollection services)
