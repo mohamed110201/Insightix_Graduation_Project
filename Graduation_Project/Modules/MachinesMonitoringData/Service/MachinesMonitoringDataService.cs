@@ -7,7 +7,7 @@ namespace Graduation_Project.Modules.MachinesMonitoringData.Service;
 
 public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository machinesMonitoringDataRepository) : IMachinesMonitoringDataService
 {
-    public async Task<List<GetMonitoringDataDto>> GetAll(int machineId 
+    public async Task<List<GetMointoringDataDto>> GetAll(int machineId 
         , int monitoringAttributeId
         ,int? lastSeconds)
     {
@@ -17,7 +17,7 @@ public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository mac
         var startDate = DateTime.Now.AddSeconds(-(double)lastSeconds);
         var endDate = DateTime.Now;
         var monitoringData = await machinesMonitoringDataRepository.GetAll(machineId, monitoringAttributeId,windowSize, startDate, endDate);
-        var monitoringDataDto = monitoringData.Select(x=>new GetMonitoringDataDto
+        var monitoringDataDto = monitoringData.Select(x=>new GetMointoringDataDto
         {
             TimeStamp = x.TimeStamp,
             Value = x.Value,
