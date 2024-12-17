@@ -6,6 +6,7 @@ using Graduation_Project.Services.Implementation;
 using Graduation_Project.Services.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachineTypes.Repository;
 using Microsoft.AspNetCore.Mvc;
 

@@ -24,5 +24,7 @@ public class SeedDataLoader(AppDbContext db)
         db.SaveChanges();
         db.Machines.AddRange(data.Machines);
         db.SaveChanges();
+        db.MonitoringData.AddRange(data.MonitoringData);
+        db.SaveChanges();
     }
 }
