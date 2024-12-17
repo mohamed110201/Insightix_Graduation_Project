@@ -19,24 +19,32 @@ namespace Graduation_Project.Data
         public DbSet<MachineTypeResourceConsumptionAttribute>  MachineTypeResourceConsumptionAttributes  { get; set; }
         public DbSet<MonitoringData>  MonitoringData  { get; set; }
         public DbSet<Alert>  Alerts  { get; set; }
-
-        
         public DbSet<MonitorAttributeAlertRule>  MonitorAttributeAlertRules   { get; set; }
         public DbSet<ResourceConsumptionAttributeAlertRule>  ResourceConsumptionAttributeAlertRules   { get; set; }
-        
+        public DbSet<ResourceConsumptionData> ResourceConsumptionData { get; set; }
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
             
             modelBuilder.Entity<MachineMonitoringData>().HasNoKey(); 
-            modelBuilder.Entity<CurrentMonitoringAttributesValues>().HasNoKey(); 
+            modelBuilder.Entity<CurrentMonitoringAttributesValues>().HasNoKey();
+            modelBuilder.Entity<MachineResourceConsumptionData>().HasNoKey();
+
 
             modelBuilder
                 .HasDbFunction(() => DownSamplingMonitoringData(default, default, default, default, default))
                 .HasName("DownSamplingMonitoringData")
                 .HasSchema("dbo");
-            
+
+            modelBuilder
+                .HasDbFunction(() => DownSamplingResourceConsumptionData(default, default, default, default, default))
+                .HasName("DownSamplingResourceConsumptionData")
+                .HasSchema("dbo");
+
             modelBuilder
                 .HasDbFunction(() => GetCurrentMonitoringAttributesForMachine(default))
                 .HasName("GetCurrentMonitoringAttributesForMachine")
@@ -51,6 +59,16 @@ namespace Graduation_Project.Data
             DateTime endDate)
         {
             return FromExpression(() => DownSamplingMonitoringData(machineId, monitoringAttributeId, windowSize, startDate, endDate));
+        }
+
+        public IQueryable<MachineResourceConsumptionData> DownSamplingResourceConsumptionData(
+            int machineId,
+            int ResourceConsumptionAttributeId,
+            int windowSize,
+            DateTime startDate,
+            DateTime endDate)
+        {
+            return FromExpression(() => DownSamplingResourceConsumptionData(machineId, ResourceConsumptionAttributeId, windowSize, startDate, endDate));
         }
 
         public IQueryable<CurrentMonitoringAttributesValues> GetCurrentMonitoringAttributesForMachine(int machineId)

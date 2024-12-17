@@ -24,6 +24,47 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.HasSequence("AlertRuleSequence");
 
+            modelBuilder.Entity("Graduation_Project.Data.FunctionsData.CurrentMonitoringAttributesValues", b =>
+                {
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MonitoringAttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MonitoringAttributeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Value")
+                        .HasColumnType("int");
+
+                    b.ToTable("CurrentMonitoringAttributesValues");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.FunctionsData.MachineMonitoringData", b =>
+                {
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MonitoringAttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Value")
+                        .HasColumnType("int");
+
+                    b.ToTable("MachineMonitoringData");
+                });
+
             modelBuilder.Entity("Graduation_Project.Data.Models.Alert", b =>
                 {
                     b.Property<int>("Id")
