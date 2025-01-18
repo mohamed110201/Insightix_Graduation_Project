@@ -12,8 +12,6 @@ namespace Graduation_Project.Modules.Machines.Service
 
         public async Task<IEnumerable<GetAllMachinesAcrossAllSystemsDto>> GetAll()
         {
-            
-
             var machines = await machinesRepository.GetAll();
 
             return machines.Select(m => new GetAllMachinesAcrossAllSystemsDto
@@ -39,6 +37,7 @@ namespace Graduation_Project.Modules.Machines.Service
                 SystemName = machine.System.Name,
                 SerialNumber = machine.SerialNumber,
                 MachineTypeName = machine.MachineType.Name,
+                MachineTypeId = machine.MachineTypeId,
             };
         }
 
