@@ -76,7 +76,8 @@ namespace Graduation_Project.Modules.Machines.Service
             {
                 Id = m.Id,
                 SerialNumber = m.SerialNumber,
-                MachineTypeName = m.MachineType.Name
+                MachineTypeName = m.MachineType.Name,
+                MachineTypeId = m.MachineTypeId,
             }).ToList(); ;
         }
 
