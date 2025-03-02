@@ -22,6 +22,7 @@ namespace Graduation_Project.Data
         public DbSet<MonitorAttributeAlertRule>  MonitorAttributeAlertRules   { get; set; }
         public DbSet<ResourceConsumptionAttributeAlertRule>  ResourceConsumptionAttributeAlertRules   { get; set; }
         public DbSet<ResourceConsumptionData> ResourceConsumptionData { get; set; }
+        public DbSet<Failure> Failures { get; set; }
 
 
 
