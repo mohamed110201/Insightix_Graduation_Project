@@ -1,0 +1,35 @@
+﻿using Graduation_Project.Core.JSend;
+using Graduation_Project.Modules.Failures.Repository;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Graduation_Project.Controllers
+{
+    [Route("api/failures")]
+    [ApiController]
+    public class FailuresController(IFailuresService failuresService) : ControllerBase
+    {
+        
+        [HttpGet]
+        public async Task<IActionResult> GetAll([FromRoute] int machineId)
+        {
+            var failures = await failuresService.GetAll();
+            return JSend.Success(data:failures);
+        }
+        
+        [HttpGet("{machineId:int}")]
+        public async Task<IActionResult> GetById([FromRoute] int machineId)
+        {
+              var failure = await failuresService.GetById(machineId);
+              return JSend.Success(data:failure);
+        }
+        
+        [HttpPost("{machineId:int}")]
+        public async Task<IActionResult> Add([FromRoute] int machineId)
+        {
+            await failuresService.Resolve(machineId);
+            return JSend.Created(message:"Failure Resolved Successfully");
+        }
+
+        
+    }
+}

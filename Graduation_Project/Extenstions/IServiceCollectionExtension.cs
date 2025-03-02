@@ -6,6 +6,8 @@ using Graduation_Project.Services.Implementation;
 using Graduation_Project.Services.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Graduation_Project.Controllers.Repository;
+using Graduation_Project.Modules.Failures.Repository;
 using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachineTypes.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -28,6 +30,8 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachineTypesService, MachineTypesService>();
             services.AddScoped<IMachinesResourceConsumptionDataService, MachinesResourceConsumptionDataService>();
             services.AddScoped<IMachinesMonitoringDataService, MachinesMonitoringDataService>();
+            services.AddScoped<IMachineFailuresService, MachineFailuresService>();
+            services.AddScoped<IFailuresService, FailuresService>();
 
 
 
@@ -42,7 +46,8 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachineTypesRepository, MachineTypesRepository>();
             services.AddScoped<IMachinesResourceConsumptionDataRepository, MachinesResourceConsumptionDataRepository>();
             services.AddScoped<IMachinesMonitoringDataRepository, MachinesMonitoringDataRepository>();
-
+            services.AddScoped<IMachineFailuresRespository, MachineFailuresRespository>();
+            services.AddScoped<IFailuresRepository, FailuresRepository>();
 
         }
 
