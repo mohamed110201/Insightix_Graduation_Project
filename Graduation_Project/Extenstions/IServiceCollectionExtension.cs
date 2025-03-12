@@ -7,6 +7,8 @@ using Graduation_Project.Services.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Graduation_Project.Controllers.Repository;
+using Graduation_Project.Modules.Alerts.Repository;
+using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.Failures.Repository;
 using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachineTypes.Repository;
@@ -48,7 +50,8 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachinesMonitoringDataRepository, MachinesMonitoringDataRepository>();
             services.AddScoped<IMachineFailuresRespository, MachineFailuresRespository>();
             services.AddScoped<IFailuresRepository, FailuresRepository>();
-
+            services.AddScoped<IAlertsService, AlertsService>();
+            services.AddScoped<IAlertsRepository, AlertsRepository>();
         }
 
         public static void RegisterConfigurations(this IServiceCollection services)
@@ -71,6 +74,10 @@ namespace Graduation_Project.Extenstions
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(config.GetConnectionString("Default"))
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+        }
+        public static void RegisterCaching(this IServiceCollection services)
+        {
+            services.AddMemoryCache();
         }
     }
 }
