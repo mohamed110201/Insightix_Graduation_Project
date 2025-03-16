@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Core.ErrorHandling.Exceptions;
 using Graduation_Project.Data.Dtos.Machine;
 using Graduation_Project.Data.Dtos.MachineDto;
+using Graduation_Project.Modules.Machines.DTOs;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
 
@@ -93,6 +94,11 @@ namespace Graduation_Project.Modules.Machines.Service
             };
 
             await machinesRepository.AddMachineToSystem(systemId, machine);
+        }
+
+        public async Task<List<MachineForSimulation>> GetMachinesForSimulation()
+        {
+            return await machinesRepository.GetMachinesForSimulation();
         }
     }
 }

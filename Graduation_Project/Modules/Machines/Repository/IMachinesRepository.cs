@@ -1,4 +1,6 @@
 
+using Graduation_Project.Modules.Machines.DTOs;
+
 namespace Graduation_Project.Repositories.Interfaces
 {
     public interface IMachinesRepository
@@ -10,6 +12,9 @@ namespace Graduation_Project.Repositories.Interfaces
         Task<List<Machine>> GetMachinesByMachineTypeId(int machineTypeId);
 
         Machine? SearchBySerialNumber(string serialNumber);
+
+        Task<List<MachineForSimulation>> GetMachinesForSimulation();
+
 
     }
 }
