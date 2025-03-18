@@ -1,12 +1,13 @@
 ﻿using Graduation_Project.Core.JSend;
 using Graduation_Project.Modules.Alerts.Service;
+using Graduation_Project.Modules.MachinesMonitoringData.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Modules.Alerts
 {
     [Route("api/Alerts")]
     [ApiController]
-    public class AlertsController(IAlertsService alertService) : ControllerBase
+    public class AlertsController(IAlertsService alertService , ICreateAlertsService createAlertsService) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -28,7 +29,13 @@ namespace Graduation_Project.Modules.Alerts
             await alertService.ChangeStatus(alertId, status);
             return JSend.Edited("Status Changed Successfully");
         }
+        [HttpPost("/test")]
+        public async Task<IActionResult> Test([FromBody] MonitoringDataDto monitoringData)
+        {
+            await createAlertsService.CheckMonitoringAlertsAsync(monitoringData);
+            return JSend.Success(data:monitoringData);
+        }
 
-
+        
     }
 }

@@ -10,7 +10,7 @@
         public MonitoringAttribute MonitoringAttribute { get; set; } = null!;
 
         public DateTime TimeStamp { get; set;}
-        public int Value { get; set; }
+        public double Value { get; set; }
 
 
     }

@@ -8,7 +8,6 @@ public abstract class Alert
     public DateTime TimeStamp { get; set; }
     public AlertStatus Status { get; set; }
     public AlertType Type { get; set; }
-
     public int MachineId { get; set; }
     public Machine Machine { get; set; } = null!;
     

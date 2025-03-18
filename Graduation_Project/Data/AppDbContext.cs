@@ -24,7 +24,7 @@ namespace Graduation_Project.Data
         public DbSet<ResourceConsumptionData> ResourceConsumptionData { get; set; }
         public DbSet<Failure> Failures { get; set; }
 
-
+        public DbSet<AlertChangeLog> AlertChangeLogs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

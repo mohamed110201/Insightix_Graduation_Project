@@ -10,6 +10,7 @@ builder.Services.RegisterServices();
 builder.Services.RegisterRepositories();
 builder.Services.RegisterConfigurations();
 builder.Services.RegisterDbContext(builder.Configuration);
+builder.Services.RegisterCaching();
 
 
 
