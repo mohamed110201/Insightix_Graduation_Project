@@ -52,6 +52,8 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IFailuresRepository, FailuresRepository>();
             services.AddScoped<IAlertsService, AlertsService>();
             services.AddScoped<IAlertsRepository, AlertsRepository>();
+            services.AddScoped<IAlertsCachingService, AlertsCachingService>();
+            services.AddScoped<ICreateAlertsService, CreateAlertsService>();
         }
 
         public static void RegisterConfigurations(this IServiceCollection services)

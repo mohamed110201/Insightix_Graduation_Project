@@ -7,7 +7,7 @@ namespace Graduation_Project.Modules.Alerts
 {
     [Route("api/Alerts")]
     [ApiController]
-    public class AlertsController(IAlertsService alertService) : ControllerBase
+    public class AlertsController(IAlertsService alertService , ICreateAlertsService createAlertsService) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -32,7 +32,7 @@ namespace Graduation_Project.Modules.Alerts
         [HttpPost("/test")]
         public async Task<IActionResult> Test([FromBody] MonitoringDataDto monitoringData)
         {
-            await alertService.CheckMonitoringAlertsAsync(monitoringData);
+            await createAlertsService.CheckMonitoringAlertsAsync(monitoringData);
             return JSend.Success(data:monitoringData);
         }
 
