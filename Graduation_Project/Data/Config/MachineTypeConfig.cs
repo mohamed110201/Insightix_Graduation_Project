@@ -10,7 +10,7 @@ namespace Graduation_Project.Data.Config
 
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name);
-                
+            builder.Property(x => x.AIModelName);
 
             builder.Property(x => x.Model);
 

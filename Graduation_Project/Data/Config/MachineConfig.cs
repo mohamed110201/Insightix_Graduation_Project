@@ -8,8 +8,7 @@
 
             builder.HasKey(x => x.Id);
             builder.Property(x => x.SerialNumber);
-
-
+            builder.Property(x => x.FailurePredictionCheckPoint);
             builder.HasOne(x => x.System)
                 .WithMany(x => x.Machines)
                 .HasForeignKey(x => x.SystemId)

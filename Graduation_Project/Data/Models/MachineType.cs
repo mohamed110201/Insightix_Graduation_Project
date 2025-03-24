@@ -5,6 +5,7 @@
         public int Id { get; set; }
         public string Name { get; set; } =null!;
         public string Model { get; set; } = null!;
+        public string? AIModelName { get; set; }
         public ICollection<Machine> Machines { get; set; } = [];
         public ICollection<MonitoringAttribute> MonitoringAttributes { get; set; } = [];
         public ICollection<MachineTypeMonitoringAttribute> MachineTypeMonitoringAttributes {  get; set; } = [];
