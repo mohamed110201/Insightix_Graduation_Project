@@ -28,7 +28,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 app.RegisterMiddlewares();
-app.Services.AddSeedData();
+await app.Services.AddSeedData();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

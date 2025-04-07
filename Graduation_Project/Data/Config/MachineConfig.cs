@@ -18,7 +18,7 @@
                 .WithMany(x => x.Machines)
                 .HasForeignKey(x => x.MachineTypeId)
                 .IsRequired();
-
+            builder.HasData(new Machine { Id = 1001 , SystemId = 1001 , MachineTypeId = 1001 , SerialNumber = "WSN001"});
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Graduation_Project.Core.JSend;
+using Graduation_Project.Data;
 using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.DTOs;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +8,9 @@ namespace Graduation_Project.Modules.Alerts
 {
     [Route("api/Alerts")]
     [ApiController]
-    public class AlertsController(IAlertsService alertService , ICreateAlertsService createAlertsService) : ControllerBase
+    public class AlertsController(IAlertsService alertService , 
+        ICreateAlertsService createAlertsService,
+        AppDbContext _context) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -30,10 +33,12 @@ namespace Graduation_Project.Modules.Alerts
             return JSend.Edited("Status Changed Successfully");
         }
         [HttpPost("/test")]
-        public async Task<IActionResult> Test([FromBody] MonitoringDataDto monitoringData)
+        public async Task<IActionResult> Test([FromQuery]int machineId ,
+            [FromQuery]DateTime startTime,
+           [FromQuery] DateTime endTime)
         {
-            await createAlertsService.CheckMonitoringAlertsAsync(monitoringData);
-            return JSend.Success(data:monitoringData);
+            var result = await _context.GetMachineMonitoringData(machineId,startTime, endTime);
+            return JSend.Success(data:result);
         }
 
         
