@@ -1,8 +1,11 @@
+using System.Data;
+using System.Data.SqlTypes;
 using Graduation_Project.Data.Config;
 using Graduation_Project.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.PortableExecutable;
 using Graduation_Project.Data.FunctionsData;
+using Microsoft.Data.SqlClient;
 using Machine = Graduation_Project.Data.Models.Machine;
 
 namespace Graduation_Project.Data
@@ -23,8 +26,9 @@ namespace Graduation_Project.Data
         public DbSet<ResourceConsumptionAttributeAlertRule>  ResourceConsumptionAttributeAlertRules   { get; set; }
         public DbSet<ResourceConsumptionData> ResourceConsumptionData { get; set; }
         public DbSet<Failure> Failures { get; set; }
+        public DbSet<FailurePrediction> FailurePredictions { get; set; }
 
-
+        public DbSet<AlertChangeLog> AlertChangeLogs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -76,5 +80,41 @@ namespace Graduation_Project.Data
         {
             return FromExpression(() => GetCurrentMonitoringAttributesForMachine(machineId));
         }
+        public async Task<List<List<dynamic?>>> GetMachineMonitoringData(int machineId,
+            DateTime startTime ,
+            DateTime endTime)
+        {
+            var results = new List<List<dynamic?>>();
+
+            await using (var command = this.Database.GetDbConnection().CreateCommand())
+            {
+                command.CommandText = "GetMachineMonitoringData";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@StartTime", startTime));
+                command.Parameters.Add(new SqlParameter("@EndTime", endTime));
+                command.Parameters.Add(new SqlParameter("@MachineId", machineId));
+
+               await this.Database.OpenConnectionAsync();
+
+                await using (var reader = await command.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        var row = new List<dynamic?>();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            dynamic? value = reader.IsDBNull(i) ? null : reader.GetValue(i);
+                            row.Add(value); 
+                        }
+
+                        results.Add(row);
+                    }
+                }
+            }
+
+            return results;
+        }
+
     }
 }

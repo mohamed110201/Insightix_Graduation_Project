@@ -7,7 +7,10 @@ using Graduation_Project.Services.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Graduation_Project.Controllers.Repository;
+using Graduation_Project.Modules.Alerts.Repository;
+using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.Failures.Repository;
+using Graduation_Project.Modules.FailuresPrediction;
 using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachineTypes.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -48,7 +51,10 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachinesMonitoringDataRepository, MachinesMonitoringDataRepository>();
             services.AddScoped<IMachineFailuresRespository, MachineFailuresRespository>();
             services.AddScoped<IFailuresRepository, FailuresRepository>();
-
+            services.AddScoped<IAlertsService, AlertsService>();
+            services.AddScoped<IAlertsRepository, AlertsRepository>();
+            services.AddScoped<IAlertsCachingService, AlertsCachingService>();
+            services.AddScoped<ICreateAlertsService, CreateAlertsService>();
         }
 
         public static void RegisterConfigurations(this IServiceCollection services)
@@ -72,5 +78,21 @@ namespace Graduation_Project.Extenstions
                 options.UseSqlServer(config.GetConnectionString("Default"))
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
         }
+        public static void RegisterCaching(this IServiceCollection services)
+        {
+            services.AddMemoryCache();
+        }
+        
+        // public static void RegisterHttpClient(this IServiceCollection services)
+        // {
+        //     services.AddHttpClient<FailuresPredictionManger>();
+        // }
+        
+        public static void RegisterBackground(this IServiceCollection services)
+        {
+            services.AddHostedService<FailuresPredctionBackgroundService>();
+            services.AddSingleton<FailuresPredictionManger>();
+        }
+        
     }
 }

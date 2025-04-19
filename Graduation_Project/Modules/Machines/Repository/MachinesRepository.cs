@@ -63,6 +63,27 @@ namespace Graduation_Project.Repositories.Implementation
         }
        
         
+        public async Task<List<Machine>>GetMachinesForPrediction()
+        {
+            var machines = await dbContext.Machines.Where(x=>x.MachineType.AIModelName != null)
+                .ToListAsync();
+            return  machines;
+        }
+
+        public async Task AddPrediction(int machineId, DateTime timestamp)
+        {
+            var prediction = new FailurePrediction(){MachineId = machineId, TimeStamp = timestamp};
+            dbContext.FailurePredictions.Add(prediction);
+            await dbContext.SaveChangesAsync();
+        }
+        
+        public async Task UpdatePredictionCheckPoint(int machineId, DateTime checkPoint)
+        {
+            var machine = await dbContext.Machines.Where(m => m.Id == machineId)
+                .ExecuteUpdateAsync(setters 
+                    => setters.SetProperty(m => m.FailurePredictionCheckPoint,checkPoint));
+                        await dbContext.SaveChangesAsync();
+        }
         
     }
 }

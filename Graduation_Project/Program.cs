@@ -10,6 +10,8 @@ builder.Services.RegisterServices();
 builder.Services.RegisterRepositories();
 builder.Services.RegisterConfigurations();
 builder.Services.RegisterDbContext(builder.Configuration);
+builder.Services.RegisterCaching();
+builder.Services.RegisterBackground();
 
 
 
@@ -26,7 +28,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 app.RegisterMiddlewares();
-app.Services.AddSeedData();
+await app.Services.AddSeedData();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
