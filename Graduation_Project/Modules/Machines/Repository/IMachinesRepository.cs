@@ -14,6 +14,9 @@ namespace Graduation_Project.Repositories.Interfaces
         Machine? SearchBySerialNumber(string serialNumber);
 
         Task<List<MachineForSimulation>> GetMachinesForSimulation();
+        public Task<List<Machine>> GetMachinesForPrediction();
+        public Task AddPrediction(int machineId, DateTime timestamp);
+        public Task UpdatePredictionCheckPoint(int machineId, DateTime checkPoint);
 
 
     }

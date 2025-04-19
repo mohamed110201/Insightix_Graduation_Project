@@ -10,6 +10,7 @@ using Graduation_Project.Controllers.Repository;
 using Graduation_Project.Modules.Alerts.Repository;
 using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.Failures.Repository;
+using Graduation_Project.Modules.FailuresPrediction;
 using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachineTypes.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -81,5 +82,17 @@ namespace Graduation_Project.Extenstions
         {
             services.AddMemoryCache();
         }
+        
+        // public static void RegisterHttpClient(this IServiceCollection services)
+        // {
+        //     services.AddHttpClient<FailuresPredictionManger>();
+        // }
+        
+        public static void RegisterBackground(this IServiceCollection services)
+        {
+            services.AddHostedService<FailuresPredctionBackgroundService>();
+            services.AddSingleton<FailuresPredictionManger>();
+        }
+        
     }
 }

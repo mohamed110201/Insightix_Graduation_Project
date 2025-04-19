@@ -57,7 +57,7 @@ public class MachineTypesService(IMachineTypesRepository machineTypeRepository) 
             
         }
         
-        if (machineTypeRequestDto.ResourceConsumptionAttributeIds.Any())
+        if (machineTypeRequestDto.ResourceConsumptionAttributeIds.Any() && machineTypeRequestDto.ResourceConsumptionAttributeIds[0]!=0)
         {
             machineType.MachineTypeResourceConsumptionAttributes = machineTypeRequestDto.ResourceConsumptionAttributeIds.Select(raId => new MachineTypeResourceConsumptionAttribute()
             {

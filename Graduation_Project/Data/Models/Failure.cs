@@ -9,7 +9,6 @@ namespace Graduation_Project.Data.Models
         public Machine Machine { get; set; } = null!;
         
         public DateTime StartDateTime { get; set;}
-
         public DateTime? EndDateTime { get; set; }
         
         public FailureStatus Status { get; set;}
