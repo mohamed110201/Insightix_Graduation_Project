@@ -29,6 +29,20 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "FailurePredictions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MachineId = table.Column<int>(type: "int", nullable: false),
+                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FailurePredictions", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MachineMonitoringData",
                 columns: table => new
                 {
@@ -464,6 +478,9 @@ namespace Graduation_Project.Migrations
 
             migrationBuilder.DropTable(
                 name: "Failure");
+
+            migrationBuilder.DropTable(
+                name: "FailurePredictions");
 
             migrationBuilder.DropTable(
                 name: "MachineMonitoringData");

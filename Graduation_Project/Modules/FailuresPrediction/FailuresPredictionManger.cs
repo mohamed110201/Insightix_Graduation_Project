@@ -9,6 +9,9 @@ namespace Graduation_Project.Modules.FailuresPrediction;
 public class FailuresPredictionManger()
 {
     private readonly IServiceProvider _serviceProvider;
+    private const string failurePredictionServiceUrl = "http://127.0.0.1:8000/predict";
+    private const string modelName = "best_model_overall.py";
+    private HttpClient httpClient = new HttpClient();
 
     public FailuresPredictionManger( IServiceProvider serviceProvider ) : this()
     {
@@ -24,9 +27,7 @@ public class FailuresPredictionManger()
             await Work(machinesRepository, context);
         }
     }
-    private HttpClient httpClient = new HttpClient();
-    private async Task Work(IMachinesRepository machinesRepository
-    , AppDbContext context)
+    private async Task Work(IMachinesRepository machinesRepository, AppDbContext context)
     {
         var machines = await machinesRepository.GetMachinesForPrediction();
         foreach (var m in machines)
@@ -35,28 +36,45 @@ public class FailuresPredictionManger()
             var data = await context.GetMachineMonitoringData(m.Id
                 ,m.FailurePredictionCheckPoint?? (DateTime)(SqlDateTime.MinValue)
                 ,now);
-            var requestBody = new AiRequestBody()
+            var prediction = await SendFailurePredictionRequest(data);
+
+            if (prediction == null)
             {
-                ModelName = "best_model_overall.py",
-                Data = data
-            };
-            var json = JsonSerializer.Serialize(requestBody);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var url = "http://127.0.0.1:8000/predict/";
-            HttpResponseMessage response = await httpClient.PostAsync(url, content);
-            var responseBody = await response.Content.ReadAsStringAsync();
-            var result = JsonSerializer.Deserialize<AiResponseBody>(responseBody);
-            if (response.IsSuccessStatusCode && result is not null && result.Prediction is not null)
-            {
-                if (result.Prediction! == true)
+                if (prediction  == true )
                 {
-                    Console.WriteLine($"Prediction: {result.Prediction}");
+                    Console.WriteLine($"Prediction: {prediction}");
                     await machinesRepository.AddPrediction(m.Id, now);
                 }
                 await  machinesRepository.UpdatePredictionCheckPoint(m.Id, now);
             }
-            
         }
         
+    }
+
+    private async Task<bool?> SendFailurePredictionRequest(List<List<dynamic?>> data)
+    {
+        try
+        {
+            var requestBody = new AiRequestBody()
+            {
+                ModelName=modelName ,
+                Data = data
+            };
+            var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+            var response = await httpClient.PostAsync(failurePredictionServiceUrl, content);
+            var responseBody = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<AiResponseBody>(responseBody);
+
+            if (!response.IsSuccessStatusCode || result?.Prediction is null)
+                return null;
+        
+            return  result.Prediction!;
+        }
+        catch (Exception e)
+        {
+            return null;
+        }
+        
+
     }
 }

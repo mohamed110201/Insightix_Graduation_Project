@@ -12,7 +12,6 @@ namespace Graduation_Project.Data.Config
 
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name);
-            builder.HasData(new Models.System { Id = 1001, Name = "Wrapping System" });
 
         }
     }

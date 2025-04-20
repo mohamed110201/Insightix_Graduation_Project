@@ -22,10 +22,6 @@ namespace Graduation_Project.Data.Config
             builder.HasMany(x => x.ResourceConsumptionAttributes)
                 .WithMany(x => x.MachineTypes)
                 .UsingEntity<MachineTypeResourceConsumptionAttribute>();
-            builder.HasData(
-                new MachineType {Id = 1001 , Name = "Wrapper Machine" , Model = "Wr001" , AIModelName = "best_model_overall.h5"}
-            );
-
 
         }
     }
