@@ -40,4 +40,9 @@ public class MachinesMonitoringDataRepository(AppDbContext dbContext) : IMachine
         var current = await dbContext.GetCurrentMonitoringAttributesForMachine(machineId).ToListAsync();
         return current;
     }
+
+    public async Task AddMonitorinData(MonitoringData monitoringData)
+    {
+        await dbContext.AddAsync(monitoringData);
+    }
 }
