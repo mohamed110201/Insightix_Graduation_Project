@@ -245,15 +245,6 @@ namespace Graduation_Project.Migrations
                     b.HasIndex("SystemId");
 
                     b.ToTable("Machines", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1001,
-                            MachineTypeId = 1001,
-                            SerialNumber = "WSN001",
-                            SystemId = 1001
-                        });
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MachineType", b =>
@@ -278,15 +269,6 @@ namespace Graduation_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MachineTypes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1001,
-                            AIModelName = "best_model_overall.h5",
-                            Model = "Wr001",
-                            Name = "Wrapper Machine"
-                        });
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeMonitoringAttribute", b =>
@@ -310,86 +292,6 @@ namespace Graduation_Project.Migrations
                     b.HasIndex("MonitoringAttributeId");
 
                     b.ToTable("MachineTypeMonitoringAttributes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1001
-                        },
-                        new
-                        {
-                            Id = 2,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1002
-                        },
-                        new
-                        {
-                            Id = 3,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1003
-                        },
-                        new
-                        {
-                            Id = 4,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1004
-                        },
-                        new
-                        {
-                            Id = 5,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1005
-                        },
-                        new
-                        {
-                            Id = 6,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1006
-                        },
-                        new
-                        {
-                            Id = 7,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1007
-                        },
-                        new
-                        {
-                            Id = 8,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1008
-                        },
-                        new
-                        {
-                            Id = 9,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1009
-                        },
-                        new
-                        {
-                            Id = 10,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1010
-                        },
-                        new
-                        {
-                            Id = 11,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1011
-                        },
-                        new
-                        {
-                            Id = 12,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1012
-                        },
-                        new
-                        {
-                            Id = 13,
-                            MachineTypeId = 1001,
-                            MonitoringAttributeId = 1013
-                        });
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MachineTypeResourceConsumptionAttribute", b =>
@@ -434,86 +336,6 @@ namespace Graduation_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MonitoringAttributes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1001,
-                            Name = "Flag roping",
-                            Unit = "None"
-                        },
-                        new
-                        {
-                            Id = 1002,
-                            Name = "Platform Position",
-                            Unit = "degree"
-                        },
-                        new
-                        {
-                            Id = 1003,
-                            Name = "Platform Motor frequency",
-                            Unit = "HZ"
-                        },
-                        new
-                        {
-                            Id = 1004,
-                            Name = "Temperature platform drive",
-                            Unit = "degree"
-                        },
-                        new
-                        {
-                            Id = 1005,
-                            Name = "Temperature slave drive",
-                            Unit = "degree"
-                        },
-                        new
-                        {
-                            Id = 1006,
-                            Name = "Temperature hoist drive",
-                            Unit = "degree"
-                        },
-                        new
-                        {
-                            Id = 1007,
-                            Name = "Tensione totale film",
-                            Unit = "%"
-                        },
-                        new
-                        {
-                            Id = 1008,
-                            Name = "Current speed cart",
-                            Unit = "%"
-                        },
-                        new
-                        {
-                            Id = 1009,
-                            Name = "Platform motor speed",
-                            Unit = "%"
-                        },
-                        new
-                        {
-                            Id = 1010,
-                            Name = "Lifting motor speed",
-                            Unit = "RPM"
-                        },
-                        new
-                        {
-                            Id = 1011,
-                            Name = "Platform rotation speed",
-                            Unit = "RPM"
-                        },
-                        new
-                        {
-                            Id = 1012,
-                            Name = "Slave rotation speed",
-                            Unit = "M/MIN"
-                        },
-                        new
-                        {
-                            Id = 1013,
-                            Name = "Lifting speed rotation",
-                            Unit = "M/MIN"
-                        });
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MonitoringData", b =>
@@ -610,13 +432,6 @@ namespace Graduation_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Systems", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1001,
-                            Name = "Wrapping System"
-                        });
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.MonitoringAlert", b =>

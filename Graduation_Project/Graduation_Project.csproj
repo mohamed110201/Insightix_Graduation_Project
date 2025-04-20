@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="Modules\MachineTypesMachines\DTOs\" />
     <Folder Include="Modules\MachineTypesMachines\Repository\" />
     <Folder Include="Modules\MachineTypesMachines\Service\" />

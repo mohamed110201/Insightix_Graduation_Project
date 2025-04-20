@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
@@ -382,61 +380,6 @@ namespace Graduation_Project.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.InsertData(
-                table: "MachineTypes",
-                columns: new[] { "Id", "AIModelName", "Model", "Name" },
-                values: new object[] { 1001, "best_model_overall.h5", "Wr001", "Wrapper Machine" });
-
-            migrationBuilder.InsertData(
-                table: "MonitoringAttributes",
-                columns: new[] { "Id", "Name", "Unit" },
-                values: new object[,]
-                {
-                    { 1001, "Flag roping", "None" },
-                    { 1002, "Platform Position", "degree" },
-                    { 1003, "Platform Motor frequency", "HZ" },
-                    { 1004, "Temperature platform drive", "degree" },
-                    { 1005, "Temperature slave drive", "degree" },
-                    { 1006, "Temperature hoist drive", "degree" },
-                    { 1007, "Tensione totale film", "%" },
-                    { 1008, "Current speed cart", "%" },
-                    { 1009, "Platform motor speed", "%" },
-                    { 1010, "Lifting motor speed", "RPM" },
-                    { 1011, "Platform rotation speed", "RPM" },
-                    { 1012, "Slave rotation speed", "M/MIN" },
-                    { 1013, "Lifting speed rotation", "M/MIN" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Systems",
-                columns: new[] { "Id", "Name" },
-                values: new object[] { 1001, "Wrapping System" });
-
-            migrationBuilder.InsertData(
-                table: "MachineTypeMonitoringAttributes",
-                columns: new[] { "Id", "MachineTypeId", "MonitoringAttributeId" },
-                values: new object[,]
-                {
-                    { 1, 1001, 1001 },
-                    { 2, 1001, 1002 },
-                    { 3, 1001, 1003 },
-                    { 4, 1001, 1004 },
-                    { 5, 1001, 1005 },
-                    { 6, 1001, 1006 },
-                    { 7, 1001, 1007 },
-                    { 8, 1001, 1008 },
-                    { 9, 1001, 1009 },
-                    { 10, 1001, 1010 },
-                    { 11, 1001, 1011 },
-                    { 12, 1001, 1012 },
-                    { 13, 1001, 1013 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Machines",
-                columns: new[] { "Id", "FailurePredictionCheckPoint", "MachineTypeId", "SerialNumber", "SystemId" },
-                values: new object[] { 1001, null, 1001, "WSN001", 1001 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AlertChangeLogs_AlertId",
