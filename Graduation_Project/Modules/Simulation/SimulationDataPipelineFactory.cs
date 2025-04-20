@@ -5,16 +5,15 @@ using Graduation_Project.Modules.Simulation.PipeLineSteps;
 
 namespace Graduation_Project.Modules.Simulation;
 
-public class SimulationDataPipelineFactory(ICreateAlertsService createAlertsService,
-    IMachinesMonitoringDataService machinesMonitoringDataService)
-    
+public class SimulationDataPipelineFactory(IServiceProvider serviceProvider)
 {
 
-   public Pipeline<List<MonitoringData>> create()
+
+   public Pipeline<List<MonitoringData>> Create()
    {
        return new Pipeline<List<MonitoringData>>()
-           .AddStep(new AlertingPipelineStep(createAlertsService))
-           .AddStep(new StorePipelineStep(machinesMonitoringDataService));
+           .AddStep(new AlertingPipelineStep(serviceProvider))
+           .AddStep(new StorePipelineStep(serviceProvider));
    }
     
 }

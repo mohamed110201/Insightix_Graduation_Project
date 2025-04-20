@@ -25,6 +25,9 @@ builder.Services.RegisterValidations();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.RegisterFailuresPredictionBackground();
+builder.Services.RegisterSimulationDataBackground();
+
 
 var app = builder.Build();
 app.RegisterMiddlewares();

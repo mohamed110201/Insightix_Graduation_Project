@@ -18,6 +18,7 @@ using Graduation_Project.Modules.MachinesResourceConsumptionData.Service;
 using Graduation_Project.Modules.MachinesResourceConsumptionData.Repository;
 using Graduation_Project.Modules.MachinesMonitoringData.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.Repository;
+using Graduation_Project.Modules.Simulation;
 
 
 namespace Graduation_Project.Extenstions
@@ -88,10 +89,20 @@ namespace Graduation_Project.Extenstions
         //     services.AddHttpClient<FailuresPredictionManger>();
         // }
         
-        public static void RegisterBackground(this IServiceCollection services)
+        public static void RegisterFailuresPredictionBackground(this IServiceCollection services)
         {
             services.AddHostedService<FailuresPredctionBackgroundService>();
             services.AddSingleton<FailuresPredictionManger>();
+        }        
+        
+        public static void RegisterSimulationDataBackground(this IServiceCollection services)
+        {
+            
+            services.AddSingleton<SimulationDataPipelineFactory>();
+            services.AddSingleton<SimulationDataGenerator>();
+            
+            services.AddHostedService<SimulationDataBackgroundService>();
+            services.AddSingleton<SimulationManager>();
         }
         
     }

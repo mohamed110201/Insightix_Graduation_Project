@@ -2,7 +2,7 @@ namespace Graduation_Project.Modules.Simulation;
 
 public class SimulationManager(SimulationDataGenerator dataGenerator, SimulationDataPipelineFactory pipelineFactory)
 {
-    private readonly Pipeline<List<MonitoringData>> _pipeline = pipelineFactory.create();
+    private readonly Pipeline<List<MonitoringData>> _pipeline = pipelineFactory.Create();
 
     public async Task RunSimulation()
     {
