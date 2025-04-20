@@ -52,4 +52,16 @@ public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository mac
         }).ToList();
         return currentDto; 
     }
-}
+
+    public async Task AddMonitoringData(MonitoringDataDto monitoringDataDto)
+    {
+            var monitoringData = new MonitoringData()
+            {
+                MachineId = monitoringDataDto.MachineId,
+                MonitoringAttributeId = monitoringDataDto.MonitoringAttributeId,
+                Value = monitoringDataDto.Value,
+                TimeStamp = monitoringDataDto.TimeStamp,
+            };
+            await machinesMonitoringDataRepository.AddMonitorinData(monitoringData);
+        }
+    }
