@@ -12,7 +12,7 @@ namespace Graduation_Project.Data.Config
 
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name);
-            
+
         }
     }
 }

@@ -6,6 +6,7 @@
         public int Id { get; set; }
         public string SystemName { get; set; } = null!;
         public string MachineTypeName { get; set; } = null!;
+        public int MachineTypeId { get; set; }
         public string SerialNumber { get; set; } = null!;
     }
 }
