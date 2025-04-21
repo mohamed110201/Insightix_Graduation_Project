@@ -13,7 +13,7 @@ namespace Graduation_Project.Extenstions
 {
     public static class IServiceProviderExtension
     {
-        public static void AddSeedData(this IServiceProvider servicesProvider)
+        public static async Task AddSeedData(this IServiceProvider servicesProvider)
         {
             using var scope = servicesProvider.CreateScope();
             
@@ -24,7 +24,7 @@ namespace Graduation_Project.Extenstions
             if (db.Systems.Any()) return;
                 
             var dataLoader = new SeedDataLoader(db);
-            dataLoader.Load();
+            await dataLoader.Load();
         }
 
     }

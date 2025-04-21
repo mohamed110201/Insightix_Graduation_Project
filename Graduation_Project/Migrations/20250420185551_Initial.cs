@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,6 +29,20 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "FailurePredictions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MachineId = table.Column<int>(type: "int", nullable: false),
+                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FailurePredictions", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MachineMonitoringData",
                 columns: table => new
                 {
@@ -43,13 +57,28 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MachineResourceConsumptionData",
+                columns: table => new
+                {
+                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    MachineId = table.Column<int>(type: "int", nullable: false),
+                    ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
+                    Count = table.Column<int>(type: "int", nullable: false),
+                    Value = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MachineTypes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AIModelName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -157,7 +186,8 @@ namespace Graduation_Project.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SystemId = table.Column<int>(type: "int", nullable: false),
                     MachineTypeId = table.Column<int>(type: "int", nullable: false),
-                    SerialNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    SerialNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FailurePredictionCheckPoint = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -219,6 +249,28 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Failure",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MachineId = table.Column<int>(type: "int", nullable: false),
+                    StartDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndDateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Failure", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Failure_Machines_MachineId",
+                        column: x => x.MachineId,
+                        principalTable: "Machines",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MonitoringData",
                 columns: table => new
                 {
@@ -227,7 +279,7 @@ namespace Graduation_Project.Migrations
                     MachineId = table.Column<int>(type: "int", nullable: false),
                     MonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
                     TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Value = table.Column<int>(type: "int", nullable: false)
+                    Value = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -255,7 +307,7 @@ namespace Graduation_Project.Migrations
                     MachineId = table.Column<int>(type: "int", nullable: false),
                     ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
                     TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Value = table.Column<int>(type: "int", nullable: false)
+                    Value = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -350,6 +402,11 @@ namespace Graduation_Project.Migrations
                 column: "ResourceConsumptionAttributeAlertRuleId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Failure_MachineId",
+                table: "Failure",
+                column: "MachineId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Machines_MachineTypeId",
                 table: "Machines",
                 column: "MachineTypeId");
@@ -420,7 +477,16 @@ namespace Graduation_Project.Migrations
                 name: "CurrentMonitoringAttributesValues");
 
             migrationBuilder.DropTable(
+                name: "Failure");
+
+            migrationBuilder.DropTable(
+                name: "FailurePredictions");
+
+            migrationBuilder.DropTable(
                 name: "MachineMonitoringData");
+
+            migrationBuilder.DropTable(
+                name: "MachineResourceConsumptionData");
 
             migrationBuilder.DropTable(
                 name: "MonitoringData");

@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Core.ErrorHandling.Exceptions;
 using Graduation_Project.Data.Dtos.Machine;
 using Graduation_Project.Data.Dtos.MachineDto;
+using Graduation_Project.Modules.Machines.DTOs;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
 
@@ -12,8 +13,6 @@ namespace Graduation_Project.Modules.Machines.Service
 
         public async Task<IEnumerable<GetAllMachinesAcrossAllSystemsDto>> GetAll()
         {
-            
-
             var machines = await machinesRepository.GetAll();
 
             return machines.Select(m => new GetAllMachinesAcrossAllSystemsDto
@@ -39,6 +38,7 @@ namespace Graduation_Project.Modules.Machines.Service
                 SystemName = machine.System.Name,
                 SerialNumber = machine.SerialNumber,
                 MachineTypeName = machine.MachineType.Name,
+                MachineTypeId = machine.MachineTypeId,
             };
         }
 
@@ -77,7 +77,8 @@ namespace Graduation_Project.Modules.Machines.Service
             {
                 Id = m.Id,
                 SerialNumber = m.SerialNumber,
-                MachineTypeName = m.MachineType.Name
+                MachineTypeName = m.MachineType.Name,
+                MachineTypeId = m.MachineTypeId,
             }).ToList(); ;
         }
 
@@ -93,6 +94,11 @@ namespace Graduation_Project.Modules.Machines.Service
             };
 
             await machinesRepository.AddMachineToSystem(systemId, machine);
+        }
+
+        public async Task<List<MachineForSimulation>> GetMachinesForSimulation()
+        {
+            return await machinesRepository.GetMachinesForSimulation();
         }
     }
 }

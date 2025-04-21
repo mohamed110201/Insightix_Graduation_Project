@@ -65,6 +65,26 @@ namespace Graduation_Project.Migrations
                     b.ToTable("MachineMonitoringData");
                 });
 
+            modelBuilder.Entity("Graduation_Project.Data.FunctionsData.MachineResourceConsumptionData", b =>
+                {
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ResourceConsumptionAttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Value")
+                        .HasColumnType("int");
+
+                    b.ToTable("MachineResourceConsumptionData");
+                });
+
             modelBuilder.Entity("Graduation_Project.Data.Models.Alert", b =>
                 {
                     b.Property<int>("Id")
@@ -150,6 +170,53 @@ namespace Graduation_Project.Migrations
                     b.UseTpcMappingStrategy();
                 });
 
+            modelBuilder.Entity("Graduation_Project.Data.Models.Failure", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("EndDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MachineId");
+
+                    b.ToTable("Failure", (string)null);
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.FailurePrediction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FailurePredictions");
+                });
+
             modelBuilder.Entity("Graduation_Project.Data.Models.Machine", b =>
                 {
                     b.Property<int>("Id")
@@ -157,6 +224,9 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("FailurePredictionCheckPoint")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("MachineTypeId")
                         .HasColumnType("int");
@@ -184,6 +254,9 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AIModelName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -282,8 +355,8 @@ namespace Graduation_Project.Migrations
                     b.Property<DateTime>("TimeStamp")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -332,8 +405,8 @@ namespace Graduation_Project.Migrations
                     b.Property<DateTime>("TimeStamp")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -429,6 +502,17 @@ namespace Graduation_Project.Migrations
                         .IsRequired();
 
                     b.Navigation("Alert");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.Models.Failure", b =>
+                {
+                    b.HasOne("Graduation_Project.Data.Models.Machine", "Machine")
+                        .WithMany("Failures")
+                        .HasForeignKey("MachineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Machine");
                 });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.Machine", b =>
@@ -578,6 +662,8 @@ namespace Graduation_Project.Migrations
             modelBuilder.Entity("Graduation_Project.Data.Models.Machine", b =>
                 {
                     b.Navigation("Alerts");
+
+                    b.Navigation("Failures");
 
                     b.Navigation("MonitoringData");
 

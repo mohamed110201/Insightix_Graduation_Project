@@ -11,8 +11,6 @@ public class AlertConfig:IEntityTypeConfiguration<Alert>
     public void Configure(EntityTypeBuilder<Alert> builder)
     {
         
-
-        
         builder.ToTable("Alerts");
         builder.HasKey(x => x.Id);
 

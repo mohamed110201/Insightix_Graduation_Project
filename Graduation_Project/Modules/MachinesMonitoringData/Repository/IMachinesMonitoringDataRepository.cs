@@ -13,4 +13,5 @@ public interface IMachinesMonitoringDataRepository
 
     public Task<List<GetSummaryDto>> GetSummary(int machineId, int monitoringAttributeId, DateTime startDate, DateTime endDate);
     public Task<List<CurrentMonitoringAttributesValues>> GetCurrent(int machineId);
+    public Task AddMonitorinData(MonitoringData monitoringData);
 }

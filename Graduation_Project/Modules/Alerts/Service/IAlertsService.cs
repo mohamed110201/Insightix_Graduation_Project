@@ -8,5 +8,5 @@ public interface IAlertsService
     public Task<GetAlertByIdDto?> GetById(int id);
     public Task<List<GetAlertsByMachineIdDto>> GetAlertsByMachineId(int machineId);
     public Task ChangeStatus(int id,string status);
-
+    
 }

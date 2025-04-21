@@ -4,23 +4,22 @@ namespace Graduation_Project.Data.Seed;
 
 public class SeedDataGenerator
 {
-    public static SeedDataContainer Generate()
+    public static async Task<SeedDataContainer?> GenerateAsync()
     {
-        var jsonText = ReadJsonText();
-        var data = Deserialize(jsonText);
+        await using var stream = OpenJsonStream();
+        var data = await DeserializeAsync(stream);
         return data;
     }
 
-    private static SeedDataContainer Deserialize(string jsonText)
+    private static async Task<SeedDataContainer?> DeserializeAsync(Stream stream)
     {
-        var data = JsonSerializer.Deserialize<SeedDataContainer>(jsonText);
-        return data;
+        return await JsonSerializer.DeserializeAsync<SeedDataContainer>(stream);
     }
 
-    private static string ReadJsonText()
+    private static Stream OpenJsonStream()
     {
         var path = Path.Combine(Directory.GetCurrentDirectory(), "Data", "Seed", "TestData.json");
-        var jsonText = File.ReadAllText(path);
-        return jsonText;
+        return new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read, bufferSize: 4096, useAsync: true);
     }
+
 }

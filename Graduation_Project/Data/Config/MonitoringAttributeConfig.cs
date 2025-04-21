@@ -11,8 +11,6 @@ namespace Graduation_Project.Data.Config
             builder.Property(e => e.Name);
 
             builder.Property(e => e.Unit);
-
-
         }
     }
 }

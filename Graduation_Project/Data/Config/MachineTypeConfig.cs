@@ -10,7 +10,7 @@ namespace Graduation_Project.Data.Config
 
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name);
-                
+            builder.Property(x => x.AIModelName);
 
             builder.Property(x => x.Model);
 
@@ -22,7 +22,6 @@ namespace Graduation_Project.Data.Config
             builder.HasMany(x => x.ResourceConsumptionAttributes)
                 .WithMany(x => x.MachineTypes)
                 .UsingEntity<MachineTypeResourceConsumptionAttribute>();
-
 
         }
     }
