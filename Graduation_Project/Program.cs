@@ -1,8 +1,8 @@
-using System.Text.Json;
-using Graduation_Project.Core.ErrorHandling;
 using Graduation_Project.Extenstions;
 using Graduation_Project.Filters;
-using Microsoft.AspNetCore.Mvc;
+using Graduation_Project.Modules.Email;
+using Graduation_Project.Modules.Email.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,12 @@ builder.Services.RegisterRepositories();
 builder.Services.RegisterConfigurations();
 builder.Services.RegisterDbContext(builder.Configuration);
 builder.Services.RegisterCaching();
-// builder.Services.RegisterBackground();
+builder.Services.RegisterResend(builder.Configuration);
+builder.Services.RegisterRazorLightEngine();
+
+builder.Logging.ClearProviders();
+
+
 
 
 
@@ -32,6 +37,8 @@ builder.Services.RegisterSimulationDataBackground();
 var app = builder.Build();
 app.RegisterMiddlewares();
 await app.Services.AddSeedData();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

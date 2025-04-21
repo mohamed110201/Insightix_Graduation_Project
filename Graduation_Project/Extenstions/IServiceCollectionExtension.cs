@@ -9,6 +9,7 @@ using FluentValidation.AspNetCore;
 using Graduation_Project.Controllers.Repository;
 using Graduation_Project.Modules.Alerts.Repository;
 using Graduation_Project.Modules.Alerts.Service;
+using Graduation_Project.Modules.Email;
 using Graduation_Project.Modules.Failures.Repository;
 using Graduation_Project.Modules.FailuresPrediction;
 using Graduation_Project.Modules.Machines.Service;
@@ -19,6 +20,8 @@ using Graduation_Project.Modules.MachinesResourceConsumptionData.Repository;
 using Graduation_Project.Modules.MachinesMonitoringData.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.Repository;
 using Graduation_Project.Modules.Simulation;
+using RazorLight;
+using Resend;
 
 
 namespace Graduation_Project.Extenstions
@@ -76,8 +79,11 @@ namespace Graduation_Project.Extenstions
         public static void RegisterDbContext(this IServiceCollection services, IConfiguration config)
         {
             services.AddDbContext<AppDbContext>(options =>
+            {
+                options.LogTo(_ => { }, LogLevel.None);
                 options.UseSqlServer(config.GetConnectionString("Default"))
-                    .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+                    .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            });
         }
         public static void RegisterCaching(this IServiceCollection services)
         {
@@ -103,6 +109,34 @@ namespace Graduation_Project.Extenstions
             
             services.AddHostedService<SimulationDataBackgroundService>();
             services.AddSingleton<SimulationManager>();
+        }        
+        
+        public static void RegisterResend(this IServiceCollection services,IConfiguration config)
+        {
+            
+            services.AddHttpClient<ResendClient>();
+            services.Configure<ResendClientOptions>( o =>
+            {
+                o.ApiToken = config.GetValue<string>("RESEND_API_TOKEN")!;
+                Console.WriteLine("Resend API Token");
+                Console.WriteLine(config.GetValue<string>("RESEND_API_TOKEN"));
+            } );
+            services.AddTransient<IResend, ResendClient>();
+            services.AddTransient<EmailService>();
+        }        
+        public static void RegisterRazorLightEngine(this IServiceCollection services)
+        {
+            
+            services.AddSingleton<RazorLightEngine>(provider =>
+            {
+                var env = provider.GetRequiredService<IWebHostEnvironment>();
+                var templatesRoot = Path.Combine(env.ContentRootPath, "Modules\\Email\\Templates");
+                Console.WriteLine(templatesRoot);
+                return new RazorLightEngineBuilder()
+                    .UseFileSystemProject(templatesRoot)
+                    .UseMemoryCachingProvider()
+                    .Build();
+            });
         }
         
     }
