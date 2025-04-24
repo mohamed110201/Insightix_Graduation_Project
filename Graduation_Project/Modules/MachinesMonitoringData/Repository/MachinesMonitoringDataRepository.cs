@@ -43,6 +43,7 @@ public class MachinesMonitoringDataRepository(AppDbContext dbContext) : IMachine
 
     public async Task AddMonitorinData(MonitoringData monitoringData)
     {
-        await dbContext.AddAsync(monitoringData);
+        await dbContext.MonitoringData.AddAsync(monitoringData);
+        await dbContext.SaveChangesAsync();
     }
 }

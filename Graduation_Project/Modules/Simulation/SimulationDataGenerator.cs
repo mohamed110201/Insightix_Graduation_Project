@@ -2,10 +2,12 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Modules.Simulation;
 
-public class SimulationDataGenerator(IMachinesService machinesService)
+public class SimulationDataGenerator(IServiceProvider serviceProvider)
 {
     public async Task<List<MonitoringData>> GenerateData()
     {
+        using var scope = serviceProvider.CreateScope();
+        var machinesService = scope.ServiceProvider.GetRequiredService<IMachinesService>();
         var machines = await machinesService.GetMachinesForSimulation();
         var now = DateTime.Now;
         List<MonitoringData> monitoringDataList = new();
@@ -16,6 +18,7 @@ public class SimulationDataGenerator(IMachinesService machinesService)
                 monitoringDataList.Add(new MonitoringData()
                 {
                     MachineId = machine.MachineId,
+                    MonitoringAttributeId = attribute.MonitoringAttributeId,
                     TimeStamp = now,
                     Value = RandomNumber(attribute.MinNormalRange, attribute.MaxNormalRange),
                 });

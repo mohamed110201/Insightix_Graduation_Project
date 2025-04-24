@@ -36,17 +36,22 @@ public class FailuresPredictionManger()
             var data = await context.GetMachineMonitoringData(m.Id
                 ,m.FailurePredictionCheckPoint?? (DateTime)(SqlDateTime.MinValue)
                 ,now);
+
+            if (data.Count == 0) {
+                continue;
+            }
+            
             var prediction = await SendFailurePredictionRequest(data);
 
-            if (prediction == null)
-            {
-                if (prediction  == true )
-                {
-                    Console.WriteLine($"Prediction: {prediction}");
-                    await machinesRepository.AddPrediction(m.Id, now);
-                }
-                await  machinesRepository.UpdatePredictionCheckPoint(m.Id, now);
+            if (prediction == null) {
+                continue;
             }
+
+            if (prediction == true) {
+                await machinesRepository.AddPrediction(m.Id, now);
+            }
+                
+            await  machinesRepository.UpdatePredictionCheckPoint(m.Id, now);
         }
         
     }
