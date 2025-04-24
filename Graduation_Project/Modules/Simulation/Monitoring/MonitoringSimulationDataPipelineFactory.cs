@@ -7,7 +7,7 @@ using Graduation_Project.Modules.Simulation.PipeLineSteps;
 
 namespace Graduation_Project.Modules.Simulation;
 
-public class SimulationDataPipelineFactory(IServiceProvider serviceProvider
+public class MonitoringSimulationDataPipelineFactory(IServiceProvider serviceProvider
 , MachineDataNotifier notifier)
 {
 
@@ -15,9 +15,9 @@ public class SimulationDataPipelineFactory(IServiceProvider serviceProvider
    public Pipeline<List<MonitoringData>> Create()
    {
        return new Pipeline<List<MonitoringData>>()
-           .AddStep(new RefreshCurrentMonitoringDataPipelineStep(notifier))
-           .AddStep(new AlertingPipelineStep(serviceProvider))
-           .AddStep(new StorePipelineStep(serviceProvider));
+           .AddStep(new MonitoringRefreshCurrentDataPipelineStep(notifier))
+           .AddStep(new MonitoringAlertingPipelineStep(serviceProvider))
+           .AddStep(new MonitoringStorePipelineStep(serviceProvider));
    }
     
 }

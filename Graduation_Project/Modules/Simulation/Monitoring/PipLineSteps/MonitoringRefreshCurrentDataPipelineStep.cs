@@ -3,7 +3,7 @@ using Graduation_Project.Hubs.MachineData;
 
 namespace Graduation_Project.Modules.Simulation.PipeLineSteps;
 
-public class RefreshCurrentMonitoringDataPipelineStep(MachineDataNotifier notifier) : IPipelineStep<List<MonitoringData>>
+public class MonitoringRefreshCurrentDataPipelineStep(MachineDataNotifier notifier) : IPipelineStep<List<MonitoringData>>
 {
     public async Task<List<MonitoringData>> Process(List<MonitoringData> input)
     {

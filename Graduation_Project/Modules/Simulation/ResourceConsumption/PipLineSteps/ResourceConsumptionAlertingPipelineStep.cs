@@ -7,7 +7,6 @@ public class ResourceConsumptionAlertingPipelineStep(ICreateAlertsService create
 {
     public async Task<List<ResourceConsumptionData>> Process(List<ResourceConsumptionData> input)
     {
-        var tasks = new List<Task>();
         foreach (var resourceConsumptionData in input)
         {
             var dto = new ResourceConsumptionDataDto()
@@ -18,10 +17,9 @@ public class ResourceConsumptionAlertingPipelineStep(ICreateAlertsService create
                 TimeStamp = resourceConsumptionData.TimeStamp
             };
 
-            tasks.Add(createAlertsService.CheckResourceConsumptionAlertsAsync(dto));
+            await createAlertsService.CheckResourceConsumptionAlertsAsync(dto);
         }
 
-        await Task.WhenAll(tasks);
         return input;    
     }
 }

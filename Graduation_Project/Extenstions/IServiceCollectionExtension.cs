@@ -104,8 +104,8 @@ namespace Graduation_Project.Extenstions
         public static void RegisterSimulationDataBackground(this IServiceCollection services)
         {
             
-            services.AddSingleton<SimulationDataPipelineFactory>();
-            services.AddSingleton<SimulationDataGenerator>();
+            services.AddSingleton<MonitoringSimulationDataPipelineFactory>();
+            services.AddSingleton<MonitoringSimulationDataGenerator>();
             
             services.AddHostedService<SimulationDataBackgroundService>();
             services.AddSingleton<SimulationManager>();
