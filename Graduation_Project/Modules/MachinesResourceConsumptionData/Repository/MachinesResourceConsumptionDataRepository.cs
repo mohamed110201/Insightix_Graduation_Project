@@ -36,5 +36,9 @@ public class MachinesResourceConsumptionDataRepository(AppDbContext dbContext) :
         return summary;
     }
 
+    public async Task AddResourceConsumptioData(ResourceConsumptionData resourceConsumptionData)
+    {
+        await dbContext.AddAsync(resourceConsumptionData);
+    }
 
 }

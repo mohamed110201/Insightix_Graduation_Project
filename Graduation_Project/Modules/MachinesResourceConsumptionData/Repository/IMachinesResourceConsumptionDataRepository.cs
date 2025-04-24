@@ -12,4 +12,6 @@ public interface IMachinesResourceConsumptionDataRepository
         DateTime endDate);
 
     public Task<List<GetSummaryDto>> GetSummary(int machineId, int resourceConsumptionAttributeId, DateTime startDate, DateTime endDate);
+    public Task AddResourceConsumptioData(ResourceConsumptionData resourceConsumptionData);
+
 }
