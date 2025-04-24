@@ -104,8 +104,8 @@ namespace Graduation_Project.Extenstions
         public static void RegisterSimulationDataBackground(this IServiceCollection services)
         {
             
-            services.AddSingleton<SimulationDataPipelineFactory>();
-            services.AddSingleton<SimulationDataGenerator>();
+            services.AddSingleton<MonitoringSimulationDataPipelineFactory>();
+            services.AddSingleton<MonitoringSimulationDataGenerator>();
             
             services.AddHostedService<SimulationDataBackgroundService>();
             services.AddSingleton<SimulationManager>();
@@ -118,8 +118,6 @@ namespace Graduation_Project.Extenstions
             services.Configure<ResendClientOptions>( o =>
             {
                 o.ApiToken = config.GetValue<string>("RESEND_API_TOKEN")!;
-                Console.WriteLine("Resend API Token");
-                Console.WriteLine(config.GetValue<string>("RESEND_API_TOKEN"));
             } );
             services.AddTransient<IResend, ResendClient>();
             services.AddTransient<EmailService>();
@@ -131,7 +129,6 @@ namespace Graduation_Project.Extenstions
             {
                 var env = provider.GetRequiredService<IWebHostEnvironment>();
                 var templatesRoot = Path.Combine(env.ContentRootPath, "Modules\\Email\\Templates");
-                Console.WriteLine(templatesRoot);
                 return new RazorLightEngineBuilder()
                     .UseFileSystemProject(templatesRoot)
                     .UseMemoryCachingProvider()

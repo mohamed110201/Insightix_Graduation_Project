@@ -2,7 +2,7 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Modules.Simulation;
 
-public class SimulationDataGenerator(IServiceProvider serviceProvider)
+public class MonitoringSimulationDataGenerator(IServiceProvider serviceProvider)
 {
     public async Task<List<MonitoringData>> GenerateData()
     {

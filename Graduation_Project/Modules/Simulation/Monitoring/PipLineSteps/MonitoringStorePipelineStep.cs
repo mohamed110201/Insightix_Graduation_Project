@@ -3,7 +3,7 @@ using Graduation_Project.Modules.MachinesMonitoringData.Service;
 
 namespace Graduation_Project.Modules.Simulation.PipeLineSteps;
 
-public class StorePipelineStep(IServiceProvider serviceProvider) : IPipelineStep<List<MonitoringData>>
+public class MonitoringStorePipelineStep(IServiceProvider serviceProvider) : IPipelineStep<List<MonitoringData>>
 {
     public async Task<List<MonitoringData>> Process(List<MonitoringData> input)
     {

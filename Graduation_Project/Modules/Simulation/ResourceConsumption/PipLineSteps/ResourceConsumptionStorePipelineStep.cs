@@ -8,7 +8,8 @@ public class ResourceConsumptionStorePipelineStep (IMachinesResourceConsumptionD
 {
     public async Task<List<ResourceConsumptionData>> Process(List<ResourceConsumptionData> input)
     {
-        var tasks = input.Select(monitoringData =>
+
+        foreach (var monitoringData in input)
         {
             var dto = new ResourceConsumptionDataDto()
             {
@@ -18,9 +19,9 @@ public class ResourceConsumptionStorePipelineStep (IMachinesResourceConsumptionD
                 TimeStamp = monitoringData.TimeStamp
             };
 
-            return machinesResourceConsumptionDataService.AddResourceConsumptionData(dto);
-        });
-
-        await Task.WhenAll(tasks);
-        return input;    }
+           await machinesResourceConsumptionDataService.AddResourceConsumptionData(dto);
+        }
+        return input;    
+        
+    }
 }
