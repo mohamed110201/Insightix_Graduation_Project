@@ -40,5 +40,15 @@ public class MachinesResourceConsumptionDataService(IMachinesResourceConsumption
         return summary[0];
     }
 
-
+    public async Task AddResourceConsumptionData(ResourceConsumptionDataDto resourceConsumptionDataDto)
+    {
+        var resourceConsumptionData = new ResourceConsumptionData()
+        {
+            MachineId = resourceConsumptionDataDto.MachineId,
+            ResourceConsumptionAttributeId = resourceConsumptionDataDto.ResourceConsumptionAttributeId,
+            Value = resourceConsumptionDataDto.Value,
+            TimeStamp = resourceConsumptionDataDto.TimeStamp,
+        };
+        await machinesResourceConsumptionDataRepository.AddResourceConsumptioData(resourceConsumptionData);
+    }
 }
