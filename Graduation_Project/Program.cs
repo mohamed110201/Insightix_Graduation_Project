@@ -1,6 +1,7 @@
 using Graduation_Project.Extenstions;
 using Graduation_Project.Filters;
 using Graduation_Project.Hubs;
+using Graduation_Project.Hubs.MachineData;
 using Graduation_Project.Modules.Email;
 using Graduation_Project.Modules.Email.Models;
 
@@ -15,7 +16,7 @@ builder.Services.RegisterCaching();
 builder.Services.RegisterResend(builder.Configuration);
 builder.Services.RegisterRazorLightEngine();
 builder.Services.AddSignalR();
-builder.Services.AddSingleton<MachineMonitoringDataNotifier>();
+builder.Services.AddSingleton<MachineDataNotifier>();
 builder.Logging.ClearProviders();
 builder.Services.AddCors(options =>
 {

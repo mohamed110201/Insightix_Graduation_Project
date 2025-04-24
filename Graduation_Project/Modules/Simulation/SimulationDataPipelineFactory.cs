@@ -1,5 +1,6 @@
 using Graduation_Project.Data;
 using Graduation_Project.Hubs;
+using Graduation_Project.Hubs.MachineData;
 using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.Service;
 using Graduation_Project.Modules.Simulation.PipeLineSteps;
@@ -7,7 +8,7 @@ using Graduation_Project.Modules.Simulation.PipeLineSteps;
 namespace Graduation_Project.Modules.Simulation;
 
 public class SimulationDataPipelineFactory(IServiceProvider serviceProvider
-, MachineMonitoringDataNotifier notifier)
+, MachineDataNotifier notifier)
 {
 
 
