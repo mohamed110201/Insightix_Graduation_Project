@@ -2,36 +2,37 @@ using Graduation_Project.Services.Interfaces;
 
 namespace Graduation_Project.Modules.Simulation;
 
-public class MonitoringSimulationDataGenerator(IServiceProvider serviceProvider)
+public class ResourceConsumptionSimulationDataGenerator(IServiceProvider serviceProvider)
 {
-    public async Task<List<MonitoringData>> GenerateData()
+    public async Task<List<ResourceConsumptionData>> GenerateData()
     {
         using var scope = serviceProvider.CreateScope();
         var machinesService = scope.ServiceProvider.GetRequiredService<IMachinesService>();
         var machines = await machinesService.GetMachinesForSimulation();
         var now = DateTime.Now;
-        List<MonitoringData> monitoringDataList = new();
+        List<ResourceConsumptionData> resourceConsumptionDataDataList = new();
         foreach (var machine in machines)
         {
-            foreach (var attribute in machine.MonitoringAttributes)
+            foreach (var attribute in machine.ResourceConsumptionAttributes)
             {
-                monitoringDataList.Add(new MonitoringData()
+                resourceConsumptionDataDataList.Add(new ResourceConsumptionData()
                 {
                     MachineId = machine.MachineId,
-                    MonitoringAttributeId = attribute.MonitoringAttributeId,
+                    ResourceConsumptionAttributeId = attribute.ResourceConsumptionAttributeId,
                     TimeStamp = now,
                     Value = RandomNumber(attribute.MinNormalRange, attribute.MaxNormalRange),
                 });
             }
         }
-        return monitoringDataList;
+        return resourceConsumptionDataDataList;
     }
 
     private static Random _rand = new Random();
 
     private static double RandomNumber(double min, double max)
     {
-        var value = min + (max - min) * rand.NextDouble();        
+        var rand = new Random();
+        var value = min + (max - min) * rand.NextDouble();
         return value;
     }
 

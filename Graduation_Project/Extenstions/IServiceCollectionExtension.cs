@@ -22,6 +22,8 @@ using Graduation_Project.Modules.MachinesResourceConsumptionData.Repository;
 using Graduation_Project.Modules.MachinesMonitoringData.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.Repository;
 using Graduation_Project.Modules.Simulation;
+using Graduation_Project.Modules.Simulation.Monitoring;
+using Graduation_Project.Modules.Simulation.ResourceConsumption;
 using RazorLight;
 using Resend;
 
@@ -108,6 +110,9 @@ namespace Graduation_Project.Extenstions
             
             services.AddSingleton<MonitoringSimulationDataPipelineFactory>();
             services.AddSingleton<MonitoringSimulationDataGenerator>();
+            
+            services.AddSingleton<ResourceConsumptionSimulationDataPipelineFactory>();
+            services.AddSingleton<ResourceConsumptionSimulationDataGenerator>();
             
             services.AddHostedService<SimulationDataBackgroundService>();
             services.AddSingleton<SimulationManager>();
