@@ -27,10 +27,10 @@ public class MonitoringSimulationDataGenerator(IServiceProvider serviceProvider)
         return monitoringDataList;
     }
 
+    private static Random _rand = new Random();
+
     private static int RandomNumber(int min, int max)
     {
-        var rand = new Random();
-        var value = min + (max - min) * (int)rand.NextDouble();
-        return value;
+        return _rand.Next(min, max); 
     }
 }
