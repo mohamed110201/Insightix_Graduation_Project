@@ -6,5 +6,5 @@ public class MachineMonitoringData
     public int MachineId { get; set; }
     public int MonitoringAttributeId { get; set; }
     public int Count { get; set; }
-    public int Value { get; set; }
+    public double Value { get; set; }
 }
