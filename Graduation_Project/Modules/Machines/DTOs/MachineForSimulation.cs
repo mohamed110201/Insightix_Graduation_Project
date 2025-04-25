@@ -3,15 +3,15 @@ namespace Graduation_Project.Modules.Machines.DTOs;
 public class MachineForSimulationMonitoringAttribute
 {
     public int MonitoringAttributeId{ get; set; }
-    public int MinNormalRange{ get; set; }
-    public int MaxNormalRange{ get; set; }
+    public double MinNormalRange{ get; set; }
+    public double MaxNormalRange{ get; set; }
 }
 
 public class MachineForSimulationResourceConsumptionAttribute
 {
     public int ResourceConsumptionAttributeId{ get; set; }
-    public int MinNormalRange{ get; set; }
-    public int MaxNormalRange{ get; set; }
+    public double MinNormalRange{ get; set; }
+    public double MaxNormalRange{ get; set; }
 }
 
 public class MachineForSimulation

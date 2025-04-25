@@ -35,9 +35,15 @@ namespace Graduation_Project.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
-            modelBuilder.Entity<MachineMonitoringData>().HasNoKey();
-            modelBuilder.Entity<CurrentMonitoringAttributesValues>().HasNoKey();
-            modelBuilder.Entity<MachineResourceConsumptionData>().HasNoKey();
+            modelBuilder.Entity<MachineMonitoringData>()
+                .HasNoKey();
+            
+            modelBuilder.Entity<CurrentMonitoringAttributesValues>()
+                .HasNoKey();
+
+            modelBuilder.Entity<MachineResourceConsumptionData>()
+                .HasNoKey();
+
 
 
 

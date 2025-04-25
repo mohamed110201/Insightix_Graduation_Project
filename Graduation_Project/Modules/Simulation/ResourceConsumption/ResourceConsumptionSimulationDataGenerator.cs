@@ -29,8 +29,11 @@ public class ResourceConsumptionSimulationDataGenerator(IServiceProvider service
 
     private static Random _rand = new Random();
 
-    private static int RandomNumber(int min, int max)
+    private static double RandomNumber(double min, double max)
     {
-        return _rand.Next(min, max); 
+        var rand = new Random();
+        var value = min + (max - min) * rand.NextDouble();
+        return value;
     }
+
 }
