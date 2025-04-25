@@ -7,6 +7,8 @@ using Graduation_Project.Services.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Graduation_Project.Controllers.Repository;
+using Graduation_Project.Hubs.MachineData;
+using Graduation_Project.Hubs.Notifications;
 using Graduation_Project.Modules.Alerts.Repository;
 using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.Email;
@@ -135,6 +137,11 @@ namespace Graduation_Project.Extenstions
                     .Build();
             });
         }
-        
+
+        public static void RegisterNotifiers(this IServiceCollection services)
+        {
+            services.AddSingleton<MachineDataNotifier>();
+            services.AddSingleton<NotificationsNotifier>();
+        }
     }
 }
