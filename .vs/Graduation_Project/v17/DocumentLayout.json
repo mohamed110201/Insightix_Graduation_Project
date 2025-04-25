@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\testdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\testdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddatagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddatacontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddatacontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\data\\seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\data\\seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\modules\\simulation\\pipelinesteps\\alertingpipelinestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|solutionrelative:graduation_project\\modules\\simulation\\pipelinesteps\\alertingpipelinestep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A40C8198-3AD1-4CC7-898E-5B4E7D0DD0DC}|Graduation_Project\\Graduation_Project.csproj|d:\\studying\\faculty\\graduation_project\\graduation_project\\graduation_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -154,8 +138,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMachinesMonitoringDataService.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T17:48:25.915Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AlertingPipelineStep.cs",
+              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Simulation\\PipeLineSteps\\AlertingPipelineStep.cs",
+              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Simulation\\PipeLineSteps\\AlertingPipelineStep.cs",
+              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Simulation\\PipeLineSteps\\AlertingPipelineStep.cs",
+              "RelativeToolTip": "Graduation_Project\\Modules\\Simulation\\PipeLineSteps\\AlertingPipelineStep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T18:18:08.99Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -218,85 +228,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Program.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Program.cs",
               "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Program.cs",
               "RelativeToolTip": "Graduation_Project\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T17:06:42.306Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TestData.json",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\TestData.json",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\TestData.json",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\TestData.json",
-              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\TestData.json",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-17T15:37:49.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SeedDataContainer.cs",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedDataContainer.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T14:01:30.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SeedDataLoader.cs",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedDataLoader.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwAoAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T14:02:52.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SeedDataGenerator.cs",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedDataGenerator.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T14:02:43.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedData.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Data\\Seed\\SeedData.cs",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Seed\\SeedData.cs",
-              "RelativeToolTip": "Graduation_Project\\Data\\Seed\\SeedData.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwDcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T14:00:35.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Data\\AppDbContext.cs",
@@ -304,12 +249,11 @@
               "RelativeToolTip": "Graduation_Project\\Data\\AppDbContext.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAA3wCIAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T14:06:52.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T14:06:52.745Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "MachinesResourceConsumptionDataController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesResourceConsumptionData\\MachinesResourceConsumptionDataController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\MachinesResourceConsumptionDataController.cs",
@@ -317,24 +261,11 @@
               "RelativeToolTip": "Graduation_Project\\Modules\\MachinesResourceConsumptionData\\MachinesResourceConsumptionDataController.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T19:49:47.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T19:49:47.766Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IMachinesMonitoringDataService.cs",
-              "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
-              "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
-              "ToolTip": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
-              "RelativeToolTip": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\IMachinesMonitoringDataService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T17:48:25.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "IServiceCollectionExtension.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\IServiceCollectionExtension.cs",
@@ -346,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "MachinesMonitoringDataController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\MachinesMonitoringDataController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\MachinesMonitoringDataController.cs",
@@ -358,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "MachinesMonitoringDataRepository.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\MachinesMonitoringDataRepository.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\MachinesMonitoringDataRepository.cs",
@@ -370,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "IMachinesMonitoringDataRepository.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\IMachinesMonitoringDataRepository.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Repository\\IMachinesMonitoringDataRepository.cs",
@@ -382,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "MachinesMonitoringDataService.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\MachinesMonitoringDataService.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\Service\\MachinesMonitoringDataService.cs",
@@ -394,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "GetMonitoringDataDto.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetMonitoringDataDto.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetMonitoringDataDto.cs",
@@ -406,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 11,
               "Title": "GetSummaryDto.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetSummaryDto.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetSummaryDto.cs",
@@ -418,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 12,
               "Title": "GetCurrentMonitoringAttributesValuesDto.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetCurrentMonitoringAttributesValuesDto.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachinesMonitoringData\\DTOs\\GetCurrentMonitoringAttributesValuesDto.cs",
@@ -430,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
               "Title": "IApplicationBuilderExtensions.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IApplicationBuilderExtensions.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\IApplicationBuilderExtensions.cs",
@@ -442,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 14,
               "Title": "EnumerableExtensions.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\EnumerableExtensions.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\EnumerableExtensions.cs",
@@ -454,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 15,
               "Title": "IServiceProviderExtension.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Extenstions\\IServiceProviderExtension.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Extenstions\\IServiceProviderExtension.cs",
@@ -466,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 16,
               "Title": "AddMachineToSystemDto.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\DTOs\\AddMachineToSystemDto.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Machines\\DTOs\\AddMachineToSystemDto.cs",
@@ -478,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 17,
               "Title": "MachineMonitoringData.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\FunctionsData\\MachineMonitoringData.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Data\\FunctionsData\\MachineMonitoringData.cs",
@@ -490,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 18,
               "Title": "MonitoringData.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Data\\Models\\MonitoringData.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Data\\Models\\MonitoringData.cs",
@@ -502,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 19,
               "Title": "ChangeLogsDto.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Alerts\\DTOs\\ChangeLogsDto.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Alerts\\DTOs\\ChangeLogsDto.cs",
@@ -514,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 24,
               "Title": "Graduation_Project.http",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Graduation_Project.http",
               "RelativeDocumentMoniker": "Graduation_Project\\Graduation_Project.http",
@@ -526,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 20,
               "Title": "MachineTypesRepository.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachineTypes\\Repository\\MachineTypesRepository.cs",
@@ -538,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 22,
               "Title": "MachinesService.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Machines\\Service\\MachinesService.cs",
@@ -550,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 21,
               "Title": "MachineTypesService.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Service\\MachineTypesService.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachineTypes\\Service\\MachineTypesService.cs",
@@ -562,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 25,
               "Title": "GlobalUsings.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\GlobalUsings.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\GlobalUsings.cs",
@@ -574,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 26,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\appsettings.json",
               "RelativeDocumentMoniker": "Graduation_Project\\appsettings.json",
@@ -586,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 23,
               "Title": "SystemsMachinesController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\SystemsMachines\\SystemsMachinesController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\SystemsMachines\\SystemsMachinesController.cs",
@@ -598,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 27,
               "Title": "SystemsService.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Systems\\Service\\SystemsService.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Systems\\Service\\SystemsService.cs",
@@ -610,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 28,
               "Title": "MachinesController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Machines\\MachinesController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Machines\\MachinesController.cs",
@@ -622,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 29,
               "Title": "AddMachineTypeValidator.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\MachineTypes\\Validators\\AddMachineTypeValidator.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\MachineTypes\\Validators\\AddMachineTypeValidator.cs",
@@ -634,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 30,
               "Title": "SystemsController.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Systems\\SystemsController.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Systems\\SystemsController.cs",
@@ -646,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 31,
               "Title": "SystemsRepository.cs",
               "DocumentMoniker": "D:\\Studying\\Faculty\\Graduation_Project\\Graduation_Project\\Graduation_Project\\Modules\\Systems\\Repository\\SystemsRepository.cs",
               "RelativeDocumentMoniker": "Graduation_Project\\Modules\\Systems\\Repository\\SystemsRepository.cs",
