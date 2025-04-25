@@ -1,7 +1,7 @@
 namespace Graduation_Project.Hubs.MachineData;
 
-public enum MachineHubType
+public class MachineHubType
 {
-    Monitoring = 'm',
-    Resource = 'r',
+  public static string Monitoring = "monitoring";
+  public static string Resource = "resource";
 }
