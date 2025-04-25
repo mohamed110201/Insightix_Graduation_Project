@@ -1,12 +1,14 @@
 using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.MachinesResourceConsumptionData.DTOs;
 
-namespace Graduation_Project.Modules.Simulation.PipeLineSteps;
+namespace Graduation_Project.Modules.Simulation.ResourceConsumption.PipLineSteps;
 
-public class ResourceConsumptionAlertingPipelineStep(ICreateAlertsService createAlertsService) : IPipelineStep<List<ResourceConsumptionData>>
+public class ResourceConsumptionAlertingPipelineStep(IServiceProvider serviceProvider) : IPipelineStep<List<ResourceConsumptionData>>
 {
     public async Task<List<ResourceConsumptionData>> Process(List<ResourceConsumptionData> input)
     {
+        using var scope = serviceProvider.CreateScope();
+        var createAlertsService = scope.ServiceProvider.GetRequiredService<ICreateAlertsService>();
         foreach (var resourceConsumptionData in input)
         {
             var dto = new ResourceConsumptionDataDto()

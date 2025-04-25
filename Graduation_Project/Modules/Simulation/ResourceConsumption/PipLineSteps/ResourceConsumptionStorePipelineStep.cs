@@ -1,22 +1,22 @@
-using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.MachinesResourceConsumptionData.DTOs;
 using Graduation_Project.Modules.MachinesResourceConsumptionData.Service;
 
-namespace Graduation_Project.Modules.Simulation.PipeLineSteps;
+namespace Graduation_Project.Modules.Simulation.ResourceConsumption.PipLineSteps;
 
-public class ResourceConsumptionStorePipelineStep (IMachinesResourceConsumptionDataService machinesResourceConsumptionDataService) : IPipelineStep<List<ResourceConsumptionData>>
+public class ResourceConsumptionStorePipelineStep (IServiceProvider serviceProvider) : IPipelineStep<List<ResourceConsumptionData>>
 {
     public async Task<List<ResourceConsumptionData>> Process(List<ResourceConsumptionData> input)
     {
-
-        foreach (var monitoringData in input)
+        using var scope = serviceProvider.CreateScope();
+        var machinesResourceConsumptionDataService = scope.ServiceProvider.GetRequiredService<IMachinesResourceConsumptionDataService>();
+        foreach (var resourceConsumptionData in input)
         {
             var dto = new ResourceConsumptionDataDto()
             {
-                MachineId = monitoringData.MachineId,
-                ResourceConsumptionAttributeId = monitoringData.ResourceConsumptionAttributeId,
-                Value = monitoringData.Value,
-                TimeStamp = monitoringData.TimeStamp
+                MachineId = resourceConsumptionData.MachineId,
+                ResourceConsumptionAttributeId = resourceConsumptionData.ResourceConsumptionAttributeId,
+                Value = resourceConsumptionData.Value,
+                TimeStamp = resourceConsumptionData.TimeStamp
             };
 
            await machinesResourceConsumptionDataService.AddResourceConsumptionData(dto);

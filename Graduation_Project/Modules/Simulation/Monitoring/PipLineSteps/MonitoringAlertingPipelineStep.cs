@@ -1,7 +1,7 @@
 using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.DTOs;
 
-namespace Graduation_Project.Modules.Simulation;
+namespace Graduation_Project.Modules.Simulation.Monitoring.PipLineSteps;
 
 public class MonitoringAlertingPipelineStep(IServiceProvider serviceProvider) : IPipelineStep<List<MonitoringData>>
 {

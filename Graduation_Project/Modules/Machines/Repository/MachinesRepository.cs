@@ -50,14 +50,24 @@ namespace Graduation_Project.Repositories.Implementation
         {
          return await   dbContext.Machines.Include(m => m.MachineType)
                 .ThenInclude(t => t.MachineTypeMonitoringAttributes)
+                .Include(m => m.MachineType)
+                .ThenInclude(t=>t.MachineTypeResourceConsumptionAttributes)
+                
                 .Select(m=>new MachineForSimulation()
                 {
                     MachineId = m.Id,
                     MonitoringAttributes= m.MachineType.MachineTypeMonitoringAttributes.Select(a=>new MachineForSimulationMonitoringAttribute()
                     {
                         MonitoringAttributeId = a.MonitoringAttributeId,
-                        MinNormalRange=10,
-                        MaxNormalRange=100
+                        MinNormalRange=a.LowerRange,
+                        MaxNormalRange=a.UpperRange
+                    }).ToList()
+                    ,
+                    ResourceConsumptionAttributes = m.MachineType.MachineTypeResourceConsumptionAttributes.Select(a=>new MachineForSimulationResourceConsumptionAttribute()
+                    {
+                        ResourceConsumptionAttributeId = a.ResourceConsumptionAttributeId,
+                        MinNormalRange=a.LowerRange,
+                        MaxNormalRange=a.UpperRange
                     }).ToList()
                 }).ToListAsync();
         }

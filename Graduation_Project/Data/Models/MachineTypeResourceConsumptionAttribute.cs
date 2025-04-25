@@ -9,6 +9,8 @@ namespace Graduation_Project.Data.Models
         public MachineType MachineType { get; set; } = null!;
       
         public ICollection<ResourceConsumptionAttributeAlertRule> AlertRules { get; set; } = [];
+        public int UpperRange { get; set; }
+        public int LowerRange { get; set; }
      
     }
 }

@@ -1,11 +1,8 @@
-using Graduation_Project.Data;
-using Graduation_Project.Hubs;
 using Graduation_Project.Hubs.MachineData;
-using Graduation_Project.Modules.Alerts.Service;
-using Graduation_Project.Modules.MachinesMonitoringData.Service;
+using Graduation_Project.Modules.Simulation.Monitoring.PipLineSteps;
 using Graduation_Project.Modules.Simulation.PipeLineSteps;
 
-namespace Graduation_Project.Modules.Simulation;
+namespace Graduation_Project.Modules.Simulation.Monitoring;
 
 public class MonitoringSimulationDataPipelineFactory(IServiceProvider serviceProvider
 , MachineDataNotifier notifier)
