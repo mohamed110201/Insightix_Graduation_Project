@@ -26,6 +26,11 @@ using Graduation_Project.Modules.Simulation.Monitoring;
 using Graduation_Project.Modules.Simulation.ResourceConsumption;
 using RazorLight;
 using Resend;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Graduation_Project.Modules.Authentication.Service;
 
 
 namespace Graduation_Project.Extenstions
@@ -43,6 +48,8 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachinesMonitoringDataService, MachinesMonitoringDataService>();
             services.AddScoped<IMachineFailuresService, MachineFailuresService>();
             services.AddScoped<IFailuresService, FailuresService>();
+            services.AddScoped<IAuthService, AuthService>();
+
 
 
 
@@ -116,8 +123,38 @@ namespace Graduation_Project.Extenstions
             
             services.AddHostedService<SimulationDataBackgroundService>();
             services.AddSingleton<SimulationManager>();
-        }        
-        
+        }
+
+        public static void RegisterIdentityUser(this IServiceCollection services)
+        {
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
+
+        }
+        public static void RegisterAuthentication(this IServiceCollection services,IConfiguration configuration)
+        {
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddJwtBearer(options => {
+                            options.TokenValidationParameters = new TokenValidationParameters
+                             {
+                                ValidateIssuer = true,
+                                ValidateAudience = true,
+                                ValidateLifetime = true,
+                                ValidateIssuerSigningKey = true,
+                                ValidIssuer = configuration["JwtSettings:Issuer"],
+                                ValidAudience = configuration["JwtSettings:Audience"],
+                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Key"]))
+                             };
+                        
+
+                     });
+
+            services.AddAuthorization();
+        }
+
         public static void RegisterResend(this IServiceCollection services,IConfiguration config)
         {
             

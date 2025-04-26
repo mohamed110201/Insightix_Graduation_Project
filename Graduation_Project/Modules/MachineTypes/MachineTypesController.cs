@@ -1,12 +1,16 @@
 using Graduation_Project.Core.JSend;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
 using Graduation_Project.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Controllers;
 
 [Route("api/machine-types")]
 [ApiController]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+
 public class MachineTypesController(IMachineTypesService machineTypesService) : Controller
 {
     [HttpGet]

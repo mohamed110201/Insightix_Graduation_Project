@@ -7,11 +7,15 @@ using System.Reflection.PortableExecutable;
 using Graduation_Project.Data.FunctionsData;
 using Microsoft.Data.SqlClient;
 using Machine = Graduation_Project.Data.Models.Machine;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace Graduation_Project.Data
 {
-    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext<IdentityUser>(options)
     {
+
+
 
         public DbSet<Models.System> Systems { get; set; }
         public DbSet<MachineType>  MachineTypes { get; set; }

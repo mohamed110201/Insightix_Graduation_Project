@@ -1,11 +1,15 @@
 ﻿using Graduation_Project.Core.JSend;
 using Graduation_Project.Modules.Failures.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Controllers
 {
     [Route("api/failures")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+
     public class FailuresController(IFailuresService failuresService) : ControllerBase
     {
         
