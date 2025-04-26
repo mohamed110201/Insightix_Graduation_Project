@@ -2,12 +2,16 @@
 using Graduation_Project.Data;
 using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachinesResourceConsumptionData.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Modules.MachinesResourceConsumptionData
 {
     [Route("api/machines/{machineId:int}/resource-consumption-data")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+
     public class MachinesResourceConsumptionDataController(IMachinesResourceConsumptionDataService machinesResourceConsumptionDataService) : ControllerBase
     {
         [HttpGet("resource-consumption-attribute/{resourceConsumptionAttributeId:int}/line-chart")]
