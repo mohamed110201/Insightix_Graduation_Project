@@ -2,12 +2,16 @@
 using Graduation_Project.Data;
 using Graduation_Project.Modules.Machines.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Modules.MachinesMonitoringData
 {
     [Route("api/machines/{machineId:int}/monitoring-data")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+
     public class MachinesMonitoringDataController(IMachinesMonitoringDataService machinesMonitoringDataService) : ControllerBase
     {
         [HttpGet("monitoring-attribute/{monitoringAttributeId:int}/line-chart")]

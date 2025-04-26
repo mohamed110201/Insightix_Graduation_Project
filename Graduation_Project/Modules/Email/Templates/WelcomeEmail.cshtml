@@ -1,0 +1,11 @@
+@model Graduation_Project.Modules.Email.Models.WelcomeEmailModel
+
+<html lang="en">
+<head>
+<title>Welcome</title>
+</head>
+<body>
+<h1>Welcome, @Model.UserName!</h1>
+<p>Thanks for joining us on @Model.RegistrationDate.ToString("MMMM dd, yyyy")</p>
+</body>
+</html>

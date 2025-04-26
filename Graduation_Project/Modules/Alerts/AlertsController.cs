@@ -2,12 +2,15 @@
 using Graduation_Project.Data;
 using Graduation_Project.Modules.Alerts.Service;
 using Graduation_Project.Modules.MachinesMonitoringData.DTOs;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Modules.Alerts
 {
     [Route("api/Alerts")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AlertsController(IAlertsService alertService , 
         ICreateAlertsService createAlertsService,
         AppDbContext _context) : ControllerBase

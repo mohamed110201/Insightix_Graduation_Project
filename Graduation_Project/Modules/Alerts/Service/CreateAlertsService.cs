@@ -1,12 +1,14 @@
 using Graduation_Project.Data;
 using Graduation_Project.Data.Enums;
+using Graduation_Project.Hubs.Notifications;
+using Graduation_Project.Hubs.Notifications.NotificationDataDtos;
 using Graduation_Project.Modules.MachinesMonitoringData.DTOs;
 using Graduation_Project.Modules.MachinesResourceConsumptionData.DTOs;
 
 namespace Graduation_Project.Modules.Alerts.Service;
 
 public class CreateAlertsService(
-    AppDbContext context , IAlertsCachingService cachingService)  : ICreateAlertsService
+    AppDbContext context , IAlertsCachingService cachingService, NotificationsNotifier notificationsNotifier)  : ICreateAlertsService
 {
    
     public async Task CheckMonitoringAlertsAsync(MonitoringDataDto data)
@@ -71,6 +73,19 @@ public class CreateAlertsService(
         });
 
         await context.SaveChangesAsync();
+
+
+        await notificationsNotifier.SendNotificationsAsync(new NotificationDto()
+        {
+            Type = "alert",
+            Data = new NotificationAlertDataDto()
+            {
+                AlertId = alert.Id,
+                MachineId = machineId,
+                TimeStamp = timeStamp,
+            }
+        });
+        
         cachingService.InvalidateExistingAlertCache(machineId, ruleId, alertType);
     }
 
