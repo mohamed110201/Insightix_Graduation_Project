@@ -24,8 +24,8 @@ namespace Graduation_Project.Modules.Authentication.Service
                 issuer: configuration["JwtSettings:Issuer"],
                 audience: configuration["JwtSettings:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(
-                configuration.GetValue<int>("JwtSettings:ExpiryMinutes", 30)),
+                expires: DateTime.UtcNow.AddDays(
+                configuration.GetValue<int>("JwtSettings:ExpiryInDays", 1)),
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
