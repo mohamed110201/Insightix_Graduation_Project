@@ -31,7 +31,7 @@ public class MonitoringSimulationDataGenerator(IServiceProvider serviceProvider)
 
     private static double RandomNumber(double min, double max)
     {
-        var value = min + (max - min) * rand.NextDouble();        
+        var value = min + (max - min) * _rand.NextDouble();        
         return value;
     }
 

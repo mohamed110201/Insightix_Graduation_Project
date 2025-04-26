@@ -3,7 +3,7 @@ using Graduation_Project.DTOs;
 
 namespace Graduation_Project.Validators;
 
-public class AddResourceConsumptionAttributeValidator: AbstractValidator<AddMonitoringAttributeDto>
+public class AddResourceConsumptionAttributeValidator: AbstractValidator<AddResourceConsumptionAttributeDto>
 {
     public AddResourceConsumptionAttributeValidator()
     {
