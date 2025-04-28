@@ -1,4 +1,5 @@
 using System.Collections;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Graduation_Project.Core.JSend;
 
@@ -38,10 +39,10 @@ public static class JSend
             new JSendBody { Status = "fail", Error = error ,Errors = errors });
     }    
     
-    public static JSendResponse Unauthorized()
+    public static JSendResponse Unauthorized(string? message = null, ICollection ? errors = null)
     {
         return new JSendResponse(StatusCodes.Status401Unauthorized,
-            new JSendBody { Status = "fail", Error = $"Unauthorized, Sorry your request cannot be processed" });
+            new JSendBody { Status = "fail", Message = message, Errors = errors });
     }    
     
     public static JSendResponse Forbidden()

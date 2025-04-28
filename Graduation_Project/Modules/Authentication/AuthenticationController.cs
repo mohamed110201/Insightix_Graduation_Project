@@ -1,4 +1,5 @@
-﻿using Graduation_Project.Modules.Authentication.DTOs;
+﻿using Graduation_Project.Core.JSend;
+using Graduation_Project.Modules.Authentication.DTOs;
 using Graduation_Project.Modules.Authentication.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -14,16 +15,23 @@ namespace Graduation_Project.Modules.Authentication
     {
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginUserDto model)
+        public async Task<IActionResult> Login([FromBody] LoginUserDto loginUser)
         {
-            var user = await userManager.FindByNameAsync(model.Username);
-            if (user == null || !await userManager.CheckPasswordAsync(user, model.Password))
+            var user = await userManager.FindByEmailAsync(loginUser.Email);
+            if (user == null || !await userManager.CheckPasswordAsync(user, loginUser.Password))
             {
-                return Unauthorized("Invalid credentials");
+                return JSend.Unauthorized("Email Or Password Is Incorrect ");
             }
 
             var token = authService.GenerateJwtToken(user.UserName);
-            return Ok(new { token });
+
+            var userInfo = new
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Token = token
+            };
+            return JSend.Success("Login Successfully", userInfo);
         }
         [HttpPost("logout")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -34,7 +42,7 @@ namespace Graduation_Project.Modules.Authentication
 
             await authService.BlacklistTokenAsync(token); 
 
-            return Ok(new { message = "Logged out successfully." });
+            return JSend.Success("Logged out successfully!");
         }
     }
 }
