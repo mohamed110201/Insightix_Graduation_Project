@@ -20,7 +20,7 @@ public class MachinesResourceConsumptionDataService(IMachinesResourceConsumption
         var ResourceConsumptionDataDto = ResourceConsumptionData.Select(x=>new GetResourceConsumptionDataDto
         {
             TimeStamp = x.TimeStamp,
-            Value = (int)x.Value,
+            Value = x.Value,
             Count = x.Count
         });
         return ResourceConsumptionDataDto.ToList();

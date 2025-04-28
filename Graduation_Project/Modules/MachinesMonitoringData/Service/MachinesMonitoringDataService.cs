@@ -20,7 +20,7 @@ public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository mac
         var monitoringDataDto = monitoringData.Select(x=>new GetMointoringDataDto
         {
             TimeStamp = x.TimeStamp,
-            Value = (int)x.Value,
+            Value = x.Value,
             Count = x.Count
         });
         return monitoringDataDto.ToList();
@@ -46,7 +46,7 @@ public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository mac
         var currentDto = current.Select(x => new GetCurrentMonitoringAttributesValuesDto
         {
             TimeStamp = x.TimeStamp,
-            Value = (int)x.Value,
+            Value = x.Value,
             MonitoringAttributeId = x.MonitoringAttributeId,
             MonitoringAttributeName = x.MonitoringAttributeName
         }).ToList();
