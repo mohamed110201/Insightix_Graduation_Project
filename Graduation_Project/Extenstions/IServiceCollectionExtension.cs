@@ -148,9 +148,25 @@ namespace Graduation_Project.Extenstions
                                 ValidAudience = configuration["JwtSettings:Audience"],
                                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Key"]))
                              };
-                        
 
-                     });
+                        options.Events = new JwtBearerEvents
+                        {
+                            OnTokenValidated = async context =>
+                            {
+                                var tokenBlacklistService = context.HttpContext.RequestServices.GetRequiredService<IAuthService>();
+
+                                var rawToken = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+
+                                if (await tokenBlacklistService.IsTokenBlacklistedAsync(rawToken))
+                                {
+                                    context.Fail("This token has been revoked (logged out).");
+                                }
+                            }
+                        };
+
+
+                    });
+
 
             services.AddAuthorization();
         }
