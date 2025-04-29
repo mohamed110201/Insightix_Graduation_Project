@@ -40,14 +40,17 @@ namespace Graduation_Project.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
             modelBuilder.Entity<MachineMonitoringData>()
-                .HasNoKey();
+                .HasNoKey()
+                .ToView(null);
             
             modelBuilder.Entity<CurrentMonitoringAttributesValues>()
-                .HasNoKey();
+                .HasNoKey()
+                .ToView(null);
 
             modelBuilder.Entity<MachineResourceConsumptionData>()
-                .HasNoKey();
-
+                .HasNoKey()
+                .ToView(null);
+            
 
 
 
