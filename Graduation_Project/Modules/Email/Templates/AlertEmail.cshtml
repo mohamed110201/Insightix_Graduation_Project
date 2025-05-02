@@ -1,0 +1,64 @@
+@model Graduation_Project.Modules.Email.Models.AlertEmailModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INSIGHTIX Alert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+<div class="max-w-xl mx-auto mt-10 bg-white rounded-lg shadow-md overflow-hidden">
+    <!-- Header / Logo -->
+    <div class="p-6 text-center">
+        <img src="https://insightix-b841e.web.app/static/media/trans.bb6d7fc4e3c6681b7631.png" alt="INSIGHTIX Logo" class="h-12 mx-auto" />
+    </div>
+
+    <!-- Body -->
+    <div class="px-6 py-8">
+        <p class="text-lg font-semibold mb-4">Dear @Model.UserName,</p>
+        <p class="text-base mb-6">
+            We have detected <strong>@Model.AlertType</strong> related to one of your machines.
+        </p>
+        
+        <p>@Model.AlertMessage</p>
+
+        @if (Model.AlertDetails.Any())
+        {
+            <div class="mb-6">
+                <ul class="list-disc pl-5 space-y-1">
+                    @foreach (var detail in Model.AlertDetails)
+                    {
+                        <li>
+                            <span class="font-medium">@detail.Key:</span>
+                            <span class="text-gray-700">@detail.Value</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+
+        @if (Model.ActionUrl != null)
+        {
+            <p class="mb-6">
+                Please click the button below to view more details about the alert or predicted failure.
+            </p>
+        
+            <!-- CTA Button -->
+            <div class="text-center">
+                <a href="@Model.ActionUrl" class="inline-block text-white font-semibold py-3 px-6 rounded-lg transition" style="background-color: #07406b">
+                    Click
+                </a>
+            </div>
+        }
+
+
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-100 text-center text-sm text-gray-600 p-4">
+        © @DateTime.UtcNow.Year INSIGHTIX. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

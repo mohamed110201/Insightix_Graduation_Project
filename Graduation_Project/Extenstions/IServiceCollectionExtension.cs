@@ -31,6 +31,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Graduation_Project.Modules.Authentication.Service;
+using Graduation_Project.Modules.MonitoringDataM;
+using Graduation_Project.Modules.ResourceConsumptionDataM;
 using Graduation_Project.Modules.FailuresPrediction.Repository;
 using Graduation_Project.Modules.FailuresPrediction.Service;
 using Graduation_Project.Modules.MachineFailures.Repository;
@@ -52,7 +54,12 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachineFailuresService, MachineFailuresService>();
             services.AddScoped<IFailuresService, FailuresService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<MonitoringDataRepository>();
+            services.AddScoped<ResourceConsumptionDataRepository>();
 
+
+            services.AddScoped<BroadcastAlertEmailService>();
+            services.AddScoped<Broadcast>();
             services.AddScoped<IFailuresPredictionService, FailuresPredictionService>();
 
 
@@ -181,7 +188,7 @@ namespace Graduation_Project.Extenstions
             services.AddHttpClient<ResendClient>();
             services.Configure<ResendClientOptions>( o =>
             {
-                o.ApiToken = config.GetValue<string>("RESEND_API_TOKEN")!;
+                o.ApiToken = config.GetValue<string>("ResendAPIToken")!;
             } );
             services.AddTransient<IResend, ResendClient>();
             services.AddTransient<EmailService>();
