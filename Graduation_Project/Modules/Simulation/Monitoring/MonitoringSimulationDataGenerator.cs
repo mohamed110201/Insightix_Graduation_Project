@@ -9,7 +9,7 @@ public class MonitoringSimulationDataGenerator(IServiceProvider serviceProvider)
         using var scope = serviceProvider.CreateScope();
         var machinesService = scope.ServiceProvider.GetRequiredService<IMachinesService>();
         var machines = await machinesService.GetMachinesForSimulation();
-        var now = DateTime.Now;
+        var now = DateTimeOffset.Now;
         List<MonitoringData> monitoringDataList = new();
         foreach (var machine in machines)
         {

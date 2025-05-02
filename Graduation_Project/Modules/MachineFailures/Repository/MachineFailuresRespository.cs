@@ -10,7 +10,12 @@ public class MachineFailuresRespository(AppDbContext dbContext) : IMachineFailur
     
    public Task<List<Failure>> GetAll(int machineId)
     {
-        return dbContext.Failures.Where(f => f.MachineId == machineId).ToListAsync();
+        return dbContext.Failures
+            .OrderByDescending(x=>x.StartDateTimeOffset)
+            .Where(f => f.MachineId == machineId)
+            .Include(x=>x.Machine)
+            .ThenInclude(x=>x.MachineType)
+            .ToListAsync();
     }
 
     public async Task Add(Failure failure)

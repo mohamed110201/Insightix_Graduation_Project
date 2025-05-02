@@ -5,7 +5,7 @@ namespace Graduation_Project.Data.Models;
 public class AlertChangeLog
 {
     public int Id { get; set; }
-    public DateTime TimeStamp { get; set; }
+    public DateTimeOffset TimeStamp { get; set; }
     public AlertStatus Status { get; set; }
 
     public int AlertId { get; set; }

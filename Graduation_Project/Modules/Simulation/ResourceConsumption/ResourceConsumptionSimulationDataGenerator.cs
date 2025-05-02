@@ -9,7 +9,7 @@ public class ResourceConsumptionSimulationDataGenerator(IServiceProvider service
         using var scope = serviceProvider.CreateScope();
         var machinesService = scope.ServiceProvider.GetRequiredService<IMachinesService>();
         var machines = await machinesService.GetMachinesForSimulation();
-        var now = DateTime.Now;
+        var now = DateTimeOffset.Now;
         List<ResourceConsumptionData> resourceConsumptionDataDataList = new();
         foreach (var machine in machines)
         {

@@ -4,5 +4,5 @@ public class NotificationAlertDataDto : NotificationDataDto
 {
     public int AlertId { get; set; }
     public int MachineId { get; set; }
-    public DateTime TimeStamp { get; set; }
+    public DateTimeOffset TimeStamp { get; set; }
 }

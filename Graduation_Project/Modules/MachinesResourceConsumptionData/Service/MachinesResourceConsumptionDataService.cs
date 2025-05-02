@@ -14,8 +14,8 @@ public class MachinesResourceConsumptionDataService(IMachinesResourceConsumption
         if(lastSeconds==null)
             throw new AppError(StatusCodes.Status400BadRequest, "Last Seconds Is Required");
         var windowSize = 60;
-        var startDate = DateTime.Now.AddSeconds(-(double)lastSeconds);
-        var endDate = DateTime.Now;
+        var startDate = DateTimeOffset.Now.AddSeconds(-(double)lastSeconds);
+        var endDate = DateTimeOffset.Now;
         var ResourceConsumptionData = await machinesResourceConsumptionDataRepository.GetAll(machineId, resourceConsumptionAttributeId, windowSize, startDate, endDate);
         var ResourceConsumptionDataDto = ResourceConsumptionData.Select(x=>new GetResourceConsumptionDataDto
         {
@@ -32,8 +32,8 @@ public class MachinesResourceConsumptionDataService(IMachinesResourceConsumption
     {
         if (lastSeconds == null)
             throw new AppError(StatusCodes.Status400BadRequest, "Last Seconds Is Required");
-        var startDate = DateTime.Now.AddSeconds(-(double)lastSeconds);
-        var endDate = DateTime.Now;
+        var startDate = DateTimeOffset.Now.AddSeconds(-(double)lastSeconds);
+        var endDate = DateTimeOffset.Now;
         var summary = await machinesResourceConsumptionDataRepository.GetSummary(machineId, resourceConsumptionAttributeId, startDate, endDate);
         if (!summary.Any())
             throw new AppError(StatusCodes.Status404NotFound, "There Are No Data For This Machine");
