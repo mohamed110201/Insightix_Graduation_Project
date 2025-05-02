@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250426024332_addtables")]
-    partial class addtables
+    [Migration("20250502221221_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,73 @@ namespace Graduation_Project.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.HasSequence("AlertRuleSequence");
+
+            modelBuilder.Entity("Graduation_Project.Data.FunctionsData.CurrentMonitoringAttributesValues", b =>
+                {
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MonitoringAttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MonitoringAttributeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTimeOffset?>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<double?>("Value")
+                        .HasColumnType("float");
+
+                    b.ToTable((string)null);
+
+                    b.ToView(null, (string)null);
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.FunctionsData.MachineMonitoringData", b =>
+                {
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MonitoringAttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
+                    b.ToTable((string)null);
+
+                    b.ToView(null, (string)null);
+                });
+
+            modelBuilder.Entity("Graduation_Project.Data.FunctionsData.MachineResourceConsumptionData", b =>
+                {
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MachineId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ResourceConsumptionAttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
+                    b.ToTable((string)null);
+
+                    b.ToView(null, (string)null);
+                });
 
             modelBuilder.Entity("Graduation_Project.Data.Models.Alert", b =>
                 {
@@ -42,8 +109,8 @@ namespace Graduation_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<string>("Type")
                         .IsRequired()
@@ -75,8 +142,8 @@ namespace Graduation_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -120,14 +187,14 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("EndDateTime")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset?>("EndDateTimeOffset")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<int>("MachineId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("StartDateTime")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("StartDateTimeOffset")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -151,8 +218,8 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("MachineId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -167,8 +234,8 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("FailurePredictionCheckPoint")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset?>("FailurePredictionCheckPoint")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<int>("MachineTypeId")
                         .HasColumnType("int");
@@ -221,11 +288,17 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<double>("LowerRange")
+                        .HasColumnType("float");
+
                     b.Property<int>("MachineTypeId")
                         .HasColumnType("int");
 
                     b.Property<int>("MonitoringAttributeId")
                         .HasColumnType("int");
+
+                    b.Property<double>("UpperRange")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -244,11 +317,17 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<double>("LowerRange")
+                        .HasColumnType("float");
+
                     b.Property<int>("MachineTypeId")
                         .HasColumnType("int");
 
                     b.Property<int>("ResourceConsumptionAttributeId")
                         .HasColumnType("int");
+
+                    b.Property<double>("UpperRange")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -294,8 +373,8 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("MonitoringAttributeId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<double>("Value")
                         .HasColumnType("float");
@@ -344,8 +423,8 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("ResourceConsumptionAttributeId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("TimeStamp")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("TimeStamp")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<double>("Value")
                         .HasColumnType("float");

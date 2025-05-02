@@ -6,5 +6,5 @@ public class ResourceConsumptionDataDto
     public int ResourceConsumptionAttributeId { get; set; }
     public double Value { get; set; }
     
-    public DateTime TimeStamp { get; set; }
+    public DateTimeOffset TimeStamp { get; set; }
 }

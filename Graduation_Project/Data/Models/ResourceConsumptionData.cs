@@ -9,7 +9,7 @@
         public int ResourceConsumptionAttributeId { get; set; }
         public ResourceConsumptionAttribute ResourceConsumptionAttribute { get; set; } = null!;
 
-        public DateTime TimeStamp { get; set; }
+        public DateTimeOffset TimeStamp { get; set; }
 
         public double Value { get; set; }
     }

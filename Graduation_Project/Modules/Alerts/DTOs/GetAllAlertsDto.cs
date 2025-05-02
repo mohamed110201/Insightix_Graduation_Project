@@ -5,7 +5,7 @@ namespace Graduation_Project.Modules.Alerts.DTOs;
 public class GetAllAlertsDto
 {
     public int Id { get; set; } 
-    public DateTime TimeStamp { get; set; }
+    public DateTimeOffset TimeStamp { get; set; }
     public string MachineSerialNumber { get; set; } = null!;
     public string Type { get; set; } = null!;
     public string Attribute { get; set; } = null!;

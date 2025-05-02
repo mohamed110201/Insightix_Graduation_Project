@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class addtables : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -60,7 +60,7 @@ namespace Graduation_Project.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
-                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    TimeStamp = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -236,7 +236,9 @@ namespace Graduation_Project.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
-                    MachineTypeId = table.Column<int>(type: "int", nullable: false)
+                    MachineTypeId = table.Column<int>(type: "int", nullable: false),
+                    UpperRange = table.Column<double>(type: "float", nullable: false),
+                    LowerRange = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -262,7 +264,9 @@ namespace Graduation_Project.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
-                    MachineTypeId = table.Column<int>(type: "int", nullable: false)
+                    MachineTypeId = table.Column<int>(type: "int", nullable: false),
+                    UpperRange = table.Column<double>(type: "float", nullable: false),
+                    LowerRange = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -290,7 +294,7 @@ namespace Graduation_Project.Migrations
                     SystemId = table.Column<int>(type: "int", nullable: false),
                     MachineTypeId = table.Column<int>(type: "int", nullable: false),
                     SerialNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FailurePredictionCheckPoint = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    FailurePredictionCheckPoint = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -358,8 +362,8 @@ namespace Graduation_Project.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
-                    StartDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    StartDateTimeOffset = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
+                    EndDateTimeOffset = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -381,7 +385,7 @@ namespace Graduation_Project.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
                     MonitoringAttributeId = table.Column<int>(type: "int", nullable: false),
-                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TimeStamp = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     Value = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
@@ -409,7 +413,7 @@ namespace Graduation_Project.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MachineId = table.Column<int>(type: "int", nullable: false),
                     ResourceConsumptionAttributeId = table.Column<int>(type: "int", nullable: false),
-                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TimeStamp = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     Value = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
@@ -435,7 +439,7 @@ namespace Graduation_Project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TimeStamp = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MachineId = table.Column<int>(type: "int", nullable: false),
@@ -469,7 +473,7 @@ namespace Graduation_Project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TimeStamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TimeStamp = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AlertId = table.Column<int>(type: "int", nullable: false)
                 },

@@ -8,8 +8,8 @@ namespace Graduation_Project.Data.Models
         public int MachineId { get; set; }
         public Machine Machine { get; set; } = null!;
         
-        public DateTime StartDateTime { get; set;}
-        public DateTime? EndDateTime { get; set; }
+        public DateTimeOffset StartDateTimeOffset { get; set;}
+        public DateTimeOffset? EndDateTimeOffset { get; set; }
         
         public FailureStatus Status { get; set;}
     }
