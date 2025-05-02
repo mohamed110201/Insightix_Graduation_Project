@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Modules.MachinesAlerts;
 
-[Route("machines/{machineId:int}/alerts")]
+[Route("api/machines/{machineId:int}/alerts")]
 [ApiController]
 [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 

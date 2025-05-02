@@ -6,5 +6,5 @@ public class FailurePredictionDto
     public int MachineId { get; set; }
     public string MachineSerialNumber { get; set; } = String.Empty;
     public string MachineTypeName { get; set; } = String.Empty;
-    public DateTime TimeStamp { get; set; }
+    public DateTimeOffset TimeStamp { get; set; }
 }
