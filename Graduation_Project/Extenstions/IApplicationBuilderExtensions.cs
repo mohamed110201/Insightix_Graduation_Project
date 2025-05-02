@@ -18,7 +18,7 @@ public static class IApplicationBuilderExtensions
         var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
         const string adminUsername = "manufactureAdmin";
-        const string adminEmail = "admin@factory.com";
+        const string adminEmail = "admin@mailsac.com";
         const string adminPassword = "AdminPassword123!";
 
         if (await userManager.FindByNameAsync(adminUsername) != null)
