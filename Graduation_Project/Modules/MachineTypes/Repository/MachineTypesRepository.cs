@@ -14,8 +14,10 @@ public class MachineTypesRepository(AppDbContext dbContext) : IMachineTypesRepos
     public async Task<MachineType?> GetById(int id)
     {
         var machineType = await dbContext.MachineTypes
-            .Include(mt => mt.MonitoringAttributes)
-            .Include(mt => mt.ResourceConsumptionAttributes)
+            .Include(mt=>mt.MachineTypeMonitoringAttributes)
+            .ThenInclude(mtma => mtma.MonitoringAttribute)
+            .Include(mt=>mt.MachineTypeResourceConsumptionAttributes)
+            .ThenInclude(mtra=>mtra.ResourceConsumptionAttribute)
             .FirstOrDefaultAsync(mt => mt.Id == id);
         return machineType;
     }

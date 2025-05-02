@@ -65,3 +65,4 @@ public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository mac
             await machinesMonitoringDataRepository.AddMonitorinData(monitoringData);
         }
     }
+

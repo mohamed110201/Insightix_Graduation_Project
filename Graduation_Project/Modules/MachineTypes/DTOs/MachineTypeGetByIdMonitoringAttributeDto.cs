@@ -1,4 +1,4 @@
-namespace Graduation_Project.Data.Dtos.MachineTypeDto;
+namespace Graduation_Project.Modules.MachineTypes.DTOs;
 
 public class MachineTypeGetByIdMonitoringAttributeDto
 {

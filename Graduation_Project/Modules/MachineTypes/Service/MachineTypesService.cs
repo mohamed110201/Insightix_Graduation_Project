@@ -1,9 +1,10 @@
 using Graduation_Project.Core.ErrorHandling.Exceptions;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
+using Graduation_Project.Modules.MachineTypes.DTOs;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
 
-namespace Graduation_Project.Services.Implementation;
+namespace Graduation_Project.Modules.MachineTypes.Service;
 
 public class MachineTypesService(IMachineTypesRepository machineTypeRepository) : IMachineTypesService
 {
@@ -33,8 +34,20 @@ public class MachineTypesService(IMachineTypesRepository machineTypeRepository) 
             Id = machineType.Id,
             Name = machineType.Name,
             Model = machineType.Model,
-            MonitoringAttributes = machineType.MonitoringAttributes.Select(ma=>ma.Name).ToList(),  
-            ResourceConsumptionAttributes = machineType.ResourceConsumptionAttributes.Select(ra=>ra.Name).ToList()
+            MonitoringAttributes = machineType.MachineTypeMonitoringAttributes.Select(mtma=> new AttributeWithRangesResponseDto()
+            {
+                AttributeId = mtma.MonitoringAttribute.Id,
+                Name = mtma.MonitoringAttribute.Name,
+                UpperRange = mtma.UpperRange,
+                LowerRange = mtma.LowerRange,
+            }).ToList(),  
+            ResourceConsumptionAttributes = machineType.MachineTypeResourceConsumptionAttributes.Select(mtra => new AttributeWithRangesResponseDto()
+            {
+                AttributeId = mtra.ResourceConsumptionAttribute.Id,
+                Name = mtra.ResourceConsumptionAttribute.Name,
+                UpperRange = mtra.UpperRange,
+                LowerRange = mtra.LowerRange,
+            }).ToList()
         };
         return machineTypeDto;
     }
@@ -47,22 +60,27 @@ public class MachineTypesService(IMachineTypesRepository machineTypeRepository) 
             Model = machineTypeRequestDto.Model
         };
 
-        if (machineTypeRequestDto.MonitoringAttributeIds.Any())
+        if (machineTypeRequestDto.MonitoringAttributes.Any())
         {
-            machineType.MachineTypeMonitoringAttributes = machineTypeRequestDto.MonitoringAttributeIds.Select(maId => new MachineTypeMonitoringAttribute()
+            machineType.MachineTypeMonitoringAttributes = machineTypeRequestDto.MonitoringAttributes.Select(ma => new MachineTypeMonitoringAttribute()
             {
                 MachineType = machineType,
-                MonitoringAttributeId = maId
+                MonitoringAttributeId = ma.AttributeId,
+                UpperRange = ma.UpperRange,
+                LowerRange = ma.LowerRange
+                
             }).ToList();
             
         }
         
-        if (machineTypeRequestDto.ResourceConsumptionAttributeIds.Any() && machineTypeRequestDto.ResourceConsumptionAttributeIds[0]!=0)
+        if (machineTypeRequestDto.ResourceConsumptionAttributes.Any())
         {
-            machineType.MachineTypeResourceConsumptionAttributes = machineTypeRequestDto.ResourceConsumptionAttributeIds.Select(raId => new MachineTypeResourceConsumptionAttribute()
+            machineType.MachineTypeResourceConsumptionAttributes = machineTypeRequestDto.ResourceConsumptionAttributes.Select(ra => new MachineTypeResourceConsumptionAttribute()
             {
                 MachineType = machineType,
-                ResourceConsumptionAttributeId = raId
+                ResourceConsumptionAttributeId = ra.AttributeId,
+                UpperRange = ra.UpperRange,
+                LowerRange = ra.LowerRange
             }).ToList();
         } 
         await machineTypeRepository.Add(machineType);

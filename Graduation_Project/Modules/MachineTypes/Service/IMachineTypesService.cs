@@ -1,5 +1,6 @@
 using Graduation_Project.Data.Dtos.MachineDto;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
+using Graduation_Project.Modules.MachineTypes.DTOs;
 
 namespace Graduation_Project.Services.Interfaces;
 

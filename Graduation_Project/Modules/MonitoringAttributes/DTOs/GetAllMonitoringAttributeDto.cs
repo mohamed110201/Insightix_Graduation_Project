@@ -1,4 +1,4 @@
-namespace Graduation_Project.DTOs;
+namespace Graduation_Project.Modules.MonitoringAttributes.DTOs;
 
 public class GetAllMonitoringAttributeDto
 {
