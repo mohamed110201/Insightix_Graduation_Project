@@ -10,7 +10,10 @@ public class FailuresPredictionRepository(AppDbContext dbContext) : IFailuresPre
     {
         var machine = await dbContext.Machines.FindAsync(id);
         var failuresPredictions = await dbContext.FailurePredictions
-            .Where(f => f.MachineId == id).Include(fp=>fp.Machine).ToListAsync();
+            .Where(f => f.MachineId == id)
+            .Include(fp=>fp.Machine)
+            .ThenInclude(m=>m.MachineType)
+            .ToListAsync();
         return failuresPredictions;
     }
     
@@ -19,6 +22,7 @@ public class FailuresPredictionRepository(AppDbContext dbContext) : IFailuresPre
     {
         var failuresPredictions = await dbContext.FailurePredictions
             .Include(fp=>fp.Machine)
+            .ThenInclude(m=>m.MachineType)
             .ToListAsync();
         return failuresPredictions;
         
