@@ -30,7 +30,7 @@ namespace Graduation_Project.Modules.Alerts
         }
 
         [HttpPost("{alertId:int}")]
-        public async Task<IActionResult> ChangeStaus([FromRoute]int alertId, [FromBody]string status)
+        public async Task<IActionResult> ChangeStatus([FromRoute]int alertId, [FromBody]string status)
         {
             await alertService.ChangeStatus(alertId, status);
             return JSend.Edited("Status Changed Successfully");
