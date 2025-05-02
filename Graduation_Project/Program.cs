@@ -42,6 +42,11 @@ builder.Services.AddSwaggerGen();
 //builder.Services.RegisterFailuresPredictionBackground();
 builder.Services.RegisterSimulationDataBackground();
 
+builder.Services.RegisterIdentityUser();
+builder.Services.RegisterAuthentication(builder.Configuration);
+
+
+
 
 builder.Services.AddCors(options =>
 {
@@ -56,6 +61,8 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+await app.SeedAdminUser();
+
 app.RegisterMiddlewares();
 
 app.UseCors("AllowAll");
@@ -105,6 +112,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 
 app.UseAuthorization();
 

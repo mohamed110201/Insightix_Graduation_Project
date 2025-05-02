@@ -6,5 +6,5 @@ public class CurrentMonitoringAttributesValues
     public int MonitoringAttributeId { get; set; }
     public string MonitoringAttributeName { get; set; } = null!;
     public DateTime? TimeStamp { get; set; }
-    public int? Value { get; set; }
+    public double? Value { get; set; }
 }

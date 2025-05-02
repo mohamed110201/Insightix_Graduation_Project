@@ -1,7 +1,6 @@
-using Graduation_Project.Hubs;
 using Graduation_Project.Hubs.MachineData;
 
-namespace Graduation_Project.Modules.Simulation.PipeLineSteps;
+namespace Graduation_Project.Modules.Simulation.ResourceConsumption.PipLineSteps;
 
 public class ResourceConsumptionRefreshCurrentDataPipelineStep(MachineDataNotifier notifier) : IPipelineStep<List<ResourceConsumptionData>>
 {

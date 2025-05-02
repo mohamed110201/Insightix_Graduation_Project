@@ -1,6 +1,8 @@
 ﻿using Graduation_Project.Core.JSend;
 using Graduation_Project.Data.Dtos.SystemDto;
 using Graduation_Project.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +10,7 @@ namespace Graduation_Project.Controllers
 {
     [Route("api/systems")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class SystemsController(ISystemsService systemsService) : ControllerBase
     {
       

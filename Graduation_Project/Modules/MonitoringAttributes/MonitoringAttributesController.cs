@@ -6,12 +6,16 @@ using Graduation_Project.Core.JSend;
 using Graduation_Project.DTOs;
 using Graduation_Project.Services.Interfaces;
 using Graduation_Project.Validators;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Controllers;
 
 [ApiController]
 [Route("api/monitoring-attributes")]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+
 public class MonitoringAttributesController(IMonitoringAttributesService monitoringAttributesService) : ControllerBase
 {
     [HttpGet]
