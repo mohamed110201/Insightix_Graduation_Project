@@ -27,7 +27,12 @@ public class BroadcastAlertEmailService(
             
             foreach (var user in users)
             {
-                await emailService.Send(user.Email??"", "Machine Alert Triggered – Immediate Attention Required", new AlertEmailModel()
+                if (user.Email == null)
+                {
+                    continue;
+                }
+                
+                await emailService.Send(user.Email, "Machine Alert Triggered – Immediate Attention Required", new AlertEmailModel()
                 {
                     UserName = user.UserName??"user",
                     AlertType = "Alert",
@@ -35,9 +40,9 @@ public class BroadcastAlertEmailService(
                     AlertDetails = [
                         new ("Machine Serial Number",alert.MachineSerialNumber),
                         new ("Attribute Type",alert.Type),
-                        new ("Attribute",alert.Attribute),
-                        new ("Severity",alert.Severity),
-                        new ("Time",alert.TimeStamp.ToString("g"))
+                        new ($"{alert.Type} Attribute",alert.Attribute),
+                        new ("Alert Severity",alert.Severity),
+                        new ("Alert Time",alert.TimeStamp.ToString("g"))
                     ],
                     ActionUrl = $"{frontUrl}/alerts/{alertId}"
                 });

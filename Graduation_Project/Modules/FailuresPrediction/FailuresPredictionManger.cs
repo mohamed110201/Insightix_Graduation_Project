@@ -4,6 +4,7 @@ using System.Text.Json;
 using Graduation_Project.Data;
 using Graduation_Project.Hubs.Notifications;
 using Graduation_Project.Hubs.Notifications.NotificationDataDtos;
+using Graduation_Project.Modules.Email;
 using Graduation_Project.Repositories.Interfaces;
 
 namespace Graduation_Project.Modules.FailuresPrediction;
@@ -21,9 +22,10 @@ public class FailuresPredictionManger(IServiceProvider serviceProvider,Notificat
         using var scope = serviceProvider.CreateScope();
         var machinesRepository = scope.ServiceProvider.GetRequiredService<IMachinesRepository>();
         var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        await Work(machinesRepository, context);
+        var broadcastFailurePredictionEmailService = scope.ServiceProvider.GetRequiredService<BroadcastFailurePredictionEmailService>();
+        await Work(machinesRepository, context,broadcastFailurePredictionEmailService);
     }
-    private async Task Work(IMachinesRepository machinesRepository, AppDbContext context)
+    private async Task Work(IMachinesRepository machinesRepository, AppDbContext context,BroadcastFailurePredictionEmailService broadcastFailurePredictionEmailService)
     {
         var machines = await machinesRepository.GetMachinesForPrediction();
         foreach (var m in machines)
@@ -44,16 +46,24 @@ public class FailuresPredictionManger(IServiceProvider serviceProvider,Notificat
             }
 
             if (prediction == true) {
-                await machinesRepository.AddPrediction(m.Id, now);
-                await notificationsNotifier.SendNotificationsAsync(new NotificationDto()
+               var failurePrediction = await machinesRepository.AddPrediction(m.Id, now);
+                
+                _ = Task.Run(async () =>
                 {
-                    Type = "failurePrediction",
-                    Data = new NotificationFailurePredictionDataDto()
+                    await broadcastFailurePredictionEmailService.Send(failurePrediction.Id, now, m.SerialNumber);
+                    
+                    await notificationsNotifier.SendNotificationsAsync(new NotificationDto()
                     {
-                        MachineId = m.Id,
-                        TimeStamp = now,
-                    }
+                        Type = "failurePrediction",
+                        Data = new NotificationFailurePredictionDataDto()
+                        {
+                            MachineId = m.Id,
+                            FailurePrediction = failurePrediction.Id,
+                            TimeStamp = now,
+                        }
+                    });
                 });
+
             }
                 
             await  machinesRepository.UpdatePredictionCheckPoint(m.Id, now);
