@@ -4,5 +4,5 @@ public class FailurePredictionDto
 {
     public int Id { get; set; }
     public string MachineSerialNumber { get; set; }
-    public DateTime TimeStamp { get; set; }
+    public DateTimeOffset TimeStamp { get; set; }
 }
