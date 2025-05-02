@@ -4,5 +4,6 @@ public class FailurePrediction
 {
     public int Id { get; set; }
     public int MachineId { get; set; }
+    public Machine Machine { get; set; }
     public DateTime TimeStamp { get; set; }
 }
