@@ -80,11 +80,12 @@ namespace Graduation_Project.Repositories.Implementation
             return  machines;
         }
 
-        public async Task AddPrediction(int machineId, DateTime timestamp)
+        public async Task<FailurePrediction> AddPrediction(int machineId, DateTime timestamp)
         {
             var prediction = new FailurePrediction(){MachineId = machineId, TimeStamp = timestamp};
-            dbContext.FailurePredictions.Add(prediction);
+            var failurePrediction = dbContext.FailurePredictions.Add(prediction);
             await dbContext.SaveChangesAsync();
+            return failurePrediction.Entity;
         }
         
         public async Task UpdatePredictionCheckPoint(int machineId, DateTime checkPoint)

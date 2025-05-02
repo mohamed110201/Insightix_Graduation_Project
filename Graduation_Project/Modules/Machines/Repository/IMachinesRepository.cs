@@ -15,7 +15,7 @@ namespace Graduation_Project.Repositories.Interfaces
 
         Task<List<MachineForSimulation>> GetMachinesForSimulation();
         public Task<List<Machine>> GetMachinesForPrediction();
-        public Task AddPrediction(int machineId, DateTime timestamp);
+        public Task<FailurePrediction> AddPrediction(int machineId, DateTime timestamp);
         public Task UpdatePredictionCheckPoint(int machineId, DateTime checkPoint);
 
 

@@ -1,3 +1,4 @@
+using Graduation_Project.Data;
 using Graduation_Project.Extenstions;
 using Graduation_Project.Filters;
 using Graduation_Project.Hubs;
@@ -18,7 +19,6 @@ builder.Services.RegisterResend(builder.Configuration);
 builder.Services.RegisterRazorLightEngine();
 builder.Services.RegisterNotifiers();
 builder.Services.AddSignalR();
-builder.Logging.ClearProviders();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -81,6 +81,26 @@ app.MapHub<NotificationsHub>("/notificationsHub",options =>
 );
 
 await app.Services.AddSeedData();
+
+
+
+var emailService =  app.Services.CreateScope().ServiceProvider.GetService<EmailService>()!;
+
+await emailService.Send("test458745@mailsac.com","welcome",new AlertEmailModel()
+{
+    UserName = "alkady",
+    AlertType = "Failure Prediction",
+    AlertMessage = "there is a machien that will fail soon",
+    ActionUrl = "https://15445.courses.cs.cmu.edu/fall2023/",
+    AlertDetails = [
+        new KeyValuePair<string, string>("Machine ID", "MX-2032"),
+        new KeyValuePair<string, string>("Temperature", "85°C"),
+        new KeyValuePair<string, string>("Location", "Factory 1"),]
+});
+
+
+Console.WriteLine("send email success");
+
 
 
 
