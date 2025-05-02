@@ -8,7 +8,7 @@ namespace Graduation_Project.Modules.Email;
 public class BroadcastAlertEmailService(
     UserManager<IdentityUser> userManager,
     EmailService emailService,
-    AlertsService alertsService,
+    IAlertsService alertsService,
     IConfiguration config
     )
 {
@@ -37,7 +37,7 @@ public class BroadcastAlertEmailService(
                         new ("Attribute Type",alert.Type),
                         new ("Attribute",alert.Attribute),
                         new ("Severity",alert.Severity),
-                        new ("Time",alert.TimeStamp.ToString())
+                        new ("Time",alert.TimeStamp.ToString("g"))
                     ],
                     ActionUrl = $"{frontUrl}/alerts/{alertId}"
                 });
