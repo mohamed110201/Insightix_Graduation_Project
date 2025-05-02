@@ -1,7 +1,8 @@
+using Graduation_Project.Controllers.Repository;
 using Graduation_Project.Data;
 using Graduation_Project.Data.Enums;
 
-namespace Graduation_Project.Controllers.Repository;
+namespace Graduation_Project.Modules.MachineFailures.Repository;
 
 public class MachineFailuresRespository(AppDbContext dbContext) : IMachineFailuresRespository
 {
