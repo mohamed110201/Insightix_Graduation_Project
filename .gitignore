@@ -2,3 +2,7 @@
 .vs/
 **/obj/**
 **/bin/**
+
+
+Graduation_Project/appsettings.Development.json
+Graduation_Project/appsettings.Production.json
