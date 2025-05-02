@@ -15,7 +15,7 @@ public class BroadcastFailurePredictionEmailService(
     {
         try
         {
-            var frontUrl = config.GetValue<string>("Front_Url");
+            var frontUrl = config.GetValue<string>("FrontUrl");
             var users = await userManager.Users.ToListAsync();
             
             

@@ -183,7 +183,7 @@ namespace Graduation_Project.Extenstions
             services.AddHttpClient<ResendClient>();
             services.Configure<ResendClientOptions>( o =>
             {
-                o.ApiToken = config.GetValue<string>("RESEND_API_TOKEN")!;
+                o.ApiToken = config.GetValue<string>("ResendAPIToken")!;
             } );
             services.AddTransient<IResend, ResendClient>();
             services.AddTransient<EmailService>();

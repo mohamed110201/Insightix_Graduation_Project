@@ -9,11 +9,10 @@ public class SimulationManager(MonitoringSimulationDataGenerator monitoringDataG
     ResourceConsumptionSimulationDataGenerator resourceConsumptionSimulationDataGenerator,
     ResourceConsumptionSimulationDataPipelineFactory resourceConsumptionPipelineFactory,
     MonitoringSimulationDataPipelineFactory monitoringPipelineFactory,
-    IServiceProvider serviceProvider
+    IServiceProvider serviceProvider,
+    IConfiguration configuration
     )
 {
-    
-    private static readonly int DataLimitCount = 1000; 
     
     private readonly Pipeline<List<MonitoringData>> _monitoringPipeline = monitoringPipelineFactory.Create();
     private readonly Pipeline<List<ResourceConsumptionData>> _resourceConsumptionPipeline = resourceConsumptionPipelineFactory.Create();
@@ -25,15 +24,23 @@ public class SimulationManager(MonitoringSimulationDataGenerator monitoringDataG
         using var scope = serviceProvider.CreateScope();
         var resourceConsumptionDataRepository = scope.ServiceProvider.GetRequiredService<ResourceConsumptionDataRepository>();
         var monitoringDataRepository = scope.ServiceProvider.GetRequiredService<MonitoringDataRepository>();
+
+
+        var dataLimitCount = configuration.GetValue<int?>("DataLimitCount");
+
+        if (dataLimitCount==null)
+        {
+            return;
+        }
         
-        if (await monitoringDataRepository.Count() < DataLimitCount)
+        if (await monitoringDataRepository.Count() < dataLimitCount)
         {
             var monitoringData = await monitoringDataGenerator.GenerateData();
             await _monitoringPipeline.ExecuteAsync(monitoringData);
         }
         
         
-        if (await resourceConsumptionDataRepository.Count() < DataLimitCount)
+        if (await resourceConsumptionDataRepository.Count() < dataLimitCount)
         {
             var resourceConsumptionData = await resourceConsumptionSimulationDataGenerator.GenerateData();
             await _resourceConsumptionPipeline.ExecuteAsync(resourceConsumptionData);

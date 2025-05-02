@@ -16,7 +16,7 @@ public class BroadcastAlertEmailService(
     {
         try
         {
-            var frontUrl = config.GetValue<string>("Front_Url");
+            var frontUrl = config.GetValue<string>("FrontUrl");
             var alert = await alertsService.GetById(alertId);
             var users = await userManager.Users.ToListAsync();
 

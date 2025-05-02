@@ -9,14 +9,10 @@ using Graduation_Project.Repositories.Interfaces;
 
 namespace Graduation_Project.Modules.FailuresPrediction;
 
-public class FailuresPredictionManger(IServiceProvider serviceProvider,NotificationsNotifier notificationsNotifier)
+public class FailuresPredictionManger(IServiceProvider serviceProvider,NotificationsNotifier notificationsNotifier,IConfiguration configuration)
 {
-    private const string failurePredictionServiceUrl = "http://127.0.0.1:8000/predict";
-    private const string modelName = "best_model_overall.py";
     private HttpClient httpClient = new HttpClient();
-
-
-
+    
     public async Task ExecuteProcedure()
     {
         using var scope = serviceProvider.CreateScope();
@@ -75,13 +71,21 @@ public class FailuresPredictionManger(IServiceProvider serviceProvider,Notificat
     {
         try
         {
+            var failurePredictionServiceUrl = configuration.GetValue<string>("FailurePredictionServiceUrl");
+            var wrapperMachineModelName = configuration.GetValue<string>("WrapperMachineModelName");
+
+            if (failurePredictionServiceUrl==null||wrapperMachineModelName==null)
+            {
+                return null;
+            }
+            
             var requestBody = new AiRequestBody()
             {
-                ModelName=modelName ,
+                ModelName=wrapperMachineModelName ,
                 Data = data
             };
             var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
-            var response = await httpClient.PostAsync(failurePredictionServiceUrl, content);
+            var response = await httpClient.PostAsync($"{failurePredictionServiceUrl}/predict", content);
             var responseBody = await response.Content.ReadAsStringAsync();
             var result = JsonSerializer.Deserialize<AiResponseBody>(responseBody);
 
