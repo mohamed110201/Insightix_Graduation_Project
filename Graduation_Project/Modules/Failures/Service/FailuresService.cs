@@ -18,6 +18,9 @@ public class FailuresService(IFailuresRepository failuresRepository) : IFailures
             Status = x.Status,
             StartDateTime = x.StartDateTime,
             EndDateTime = x.EndDateTime,
+            MachineId = x.MachineId,
+            MachineSerialNumber = x.Machine.SerialNumber,
+            MachineTypeName = x.Machine.MachineType.Name
         }).ToList();
     }
 
@@ -32,11 +35,13 @@ public class FailuresService(IFailuresRepository failuresRepository) : IFailures
             StartDateTime = failure.StartDateTime,
             EndDateTime = failure.EndDateTime, 
             MachineId = failure.MachineId,
+            MachineSerialNumber = failure.Machine.SerialNumber,
+            MachineTypeName = failure.Machine.MachineType.Name
         };
     }
     
-    public async Task Resolve(int id)
+    public async Task Resolve(int id,DateTime? endDateTime)
     {
-        await failuresRepository.Resolve(id);
+        await failuresRepository.Resolve(id,endDateTime??DateTime.Now);
     }
 }

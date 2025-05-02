@@ -11,4 +11,8 @@ public class MachineFailureGetAll
     public DateTime? EndDateTime { get; set; }
         
     public FailureStatus Status { get; set;}
+    
+    public required string MachineSerialNumber { get; set; }
+    
+    public required string MachineTypeName { get; set; }
 }

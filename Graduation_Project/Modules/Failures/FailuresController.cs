@@ -20,17 +20,17 @@ namespace Graduation_Project.Controllers
             return JSend.Success(data:failures);
         }
         
-        [HttpGet("{machineId:int}")]
-        public async Task<IActionResult> GetById([FromRoute] int machineId)
+        [HttpGet("{failureId:int}")]
+        public async Task<IActionResult> GetById([FromRoute] int failureId)
         {
-              var failure = await failuresService.GetById(machineId);
+              var failure = await failuresService.GetById(failureId);
               return JSend.Success(data:failure);
         }
         
-        [HttpPost("{machineId:int}")]
-        public async Task<IActionResult> Add([FromRoute] int machineId)
+        [HttpPost("{failureId:int}/resolve")]
+        public async Task<IActionResult> Add([FromRoute] int failureId,[FromBody] DateTime? endDateTime)
         {
-            await failuresService.Resolve(machineId);
+            await failuresService.Resolve(failureId,endDateTime);
             return JSend.Created(message:"Failure Resolved Successfully");
         }
 
