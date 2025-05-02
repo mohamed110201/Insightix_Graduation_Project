@@ -11,8 +11,10 @@ public class FailuresPredictionService(IFailuresPredictionRepository failuresPre
         return failurePredictions.Select(fp => new FailurePredictionDto()
         {
             Id = fp.Id,
+            MachineId = fp.MachineId,
             MachineSerialNumber = fp.Machine.SerialNumber,
-            TimeStamp = fp.TimeStamp
+            TimeStamp = fp.TimeStamp,
+            MachineTypeName = fp.Machine.MachineType.Name
         }).ToList();
     }
 
@@ -22,8 +24,10 @@ public class FailuresPredictionService(IFailuresPredictionRepository failuresPre
         return machineFailurePredictions.Select(fp => new FailurePredictionDto()
         {
             Id = fp.Id,
+            MachineId = fp.MachineId,
             MachineSerialNumber = fp.Machine.SerialNumber,
-            TimeStamp = fp.TimeStamp
+            TimeStamp = fp.TimeStamp,
+            MachineTypeName = fp.Machine.MachineType.Name
         }).ToList();
     }
 }

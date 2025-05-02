@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Graduation_Project.Modules.MachinesFailuresPrediction;
 
-[Route("machines/{machineId:int}/failures")]
+[Route("api/machines/{machineId:int}/failures-prediction")]
 [ApiController]
-//[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 
 public class MachinesFailuresPredictionController(IFailuresPredictionService failuresPredictionService) : ControllerBase
 {

@@ -76,6 +76,7 @@ namespace Graduation_Project.Repositories.Implementation
         public async Task<List<Machine>>GetMachinesForPrediction()
         {
             var machines = await dbContext.Machines.Where(x=>x.MachineType.AIModelName != null)
+                .Include(m=>m.MachineType)
                 .ToListAsync();
             return  machines;
         }
