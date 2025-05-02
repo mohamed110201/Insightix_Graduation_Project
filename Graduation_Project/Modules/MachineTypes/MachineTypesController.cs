@@ -1,5 +1,6 @@
 using Graduation_Project.Core.JSend;
 using Graduation_Project.Data.Dtos.MachineTypeDto;
+using Graduation_Project.Modules.MachineTypes.DTOs;
 using Graduation_Project.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;

@@ -1,8 +1,9 @@
 using Graduation_Project.DTOs;
+using Graduation_Project.Modules.MonitoringAttributes.DTOs;
 using Graduation_Project.Repositories.Interfaces;
 using Graduation_Project.Services.Interfaces;
 
-namespace Graduation_Project.Services.Implementation;
+namespace Graduation_Project.Modules.MonitoringAttributes.Service;
 
 public class MonitoringAttributesService(IMonitoringAttributesRepository monitoringAttributesRepository):IMonitoringAttributesService
 {

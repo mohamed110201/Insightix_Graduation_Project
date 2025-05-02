@@ -1,9 +1,8 @@
 using FluentValidation;
-using Graduation_Project.Data.Dtos.MachineTypeDto;
+using Graduation_Project.Modules.MachineTypes.DTOs;
 using Graduation_Project.Repositories.Interfaces;
 
-
-namespace Graduation_Project.Validators;
+namespace Graduation_Project.Modules.MachineTypes.Validators;
 
 public class AddMachineTypeValidator : AbstractValidator<MachineTypeRequestDto>
 {
@@ -22,12 +21,12 @@ public class AddMachineTypeValidator : AbstractValidator<MachineTypeRequestDto>
             .Must(UniqueMachineType)
             .WithMessage("Machine Type with this model already exists");
 
-        RuleFor(x => x.MonitoringAttributeIds)
+        RuleFor(x => x.MonitoringAttributes)
             .NotNull()
             .Must(ids => ids.Count > 0)
             .WithMessage("Machine Type must have at least one monitoring attribute");
             
-        RuleFor(x => x.ResourceConsumptionAttributeIds)
+        RuleFor(x => x.ResourceConsumptionAttributes)
             .NotNull()
             .Must(ids => ids.Count > 0)
             .WithMessage("Machine Type must have at least one resource consumption attribute");

@@ -1,4 +1,5 @@
 using Graduation_Project.DTOs;
+using Graduation_Project.Modules.MonitoringAttributes.DTOs;
 
 namespace Graduation_Project.Services.Interfaces;
 

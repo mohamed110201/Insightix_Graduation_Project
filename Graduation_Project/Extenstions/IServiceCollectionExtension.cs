@@ -36,6 +36,8 @@ using Graduation_Project.Modules.ResourceConsumptionDataM;
 using Graduation_Project.Modules.FailuresPrediction.Repository;
 using Graduation_Project.Modules.FailuresPrediction.Service;
 using Graduation_Project.Modules.MachineFailures.Repository;
+using Graduation_Project.Modules.MachineTypes.Service;
+using Graduation_Project.Modules.MonitoringAttributes.Service;
 
 
 namespace Graduation_Project.Extenstions
@@ -56,9 +58,11 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<MonitoringDataRepository>();
             services.AddScoped<ResourceConsumptionDataRepository>();
-
-
+            services.AddScoped<IAlertsService, AlertsService>();
+            services.AddScoped<IAlertsCachingService, AlertsCachingService>();
+            services.AddScoped<ICreateAlertsService, CreateAlertsService>();
             services.AddScoped<BroadcastAlertEmailService>();
+            services.AddScoped<BroadcastFailurePredictionEmailService>();
             services.AddScoped<Broadcast>();
             services.AddScoped<IFailuresPredictionService, FailuresPredictionService>();
 
@@ -76,10 +80,8 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IMachinesMonitoringDataRepository, MachinesMonitoringDataRepository>();
             services.AddScoped<IMachineFailuresRespository, MachineFailuresRespository>();
             services.AddScoped<IFailuresRepository, FailuresRepository>();
-            services.AddScoped<IAlertsService, AlertsService>();
             services.AddScoped<IAlertsRepository, AlertsRepository>();
-            services.AddScoped<IAlertsCachingService, AlertsCachingService>();
-            services.AddScoped<ICreateAlertsService, CreateAlertsService>();
+        
             services.AddScoped<IFailuresPredictionRepository, FailuresPredictionRepository>();
         }
 
@@ -103,7 +105,7 @@ namespace Graduation_Project.Extenstions
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.LogTo(_ => { }, LogLevel.None);
-                options.UseSqlServer(config.GetConnectionString("Remote"))
+                options.UseSqlServer(config.GetConnectionString("Default"))
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
         }
