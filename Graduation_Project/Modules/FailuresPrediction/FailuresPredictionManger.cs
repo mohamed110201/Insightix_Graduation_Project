@@ -58,6 +58,7 @@ public class FailuresPredictionManger(IServiceProvider serviceProvider,Notificat
                             TimeStamp = now,
                         }
                     });
+
                 });
 
             }
