@@ -50,7 +50,7 @@ public class FailuresPredictionManger(IServiceProvider serviceProvider,Notificat
                     Type = "failurePrediction",
                     Data = new NotificationFailurePredictionDataDto()
                     {
-                        MachineId = m.Id,
+                        MachineSerialNumber = m.SerialNumber,
                         TimeStamp = now,
                     }
                 });

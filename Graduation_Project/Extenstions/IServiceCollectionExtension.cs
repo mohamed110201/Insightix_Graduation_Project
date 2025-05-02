@@ -31,6 +31,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Graduation_Project.Modules.Authentication.Service;
+using Graduation_Project.Modules.FailuresPrediction.Repository;
+using Graduation_Project.Modules.FailuresPrediction.Service;
+using Graduation_Project.Modules.MachineFailures.Repository;
 
 
 namespace Graduation_Project.Extenstions
@@ -50,7 +53,7 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IFailuresService, FailuresService>();
             services.AddScoped<IAuthService, AuthService>();
 
-
+            services.AddScoped<IFailuresPredictionService, FailuresPredictionService>();
 
 
         }
@@ -70,6 +73,7 @@ namespace Graduation_Project.Extenstions
             services.AddScoped<IAlertsRepository, AlertsRepository>();
             services.AddScoped<IAlertsCachingService, AlertsCachingService>();
             services.AddScoped<ICreateAlertsService, CreateAlertsService>();
+            services.AddScoped<IFailuresPredictionRepository, FailuresPredictionRepository>();
         }
 
         public static void RegisterConfigurations(this IServiceCollection services)
@@ -92,7 +96,7 @@ namespace Graduation_Project.Extenstions
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.LogTo(_ => { }, LogLevel.None);
-                options.UseSqlServer(config.GetConnectionString("Default"))
+                options.UseSqlServer(config.GetConnectionString("Remote"))
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
         }
