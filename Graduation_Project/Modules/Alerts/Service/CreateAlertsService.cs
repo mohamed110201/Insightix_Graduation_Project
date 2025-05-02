@@ -2,13 +2,16 @@ using Graduation_Project.Data;
 using Graduation_Project.Data.Enums;
 using Graduation_Project.Hubs.Notifications;
 using Graduation_Project.Hubs.Notifications.NotificationDataDtos;
+using Graduation_Project.Modules.Email;
+using Graduation_Project.Modules.Email.Models;
+using Graduation_Project.Modules.Email.Templates;
 using Graduation_Project.Modules.MachinesMonitoringData.DTOs;
 using Graduation_Project.Modules.MachinesResourceConsumptionData.DTOs;
 
 namespace Graduation_Project.Modules.Alerts.Service;
 
 public class CreateAlertsService(
-    AppDbContext context , IAlertsCachingService cachingService, NotificationsNotifier notificationsNotifier)  : ICreateAlertsService
+    AppDbContext context , IAlertsCachingService cachingService, NotificationsNotifier notificationsNotifier,BroadcastAlertEmailService broadcastAlertEmailService)  : ICreateAlertsService
 {
    
     public async Task CheckMonitoringAlertsAsync(MonitoringDataDto data)
@@ -75,6 +78,8 @@ public class CreateAlertsService(
         await context.SaveChangesAsync();
 
 
+
+        
         await notificationsNotifier.SendNotificationsAsync(new NotificationDto()
         {
             Type = "alert",
@@ -85,6 +90,13 @@ public class CreateAlertsService(
                 TimeStamp = timeStamp,
             }
         });
+
+
+        _ = Task.Run(async () =>
+        {
+            await broadcastAlertEmailService.Send(alert.Id);
+        });
+
         
         cachingService.InvalidateExistingAlertCache(machineId, ruleId, alertType);
     }
