@@ -14,7 +14,7 @@ namespace Graduation_Project.Controllers
     {
         
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromRoute] int machineId)
+        public async Task<IActionResult> GetAll()
         {
             var failures = await failuresService.GetAll();
             return JSend.Success(data:failures);
