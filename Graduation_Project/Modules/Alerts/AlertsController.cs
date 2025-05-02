@@ -37,8 +37,8 @@ namespace Graduation_Project.Modules.Alerts
         }
         [HttpPost("/test")]
         public async Task<IActionResult> Test([FromQuery]int machineId ,
-            [FromQuery]DateTime startTime,
-           [FromQuery] DateTime endTime)
+            [FromQuery]DateTimeOffset startTime,
+           [FromQuery] DateTimeOffset endTime)
         {
             var result = await _context.GetMachineMonitoringData(machineId,startTime, endTime);
             return JSend.Success(data:result);

@@ -81,7 +81,7 @@ namespace Graduation_Project.Repositories.Implementation
             return  machines;
         }
 
-        public async Task<FailurePrediction> AddPrediction(int machineId, DateTime timestamp)
+        public async Task<FailurePrediction> AddPrediction(int machineId, DateTimeOffset timestamp)
         {
             var prediction = new FailurePrediction(){MachineId = machineId, TimeStamp = timestamp};
             var failurePrediction = dbContext.FailurePredictions.Add(prediction);
@@ -89,7 +89,7 @@ namespace Graduation_Project.Repositories.Implementation
             return failurePrediction.Entity;
         }
         
-        public async Task UpdatePredictionCheckPoint(int machineId, DateTime checkPoint)
+        public async Task UpdatePredictionCheckPoint(int machineId, DateTimeOffset checkPoint)
         {
             var machine = await dbContext.Machines.Where(m => m.Id == machineId)
                 .ExecuteUpdateAsync(setters 

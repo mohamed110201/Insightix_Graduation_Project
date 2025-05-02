@@ -9,7 +9,7 @@
         public int MonitoringAttributeId { get; set; }
         public MonitoringAttribute MonitoringAttribute { get; set; } = null!;
 
-        public DateTime TimeStamp { get; set;}
+        public DateTimeOffset TimeStamp { get; set;}
         public double Value { get; set; }
 
 

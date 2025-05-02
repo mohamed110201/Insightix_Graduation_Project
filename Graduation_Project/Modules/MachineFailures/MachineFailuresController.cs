@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Controllers.Repository;
 using Graduation_Project.Core.JSend;
 using Graduation_Project.Data.Dtos.Machine;
+using Graduation_Project.Modules.Failures.DTOs;
 using Graduation_Project.Services.Implementation;
 using Graduation_Project.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -26,9 +27,9 @@ namespace Graduation_Project.Controllers
         
         
         [HttpPost]
-        public async Task<IActionResult> Add([FromRoute] int machineId)
+        public async Task<IActionResult> Add([FromRoute] int machineId,[FromBody] FailureAddDTO failureAddDto)
         {
-            await machineFailuresService.Add(machineId);
+            await machineFailuresService.Add(machineId,failureAddDto);
             return JSend.Created(message:"Failure Added To Machine Successfully");
         }
 

@@ -6,7 +6,7 @@ namespace Graduation_Project.Modules.MachinesMonitoringData.Repository;
 
 public class MachinesMonitoringDataRepository(AppDbContext dbContext) : IMachinesMonitoringDataRepository
 {
-    public async Task<List<MachineMonitoringData>> GetAll(int machineId, int monitoringAttributeId, int windowSize, DateTime startDate, DateTime endDate)
+    public async Task<List<MachineMonitoringData>> GetAll(int machineId, int monitoringAttributeId, int windowSize, DateTimeOffset startDate, DateTimeOffset endDate)
     {
         var monitoringData = await dbContext.DownSamplingMonitoringData(machineId,
             monitoringAttributeId,
@@ -18,7 +18,7 @@ public class MachinesMonitoringDataRepository(AppDbContext dbContext) : IMachine
         return  monitoringData;
     }
 
-    public async Task<List<GetSummaryDto>> GetSummary(int machineId, int monitoringAttributeId, DateTime startDate, DateTime endDate)
+    public async Task<List<GetSummaryDto>> GetSummary(int machineId, int monitoringAttributeId, DateTimeOffset startDate, DateTimeOffset endDate)
     {
         var summary = await dbContext.MonitoringData
             .Where(d => d.MachineId == machineId 

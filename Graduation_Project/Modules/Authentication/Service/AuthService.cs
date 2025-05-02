@@ -44,7 +44,7 @@ namespace Graduation_Project.Modules.Authentication.Service
         {
             var jwtToken = new JwtSecurityTokenHandler().ReadToken(token) as JwtSecurityToken;
             var exp = jwtToken?.ValidTo;
-            return exp.HasValue ? exp.Value - DateTime.UtcNow : TimeSpan.FromMinutes(60);
+            return exp.HasValue ? exp.Value - DateTimeOffset.UtcNow : TimeSpan.FromMinutes(60);
         }
         public Task<bool> IsTokenBlacklistedAsync(string token)
         {

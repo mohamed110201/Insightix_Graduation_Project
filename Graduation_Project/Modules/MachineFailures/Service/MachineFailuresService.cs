@@ -1,6 +1,7 @@
 using Graduation_Project.Controllers.DTOs;
 using Graduation_Project.Core.ErrorHandling.Exceptions;
 using Graduation_Project.Data.Enums;
+using Graduation_Project.Modules.Failures.DTOs;
 
 namespace Graduation_Project.Controllers.Repository;
 
@@ -15,15 +16,16 @@ public class MachineFailuresService(IMachineFailuresRespository machineFailuresR
         {
             Id = x.Id,
             Status = x.Status,
-            StartDateTime = x.StartDateTime,
-            EndDateTime = x.EndDateTime,
+            StartDateTimeOffset = x.StartDateTimeOffset,
+            EndDateTimeOffset = x.EndDateTimeOffset,
+            MachineSerialNumber = x.Machine.SerialNumber,
+            MachineTypeName = x.Machine.MachineType.Name
         }).ToList();
 
     }
 
-    public async Task Add(int machineId)
+    public async Task Add(int machineId, FailureAddDTO failureAddDto)
     {
-
         var pendingFailures =await machineFailuresRespository.GetNumberOfPendingFailures(machineId);;
 
         if (pendingFailures>0)
@@ -33,11 +35,11 @@ public class MachineFailuresService(IMachineFailuresRespository machineFailuresR
         var failure = new Failure()
         {
             MachineId = machineId,
-            StartDateTime = DateTime.Now,
-            Status = FailureStatus.Pending
+            StartDateTimeOffset = failureAddDto.StartDateTimeOffset,
+            EndDateTimeOffset = failureAddDto.EndDateTimeOffset,
+            Status = failureAddDto.EndDateTimeOffset == null ? FailureStatus.Pending : FailureStatus.Resolved
         };
         
         await machineFailuresRespository.Add(failure);
     }
-    
 }
