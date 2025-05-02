@@ -9,7 +9,7 @@ public class FailuresRepository(AppDbContext dbContext) : IFailuresRepository
     public Task<List<Failure>> GetAll()
     {
         return dbContext.Failures
-            .OrderByDescending(x=>x.StartDateTime)
+            .OrderByDescending(x=>x.StartDateTimeOffset)
             .Include(x=>x.Machine)
             .ThenInclude(x=>x.MachineType)
             .ToListAsync();
@@ -22,12 +22,12 @@ public class FailuresRepository(AppDbContext dbContext) : IFailuresRepository
             .SingleOrDefaultAsync(x => x.Id == id);
     }
 
-    public async Task Resolve(int id, DateTime endDateTime)
+    public async Task Resolve(int id, DateTimeOffset endDateTimeOffset)
     {
         await dbContext.Failures
             .Where(x => x.Id == id && x.Status == FailureStatus.Pending)
             .ExecuteUpdateAsync(setters => 
                 setters.SetProperty(u => u.Status, FailureStatus.Resolved)
-                    .SetProperty(u => u.EndDateTime, endDateTime));
+                    .SetProperty(u => u.EndDateTimeOffset, endDateTimeOffset));
     }
 }

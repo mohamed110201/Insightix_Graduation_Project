@@ -12,9 +12,9 @@ namespace Graduation_Project.Data.Config
 
             builder.HasKey(x => x.Id);
             
-            builder.Property(x => x.StartDateTime);
+            builder.Property(x => x.StartDateTimeOffset);
             
-            builder.Property(x=>x.EndDateTime);
+            builder.Property(x=>x.EndDateTimeOffset);
             
             builder.Property(x=>x.Status).HasConversion(new EnumToStringConverter<FailureStatus>());;
 

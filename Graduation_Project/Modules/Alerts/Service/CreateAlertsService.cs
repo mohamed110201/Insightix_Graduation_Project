@@ -46,7 +46,7 @@ public class CreateAlertsService(
         };
     }
     
-    private async Task CreateAlertAsync<TAlert>(DateTime timeStamp, int machineId, int ruleId, AlertType alertType)
+    private async Task CreateAlertAsync<TAlert>(DateTimeOffset timeStamp, int machineId, int ruleId, AlertType alertType)
         where TAlert : Alert, new()
     {
         var alert = new TAlert
@@ -105,10 +105,10 @@ public class CreateAlertsService(
         int machineId, 
         int attributeId, 
         double value, 
-        DateTime timeStamp,
+        DateTimeOffset timeStamp,
         AlertType alertType,
         Func<int, int, Task<List<TAlertRule>?>> getRulesFunc,
-        Func<DateTime, int,int,AlertType, Task> createAlertFunc
+        Func<DateTimeOffset, int,int,AlertType, Task> createAlertFunc
         )
         where TAlertRule : AlertRule
     {

@@ -11,7 +11,7 @@ public class BroadcastFailurePredictionEmailService(
     IConfiguration config
     )
 {
-    public async Task Send(int failurePredictionId,DateTime timestamp,string machineSerialNumber)
+    public async Task Send(int failurePredictionId,DateTimeOffset timestamp,string machineSerialNumber)
     {
         try
         {

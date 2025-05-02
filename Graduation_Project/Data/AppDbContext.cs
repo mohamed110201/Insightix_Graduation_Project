@@ -74,8 +74,8 @@ namespace Graduation_Project.Data
             int machineId,
             int monitoringAttributeId,
             int windowSize,
-            DateTime startDate,
-            DateTime endDate)
+            DateTimeOffset startDate,
+            DateTimeOffset endDate)
         {
             return FromExpression(() => DownSamplingMonitoringData(machineId, monitoringAttributeId, windowSize, startDate, endDate));
         }
@@ -84,8 +84,8 @@ namespace Graduation_Project.Data
             int machineId,
             int ResourceConsumptionAttributeId,
             int windowSize,
-            DateTime startDate,
-            DateTime endDate)
+            DateTimeOffset startDate,
+            DateTimeOffset endDate)
         {
             return FromExpression(() => DownSamplingResourceConsumptionData(machineId, ResourceConsumptionAttributeId, windowSize, startDate, endDate));
         }
@@ -95,8 +95,8 @@ namespace Graduation_Project.Data
             return FromExpression(() => GetCurrentMonitoringAttributesForMachine(machineId));
         }
         public async Task<List<List<dynamic?>>> GetMachineMonitoringData(int machineId,
-            DateTime startTime ,
-            DateTime endTime)
+            DateTimeOffset startTime ,
+            DateTimeOffset endTime)
         {
             var results = new List<List<dynamic?>>();
 

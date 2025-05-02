@@ -6,7 +6,7 @@ namespace Graduation_Project.Modules.MachinesResourceConsumptionData.Repository;
 
 public class MachinesResourceConsumptionDataRepository(AppDbContext dbContext) : IMachinesResourceConsumptionDataRepository
 {
-    public async Task<List<MachineResourceConsumptionData>> GetAll(int machineId, int resourceConsumptionAttributeId, int windowSize, DateTime startDate, DateTime endDate)
+    public async Task<List<MachineResourceConsumptionData>> GetAll(int machineId, int resourceConsumptionAttributeId, int windowSize, DateTimeOffset startDate, DateTimeOffset endDate)
     {
         var ResourceConsumptionData = await dbContext.DownSamplingResourceConsumptionData(machineId,
             resourceConsumptionAttributeId,
@@ -18,7 +18,7 @@ public class MachinesResourceConsumptionDataRepository(AppDbContext dbContext) :
         return ResourceConsumptionData;
     }
 
-    public async Task<List<GetSummaryDto>> GetSummary(int machineId, int resourceConsumptionAttributeId, DateTime startDate, DateTime endDate)
+    public async Task<List<GetSummaryDto>> GetSummary(int machineId, int resourceConsumptionAttributeId, DateTimeOffset startDate, DateTimeOffset endDate)
     {
         var summary = await dbContext.ResourceConsumptionData
             .Where(d => d.MachineId == machineId

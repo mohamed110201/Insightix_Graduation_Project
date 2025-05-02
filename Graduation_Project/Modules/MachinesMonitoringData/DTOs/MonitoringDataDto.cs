@@ -6,7 +6,7 @@ public class MonitoringDataDto
     public int MonitoringAttributeId { get; set; }
     public double Value { get; set; }
     
-    public DateTime TimeStamp { get; set; }
+    public DateTimeOffset TimeStamp { get; set; }
 }
 
 

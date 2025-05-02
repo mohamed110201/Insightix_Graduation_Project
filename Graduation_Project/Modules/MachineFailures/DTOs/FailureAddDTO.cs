@@ -2,8 +2,8 @@ namespace Graduation_Project.Modules.Failures.DTOs;
 
 public class FailureAddDTO
 {
-    public DateTime StartDateTime { get; set;}
+    public DateTimeOffset StartDateTimeOffset { get; set;}
 
-    public DateTime? EndDateTime { get; set; }
+    public DateTimeOffset? EndDateTimeOffset { get; set; }
         
 }

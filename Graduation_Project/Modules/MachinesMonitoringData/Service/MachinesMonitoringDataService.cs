@@ -14,8 +14,8 @@ public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository mac
         if(lastSeconds==null)
             throw new AppError(StatusCodes.Status400BadRequest, "Last Seconds Is Required");
         var windowSize = 60;
-        var startDate = DateTime.Now.AddSeconds(-(double)lastSeconds);
-        var endDate = DateTime.Now;
+        var startDate = DateTimeOffset.Now.AddSeconds(-(double)lastSeconds);
+        var endDate = DateTimeOffset.Now;
         var monitoringData = await machinesMonitoringDataRepository.GetAll(machineId, monitoringAttributeId,windowSize, startDate, endDate);
         var monitoringDataDto = monitoringData.Select(x=>new GetMointoringDataDto
         {
@@ -32,8 +32,8 @@ public class MachinesMonitoringDataService(IMachinesMonitoringDataRepository mac
     {
         if(lastSeconds==null)
             throw new AppError(StatusCodes.Status400BadRequest, "Last Seconds Is Required");
-        var startDate = DateTime.Now.AddSeconds(-(double)lastSeconds);
-        var endDate = DateTime.Now;
+        var startDate = DateTimeOffset.Now.AddSeconds(-(double)lastSeconds);
+        var endDate = DateTimeOffset.Now;
         var summary = await machinesMonitoringDataRepository.GetSummary(machineId,monitoringAttributeId,startDate, endDate);
         if(!summary.Any())
             throw new AppError(StatusCodes.Status404NotFound, "There Are No Data For This Machine");

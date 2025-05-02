@@ -8,14 +8,14 @@ public class FailureAddValidator : AbstractValidator<FailureAddDTO>
     public FailureAddValidator()
     {
         
-        RuleFor(x => x.StartDateTime)
+        RuleFor(x => x.StartDateTimeOffset)
             .NotEmpty()
-            .LessThanOrEqualTo(DateTime.UtcNow).WithMessage("StartDateTime cannot be in the future.");
+            .LessThanOrEqualTo(DateTimeOffset.UtcNow).WithMessage("StartDateTimeOffset cannot be in the future.");
 
-        RuleFor(x => x.EndDateTime)
-            .GreaterThan(x => x.StartDateTime)
-            .When(x => x.EndDateTime.HasValue)
-            .WithMessage("EndDateTime must be after StartDateTime.");
+        RuleFor(x => x.EndDateTimeOffset)
+            .GreaterThan(x => x.StartDateTimeOffset)
+            .When(x => x.EndDateTimeOffset.HasValue)
+            .WithMessage("EndDateTimeOffset must be after StartDateTimeOffset.");
         
     }
 }

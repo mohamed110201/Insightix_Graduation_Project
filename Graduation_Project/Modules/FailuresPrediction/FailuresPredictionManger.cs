@@ -26,7 +26,7 @@ public class FailuresPredictionManger(IServiceProvider serviceProvider,Notificat
         var machines = await machinesRepository.GetMachinesForPrediction();
         foreach (var m in machines)
         {
-            var now = DateTime.Now;
+            var now = DateTimeOffset.Now;
             var data = await context.GetMachineMonitoringData(m.Id
                 ,m.FailurePredictionCheckPoint?? (DateTime)(SqlDateTime.MinValue)
                 ,now);

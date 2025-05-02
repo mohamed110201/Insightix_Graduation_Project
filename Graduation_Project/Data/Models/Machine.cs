@@ -12,7 +12,7 @@ namespace Graduation_Project.Data.Models
         public ICollection<MonitoringData> MonitoringData { get; set; } = [];
         public ICollection<ResourceConsumptionData> ResourceConsumptionData { get; set; } = [];
         public ICollection<Failure> Failures { get; set; } = [];
-        public DateTime? FailurePredictionCheckPoint { get; set; }
+        public DateTimeOffset? FailurePredictionCheckPoint { get; set; }
 
     }
 }

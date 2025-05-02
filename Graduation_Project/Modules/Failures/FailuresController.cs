@@ -28,9 +28,9 @@ namespace Graduation_Project.Controllers
         }
         
         [HttpPost("{failureId:int}/resolve")]
-        public async Task<IActionResult> Add([FromRoute] int failureId,[FromBody] DateTime? endDateTime)
+        public async Task<IActionResult> Add([FromRoute] int failureId,[FromBody] DateTimeOffset? endDateTimeOffset)
         {
-            await failuresService.Resolve(failureId,endDateTime);
+            await failuresService.Resolve(failureId,endDateTimeOffset);
             return JSend.Created(message:"Failure Resolved Successfully");
         }
 

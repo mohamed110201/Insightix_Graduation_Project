@@ -10,7 +10,7 @@ public class MachineFailuresRespository(AppDbContext dbContext) : IMachineFailur
    public Task<List<Failure>> GetAll(int machineId)
     {
         return dbContext.Failures
-            .OrderByDescending(x=>x.StartDateTime)
+            .OrderByDescending(x=>x.StartDateTimeOffset)
             .Where(f => f.MachineId == machineId)
             .Include(x=>x.Machine)
             .ThenInclude(x=>x.MachineType)

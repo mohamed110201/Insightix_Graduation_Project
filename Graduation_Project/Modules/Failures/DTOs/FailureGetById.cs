@@ -7,9 +7,9 @@ public class FailureGetById
     public int Id { get; set; }
     public int MachineId { get; set; }
     
-    public DateTime StartDateTime { get; set;}
+    public DateTimeOffset StartDateTimeOffset { get; set;}
 
-    public DateTime? EndDateTime { get; set; }
+    public DateTimeOffset? EndDateTimeOffset { get; set; }
         
     public FailureStatus Status { get; set;}
     

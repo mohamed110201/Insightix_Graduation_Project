@@ -6,5 +6,5 @@ public interface IFailuresService
 {
     Task<List<FailureGetAll>> GetAll();
     public Task<FailureGetById> GetById(int id);
-    Task Resolve(int id,DateTime? endDateTime);
+    Task Resolve(int id,DateTimeOffset? endDateTimeOffset);
 }

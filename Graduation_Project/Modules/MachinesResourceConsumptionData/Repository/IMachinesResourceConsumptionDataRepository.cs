@@ -8,10 +8,10 @@ public interface IMachinesResourceConsumptionDataRepository
     public Task<List<MachineResourceConsumptionData>> GetAll(int machineId,
         int resourceConsumptionAttributeId,
         int windowSize,
-        DateTime startDate,
-        DateTime endDate);
+        DateTimeOffset startDate,
+        DateTimeOffset endDate);
 
-    public Task<List<GetSummaryDto>> GetSummary(int machineId, int resourceConsumptionAttributeId, DateTime startDate, DateTime endDate);
+    public Task<List<GetSummaryDto>> GetSummary(int machineId, int resourceConsumptionAttributeId, DateTimeOffset startDate, DateTimeOffset endDate);
     public Task AddResourceConsumptioData(ResourceConsumptionData resourceConsumptionData);
 
 }

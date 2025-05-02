@@ -16,8 +16,8 @@ public class MachineFailuresService(IMachineFailuresRespository machineFailuresR
         {
             Id = x.Id,
             Status = x.Status,
-            StartDateTime = x.StartDateTime,
-            EndDateTime = x.EndDateTime,
+            StartDateTimeOffset = x.StartDateTimeOffset,
+            EndDateTimeOffset = x.EndDateTimeOffset,
             MachineSerialNumber = x.Machine.SerialNumber,
             MachineTypeName = x.Machine.MachineType.Name
         }).ToList();
@@ -35,9 +35,9 @@ public class MachineFailuresService(IMachineFailuresRespository machineFailuresR
         var failure = new Failure()
         {
             MachineId = machineId,
-            StartDateTime = failureAddDto.StartDateTime,
-            EndDateTime = failureAddDto.EndDateTime,
-            Status = failureAddDto.EndDateTime == null ? FailureStatus.Pending : FailureStatus.Resolved
+            StartDateTimeOffset = failureAddDto.StartDateTimeOffset,
+            EndDateTimeOffset = failureAddDto.EndDateTimeOffset,
+            Status = failureAddDto.EndDateTimeOffset == null ? FailureStatus.Pending : FailureStatus.Resolved
         };
         
         await machineFailuresRespository.Add(failure);
