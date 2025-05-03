@@ -11,6 +11,11 @@ public class SeedDataContainer
     public List<MachineTypeResourceConsumptionAttribute> MachineTypeResourceConsumptionAttributes {get; set;}
     public List<MonitoringData> MonitoringData {get; set;}
     public List<ResourceConsumptionData> ResourceConsumptionData { get; set; }
+    
     public List<MonitoringData> WrapperMachineData { get; set; }
+    public List<MonitorAttributeAlertRule> MonitorAttributeAlertRule { get; set; }
+    public List<ResourceConsumptionAttributeAlertRule> ResourceConsumptionAttributeAlertRule { get; set; }
+    public List<MonitoringAlert> MonitoringAlert { get; set; }
+    public List<ResourceConsumptionAlert> ResourceConsumptionAlert { get; set; }
 
 }

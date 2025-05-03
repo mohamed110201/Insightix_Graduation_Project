@@ -63,7 +63,7 @@ public class AlertsCachingService(
                     .Include(a => a.MonitorAttributeAlertRule)
                     .Where(a => a.MachineId == machineId &&
                                 a.MonitorAttributeAlertRuleId == ruleId &&
-                                a.Status == AlertStatus.Active)
+                                a.Status == AlertStatus.Pending)
                     .OrderByDescending(a => a.TimeStamp)
                     .FirstOrDefaultAsync();
             }
@@ -74,7 +74,7 @@ public class AlertsCachingService(
                     .Include(a => a.ResourceConsumptionAttributeAlertRule)
                     .Where(a => a.MachineId == machineId &&
                                 a.ResourceConsumptionAttributeAlertRuleId == ruleId &&
-                                a.Status == AlertStatus.Active)
+                                a.Status == AlertStatus.Pending)
                     .OrderByDescending(a => a.TimeStamp)
                     .FirstOrDefaultAsync();
             }

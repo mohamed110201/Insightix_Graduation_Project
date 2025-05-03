@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Graduation_Project.Data.Seed;
 
@@ -13,7 +14,10 @@ public class SeedDataGenerator
 
     private static async Task<SeedDataContainer?> DeserializeAsync(Stream stream)
     {
-        return await JsonSerializer.DeserializeAsync<SeedDataContainer>(stream);
+        return await JsonSerializer.DeserializeAsync<SeedDataContainer>(stream,new JsonSerializerOptions
+        {
+            Converters = { new JsonStringEnumConverter() }
+        });
     }
 
     private static Stream OpenJsonStream()
