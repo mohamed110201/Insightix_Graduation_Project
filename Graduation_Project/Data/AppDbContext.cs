@@ -26,6 +26,8 @@ namespace Graduation_Project.Data
         public DbSet<MachineTypeResourceConsumptionAttribute>  MachineTypeResourceConsumptionAttributes  { get; set; }
         public DbSet<MonitoringData>  MonitoringData  { get; set; }
         public DbSet<Alert>  Alerts  { get; set; }
+        public DbSet<MonitoringAlert>  MonitoringAlerts  { get; set; }
+        public DbSet<ResourceConsumptionAlert>  ResourceConsumptionAlerts  { get; set; }
         public DbSet<MonitorAttributeAlertRule>  MonitorAttributeAlertRules   { get; set; }
         public DbSet<ResourceConsumptionAttributeAlertRule>  ResourceConsumptionAttributeAlertRules   { get; set; }
         public DbSet<ResourceConsumptionData> ResourceConsumptionData { get; set; }

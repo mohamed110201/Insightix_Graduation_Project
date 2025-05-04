@@ -10,23 +10,47 @@ public class SeedDataLoader(AppDbContext db)
 
     private async Task SaveToDb(SeedDataContainer data)
     {
-        await db.Systems.AddRangeAsync(data.Systems);
-        await db.SaveChangesAsync();
-        await db.MachineTypes.AddRangeAsync(data.MachineTypes);
-        await db.SaveChangesAsync();
-        await db.MonitoringAttributes.AddRangeAsync(data.MonitoringAttributes);
-        await db.SaveChangesAsync();
-        await db.ResourceConsumptionAttributes.AddRangeAsync(data.ResourceConsumptionAttributes);
-        await db.SaveChangesAsync();
-        await db.MachineTypeMonitoringAttributes.AddRangeAsync(data.MachineTypeMonitoringAttributes);
-        await db.SaveChangesAsync();
-        await db.MachineTypeResourceConsumptionAttributes.AddRangeAsync(data.MachineTypeResourceConsumptionAttributes);
-        await db.SaveChangesAsync();
-        await db.Machines.AddRangeAsync(data.Machines);
-        await db.SaveChangesAsync();
-        await db.MonitoringData.AddRangeAsync(data.MonitoringData);
-        await db.SaveChangesAsync();
-        await db.ResourceConsumptionData.AddRangeAsync(data.ResourceConsumptionData); 
-        await db.SaveChangesAsync();
+
+            await db.Systems.AddRangeAsync(data.Systems);
+            await db.SaveChangesAsync();
+            await db.MachineTypes.AddRangeAsync(data.MachineTypes);
+            await db.SaveChangesAsync();
+            await db.MonitoringAttributes.AddRangeAsync(data.MonitoringAttributes);
+            await db.SaveChangesAsync();
+            await db.ResourceConsumptionAttributes.AddRangeAsync(data.ResourceConsumptionAttributes);
+            await db.SaveChangesAsync();
+            await db.MachineTypeMonitoringAttributes.AddRangeAsync(data.MachineTypeMonitoringAttributes);
+            await db.SaveChangesAsync();
+            await db.MachineTypeResourceConsumptionAttributes.AddRangeAsync(data.MachineTypeResourceConsumptionAttributes);
+            await db.SaveChangesAsync();
+            await db.Machines.AddRangeAsync(data.Machines);
+            await db.SaveChangesAsync();
+            
+            
+            await db.MonitoringData.AddRangeAsync(data.MonitoringData);
+            await db.SaveChangesAsync();
+            
+            
+            await db.ResourceConsumptionData.AddRangeAsync(data.ResourceConsumptionData); 
+            await db.SaveChangesAsync();
+            
+            
+            await db.MonitorAttributeAlertRules.AddRangeAsync(data.MonitorAttributeAlertRule); 
+            await db.SaveChangesAsync();
+            
+                    
+            await db.ResourceConsumptionAttributeAlertRules.AddRangeAsync(data.ResourceConsumptionAttributeAlertRule); 
+            await db.SaveChangesAsync();
+            
+                    
+            await db.MonitoringAlerts.AddRangeAsync(data.MonitoringAlert); 
+            await db.SaveChangesAsync();
+            
+                    
+            await db.ResourceConsumptionAlerts.AddRangeAsync(data.ResourceConsumptionAlert); 
+            await db.SaveChangesAsync();
+            
+            
+
     }
 }

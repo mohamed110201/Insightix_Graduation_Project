@@ -52,7 +52,7 @@ public class CreateAlertsService(
         var alert = new TAlert
         {
             TimeStamp = timeStamp,
-            Status = AlertStatus.Active,
+            Status = AlertStatus.Pending,
             Type = alertType,
             MachineId = machineId
         };
@@ -71,7 +71,7 @@ public class CreateAlertsService(
         context.AlertChangeLogs.Add(new AlertChangeLog
         {
             TimeStamp = timeStamp,
-            Status = AlertStatus.Active,
+            Status = AlertStatus.Pending,
             AlertId = alert.Id
         });
 
