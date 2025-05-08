@@ -8,7 +8,7 @@ namespace Graduation_Project.Modules.FailuresPrediction
 {
     [Route("api/failures-prediction")]
     [ApiController]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 
     public class FailuresPredictionController(IFailuresPredictionService failuresPredictionService) : ControllerBase
     {
