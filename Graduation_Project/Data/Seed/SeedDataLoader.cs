@@ -27,13 +27,7 @@ public class SeedDataLoader(AppDbContext db)
             await db.SaveChangesAsync();
             
             
-            await db.MonitoringData.AddRangeAsync(data.MonitoringData);
-            await db.SaveChangesAsync();
-            
-            
-            await db.ResourceConsumptionData.AddRangeAsync(data.ResourceConsumptionData); 
-            await db.SaveChangesAsync();
-            
+        
             
             await db.MonitorAttributeAlertRules.AddRangeAsync(data.MonitorAttributeAlertRule); 
             await db.SaveChangesAsync();
@@ -49,6 +43,14 @@ public class SeedDataLoader(AppDbContext db)
                     
             await db.ResourceConsumptionAlerts.AddRangeAsync(data.ResourceConsumptionAlert); 
             await db.SaveChangesAsync();
+            
+            await db.MonitoringData.AddRangeAsync(data.MonitoringData);
+            await db.SaveChangesAsync();
+            
+            
+            await db.ResourceConsumptionData.AddRangeAsync(data.ResourceConsumptionData); 
+            await db.SaveChangesAsync();
+
             
             
 
