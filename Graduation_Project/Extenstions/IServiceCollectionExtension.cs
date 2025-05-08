@@ -105,7 +105,7 @@ namespace Graduation_Project.Extenstions
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.LogTo(_ => { }, LogLevel.None);
-                options.UseSqlServer(config.GetConnectionString("Remote"))
+                options.UseSqlServer(config.GetConnectionString("Default"))
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
         }
@@ -201,7 +201,7 @@ namespace Graduation_Project.Extenstions
             services.AddSingleton<RazorLightEngine>(provider =>
             {
                 var env = provider.GetRequiredService<IWebHostEnvironment>();
-                var templatesRoot = Path.Combine(env.ContentRootPath, "../Modules\\Email\\Templates");
+                var templatesRoot = Path.Combine(env.ContentRootPath, "Modules\\Email\\Templates");
                 return new RazorLightEngineBuilder()
                     .UseFileSystemProject(templatesRoot)
                     .UseMemoryCachingProvider()
