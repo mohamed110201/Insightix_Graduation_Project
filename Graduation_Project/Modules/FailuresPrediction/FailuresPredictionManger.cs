@@ -11,7 +11,10 @@ namespace Graduation_Project.Modules.FailuresPrediction;
 
 public class FailuresPredictionManger(IServiceProvider serviceProvider,NotificationsNotifier notificationsNotifier,IConfiguration configuration)
 {
-    private HttpClient httpClient = new HttpClient();
+    private HttpClient httpClient = new HttpClient
+    {
+        Timeout = TimeSpan.FromSeconds(1000) 
+    };
     
     public async Task ExecuteProcedure()
     {
