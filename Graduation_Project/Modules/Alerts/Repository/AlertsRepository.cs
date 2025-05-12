@@ -53,10 +53,20 @@ public class AlertsRepository(AppDbContext dbContext) : IAlertsRepository
         if(alert == null) 
             throw new NotFoundError("Alert Does Not Exist");
         
+        var newStatus = Enum.Parse<AlertStatus>(status);
         await dbContext.Alerts.Where(al => al.Id == alert.Id)
             .ExecuteUpdateAsync(x => x
-                .SetProperty(z => z.Status, Enum.Parse<AlertStatus>(status))
+                .SetProperty(z => z.Status,newStatus )
             );
+        var changeLog = new AlertChangeLog
+        {
+            AlertId = alert.Id,
+            Status = newStatus,
+            TimeStamp = DateTimeOffset.Now
+        };
+
+        dbContext.AlertChangeLogs.Add(changeLog);
+        
         await dbContext.SaveChangesAsync();
 
     }
