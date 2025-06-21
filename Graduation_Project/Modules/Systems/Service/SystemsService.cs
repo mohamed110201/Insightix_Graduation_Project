@@ -25,6 +25,7 @@ namespace Graduation_Project.Services.Implementation
             {
                 Id = s.Id,
                 Name = s.Name,
+                MachinesCount = s.Machines.Count
        
             });
         }

@@ -13,7 +13,7 @@ namespace Graduation_Project.Repositories.Implementation
 
         public async Task<List<Data.Models.System>> GetAll()
         {
-            return await dbContext.Systems.ToListAsync();
+            return await dbContext.Systems.Include(s=> s.Machines).ToListAsync();
         }
 
         public async Task<Data.Models.System?> GetById(int id)
